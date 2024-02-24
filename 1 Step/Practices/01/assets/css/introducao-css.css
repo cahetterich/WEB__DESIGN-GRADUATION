@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+h1 {
+    color: crimson;
+    text-align: center;
+}
+
+h2 {
+    /* color: rgb(33, 73, 114); */
+    text-align: left;
+}
+
+h3 {   
+    /* color:violet;  */
+    color:#ee82ee;
+    /* color:rgb(238, 129, 238); */
+    /* color:hsl(300, 76%, 72%); */
+    /* color:hwb(300 51% 7%); */
+}
+
+.text_cont {
+    font-family:"Josefin Sans", sans-serif;
+}
+
+.text {    
+    font-size: 2.8rem;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.text_sub {
+    color:#00f;
+    font-size: 1.25rem;
+    font-weight: 300;
+   word-spacing: 20px;  /* coloca espaço entre as palavras */
+   /* letter-spacing: 15px; espaço entre as letras  */
+   /* line-height: 40px; altura entre as linhas */
+}
+
+ol {
+   /* list-style: lower-alpha;  tipo de lista em ordem alfabética */
+   list-style: upper-roman;
+}
+
+ul{
+    /* list-style: none; sem marcadores */
+    list-style: url(../image/carrot.png);
+}
+
+img {    
+    width: 40%;
+    border-radius: 10px;
+    /* border: 5px solid #eebc82; */
+    filter: opacity(90%);
+    /* filter: saturate(50%); */
+    filter: grayscale(100%);
+    /* filter: drop-shadow(20px 40px 1px #665866); */
+}
+
