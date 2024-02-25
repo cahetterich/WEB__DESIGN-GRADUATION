@@ -1,4 +1,4 @@
-# FIAP_WEB-DESIGN
+# Course_WEB-DESIGN
 ________________________________________________________________________________________________
 🇺🇸:
  Codes, practices and projects developed in the graduation course in Web Design at FIAP.
