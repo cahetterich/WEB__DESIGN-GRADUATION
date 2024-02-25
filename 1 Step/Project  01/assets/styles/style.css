@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    --cor-primaria: #1B1617;
+    --cor-secundaria: #F3F4EA;
+    --cor-tercearia: #626A5B;
+    --cor-quartenaria: #CFC2B6;
+    --cor-hover: #58575765;
+
+    --fonte-primaria: "Barlow Condensed", sans-serif;
+    --fonte-secundaria : "League Spartan", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    /* height: 100vh; */
+    color: var(--cor-secundaria);   
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 10%;
+}
+
+.cabecalho_menu {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 130px;
+    gap: 80px;
+}
+
+.cabecalho_menu_link {
+    font-family: var(--fonte-secundaria);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+
+.cabecalho_menu_link:hover {
+    color: var(--cor-tercearia);    
+}
+    
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 15%;
+}
+
+.apresentacao_conteudo {
+    width: 615px; 
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.apresentacao_conteudo_titulo {
+    font-size: 24px; /*"Hi, I'm Carla"*/
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-tercearia);
+    font-weight: bold;        
+}
+
+.apresentacao_conteudo_texto {
+    font-size: 24px;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-secundaria);  
+    margin-bottom: 36px;  
+}
+
+.titulo-destaque {
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+    font-size: 40px;
+    padding: 10px;
+    font-weight:bold; 
+    font-style: italic;
+}
+
+.imagem {
+    width: 300px;
+}
+/* Adicionar mais estilos conforme necessário */
+
+.apresentacao_links {
+    /* display: flex; */
+    /* flex-direction: column; */
+    justify-content: space-between;     
+    align-items: center;  
+    gap: 35px;
+}
+
+.apresentacao_links_link {   
+    background-color: var(--cor-tercearia);   
+    display: inline-block;   
+    width: 150px;     
+    text-align:center;
+    border-radius: 30px;
+    font-size: 24px;    
+    font-family: var(--fonte-primaria);
+    font-weight: 600;
+    transition: .3s all ease-in-out;
+    color: var(--cor-secundaria);
+    padding: 10.5px 15px;
+    text-decoration: none;    
+    margin-right: 10px; 
+    margin-bottom: 10px;  
+}   
+
+.apresentacao_links_link:hover {
+    background-color: var(--cor-primaria); 
+    border: 2px solid var(--cor-tercearia);   
+}
+
+.rodape { 
+    background-color: var(--cor-tercearia) ;
+    color: var(--cor-primaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* Style - CV */
+.apresentacao_conteudo_texto a {
+    text-decoration: none;
+    color: var(--cor-tercearia);
+}
+
