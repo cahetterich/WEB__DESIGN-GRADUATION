@@ -49,6 +49,14 @@ box-sizing: border-box;   /* recalcula a largura da borda no width e height - se
 .exemploBackgroundsImg {
     width: 80%;
     height: 600px;
-    background-color: #900;
     margin: 20px auto;
+    background-image: url(../img/pexels-pixabay-462162.jpg);
+    background-repeat: no-repeat;  /*  não repete a imagem */
+    background-size: cover; /* deixa a imagem inteira no container */    
+    /* background-position: 100px 400px; */
+    background-position: 50%; /* que é igual a "center" para posiciona o centro da imagem no container */
+    /* background-attachment: scroll; - é o padrão que faz a imagem rolar junto com a tela */
+    background-attachment: fixed; /* a imagem fica fixa na tela, não acompanha a rolagem */
 }
+
+
