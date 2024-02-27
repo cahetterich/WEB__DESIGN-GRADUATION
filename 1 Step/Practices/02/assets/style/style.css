@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* font-family: "Roboto Condensed", sans-serif;
+font-family: "Montserrat", sans-serif; */
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.exemploDiv {
+    width: 50%;
+    height: 180px;
+    background-color: #ccc;
+     overflow: auto;  /* - barra de rolagem */
+    /* overflow: hidden; - oculta o conteudo que ultrapassa o limite */
+    /* overflow: scroll; - barra de rolagem vertical e horizontal */    
+}
+
+.exemploBoxModel {
+width: 300px;  /*min-width: ; - altura minima*/
+height: 250px; /*max-height: ; - altura máxima*/
+background-color: #ccc;
+margin: 10px 20px 30px 40px; /* margem externa dos 4 lados - sentido horário */
+/* border-width: 10px;
+border-style: solid;
+border-color: #dc143d; */
+border: 10px solid #dc143d;
+padding: 10px;  /* espacamento interno - interfere no width e height */
+box-sizing: border-box;   /* recalcula a largura da borda no width e height - sem que o padding interfira no nosso BOX MODEL*/
+}
+
+.exemploBoxShadow {
+    width: 250px;
+    height: 250px;
+    margin: 30px;
+    padding: 20px;
+    box-sizing: border-box;    
+    box-shadow: 1px 10px 15px 5px #ccc;
+    border-radius: 7px;
+}
+
+.exemploBackgrounds {
+    width: 80%;
+    height: 600px;
+    background-color: #900;
+    margin: 20px auto;
+}
+
+.exemploBackgroundsImg {
+    width: 80%;
+    height: 600px;
+    background-color: #900;
+    margin: 20px auto;
+}
