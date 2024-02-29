@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* font-family: "Roboto Condensed", sans-serif;
+font-family: "Montserrat", sans-serif; */
+
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+li {margin: 20px 0;}
+
+li:hover{
+    width: 300px;
+    height: 50px;
+    background-color: #dc143c;
+    color: #fff;   
+}
+
+.box {
+    width: 150px;
+    height: 50px;
+    border-radius: 7px;
+    border: 1px solid #dc143c;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* .box:nth-child(3){ muda apenas um elemento do box - no caso o 3 */
+    /* .box:nth-child(even) { muda apenas os elementos pares */
+    /*.box:nth-child(odd) { muda o inverso - neste caso impares*/
+    .box:first-child {    /*primeiro filhio*/
+    background-color: #dc143c;
+    color: #fff;
+}
+
+.box:last-child { /*último filhio*/
+    background-color: #369;
+    color: #fff;
+}
+
+.box2 {
+    width: 150px;
+    height: 50px;
+    border-radius: 7px;
+    border: 1px solid #dc143c;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.box2:not(.no-color) {
+    background-color: #dc143c;
+    color: #fff;
+}
+
+
+.box3 {
+    width: 150px;
+    height: 50px;
+    border-radius: 7px;
+    border: 1px solid #dc143c;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* :is(.bg-color, h3, h4) { especificidade 1 - prevalece o h4 formatado com is */
+:where(.bg-color, h3, h4) { /* especificidade 0 - não prevalece o h4 formatado com where */
+    background-color: #dc143c;
+    color: #fff;
+}
+
+h4{
+    background-color: rgb(63, 15, 75);
+}
+
+.box4 {
+    width: 150px;
+    height: 70px;
+    border-radius: 7px;
+    border: 1px solid #dc143c;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.box4:has(p){  /*procura os p dentro do box4 e faz a formatação*/
+    background-color: #dc143c;
+    color: #fff;
+}

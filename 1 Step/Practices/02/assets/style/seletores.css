@@ -4,21 +4,21 @@
 font-family: "Montserrat", sans-serif; */
 
 * {
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
 
 
-div {
+/* div {
     width: 90%;
     height: 80px;
     margin: 10px auto;
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid #dc143c;
-}
+} */
 
 #conteudo { 
     background-color: #dc143c;
@@ -41,3 +41,37 @@ div {
 .bg-red {background-color: #900;}
 
 .bg-green {background-color: #090;}
+
+/* div p {  /*formate os p's que estão dentro da div - filhos 
+    width: 400px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #dc143c;
+} */
+
+/* ul + p {  após a ul ele altera o p adjacente-próximo
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    background-color: #dc143c;
+    color: #fff;
+    margin: 10px 0;
+} */
+
+ /* ul ~ p {  seletor irmão - formata todos os p que vierem após a ul 
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    background-color: #dc143c;
+    color: #fff;
+    margin: 10px 0;
+
+} */
+
+.filhosDiretos > p { /*apenas os p que forem filhos diretos da div filhosDiretos recebem a formatação - 'netos' não recebem*/
+    width: 300px;
+    height: 50px;
+    background-color: #dc143c;
+    color: #fff;
+    margin: 10px 0;
+} 

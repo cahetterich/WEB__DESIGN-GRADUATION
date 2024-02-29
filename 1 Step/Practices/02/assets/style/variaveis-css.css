@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* font-family: "Roboto Condensed", sans-serif;
+font-family: "Montserrat", sans-serif; */
+
+* {
+     margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* :root {
+    --bg-color: #ccc;
+    --space-10: 10px;
+    --space-30: 30px;
+    --space-50: 50px;
+} */
+
+.container {
+    width: 80%;
+    margin: 10px auto;
+    padding: var(--space-30);
+    background-color: var(--bg-color);
+}
+
+.container h1 {
+    margin: var(--space-30) auto;
+    text-align: center;
+}
+
+.box{ 
+    --width-total: 60%;  /* definindo as variáveis dentro de um elemento, faz com que ele rode apenas dentro desse elemento, não sendo possível chamá-lo em outros*/
+    --margin: 25px;
+    width: var(--width-total);
+    margin: var(--margin) auto;
+    padding: var(--space-50);
+    background-color: var(--bg-color);
+}
