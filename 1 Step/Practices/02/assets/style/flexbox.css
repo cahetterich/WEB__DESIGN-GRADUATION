@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* font-family: "Roboto Condensed", sans-serif;
+font-family: "Montserrat", sans-serif; */
+
+* {
+     margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;   
+    min-height: 600px;
+    margin: 20px auto;
+    border: 1px solid #333;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    margin: 20px;   
+}
+
+.container2 {  
+    display: flex;
+    justify-content: center;
+    width: 80%;   
+    min-height: 900px;
+    margin: 20px auto;
+    border: 1px solid #333;
+}
+
+.box2 {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    margin: 20px;   
+}
