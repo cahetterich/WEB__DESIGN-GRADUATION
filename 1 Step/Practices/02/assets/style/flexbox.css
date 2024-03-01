@@ -29,16 +29,53 @@ font-family: "Montserrat", sans-serif; */
 
 .container2 {  
     display: flex;
-    justify-content: center;
+    align-items: baseline;
     width: 80%;   
-    min-height: 900px;
+    min-height: 600px;
     margin: 20px auto;
     border: 1px solid #333;
 }
 
 .box2 {
     width: 200px;
-    height: 200px;
+    /* height: 200px; */
     background-color: #ccc;
     margin: 20px;   
 }
+
+.container3{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    margin: 10px auto;
+    width: 80%;
+    min-height: 600px;
+    border: 1px solid #aaa;
+}
+
+.box3 {
+    width: 200px;
+    height: 250px; 
+    background-color: #ccc;
+    margin: 0 20px;  
+    /* padding: 10px;  */
+}
+
+ .box-um {
+    order: 0;
+}
+.box-dois {
+    order: 0;
+}
+.box-tres {
+    order: 0;
+}
+/*
+.box-quatro {
+    flex-grow: 2;
+}
+.box-cinco {
+    flex-grow: 1;
+} */
