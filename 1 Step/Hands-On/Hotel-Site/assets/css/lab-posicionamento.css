@@ -109,7 +109,7 @@ img {
 }
 
 .hotel-item:hover {
-    transform: scale(1.1);
+    transform: scale(1.1);  /* aumenta o tamanho do container ao passar o mouse*/
 }
 
 .hotel-item img {
