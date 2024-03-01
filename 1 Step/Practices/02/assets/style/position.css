@@ -15,12 +15,25 @@ font-family: "Montserrat", sans-serif; */
     width: 80%;
     min-height: 600px;
     background-color: rgb(129, 193, 237);
+   
 }
 
 .box {
     width: 250px;
     height: 250px;
     background-color: #ccc;
-    position: relative;
-    top: 50px;
+    position: absolute;
+    
+}
+
+.menu {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #dc143c;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
