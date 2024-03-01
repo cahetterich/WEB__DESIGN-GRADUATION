@@ -1,0 +1,43 @@
+Referências:
+https://www.notion.so/Refer-ncias-Front-End-3a8a4b868eb7449d93a87f40d249588e
+
+/-------------------------------------------------------------------------/
+
+
+Font Awesome:
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+/-------------------------------------------------------------------------/
+
+Cores do gradiente: #431E4D - #0C0C23 
+gradiente:
+    linear-gradient(120deg,
+        hsl(240deg 49% 9%) 0%,
+        hsl(245deg 47% 10%) 5%,
+        hsl(250deg 49% 12%) 12%,
+        hsl(254deg 48% 13%) 26%,
+        hsl(258deg 46% 14%) 75%,
+        hsl(264deg 45% 15%) 90%,
+        hsl(268deg 47% 16%) 96%,
+        hsl(274deg 46% 17%) 99%,
+        hsl(278deg 45% 19%) 100%,
+        hsl(283deg 45% 20%) 100%,
+        hsl(287deg 44% 21%) 100%);
+
+https://www.joshwcomeau.com/gradient-generator/
+https://hypercolor.dev/
+
+/--------------------------------------------------------------------------/
+
+ícone menu
+<i class="fa-solid fa-headphones">
+
+ícone play
+<i class="fa-solid fa-play">
+
+redes sociais
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-x-twitter"></i>
+<i class="fa-brands fa-discord"></i>
+
+/-------------------------------------------------------------------------/
