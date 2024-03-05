@@ -1,4 +1,4 @@
-# Course_WEB-DESIGN
+# Course Web Design
 ________________________________________________________________________________________________
 🇺🇸:
  Codes, practices and projects developed in the graduation course in Web Design.
