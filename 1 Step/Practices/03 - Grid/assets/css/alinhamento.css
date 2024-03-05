@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* font-family: "Roboto Condensed", sans-serif;
+font-family: "Montserrat", sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;  
+}
+:root {
+    --first-color: #bebbbb;
+    --second-color: #444054;
+    --third-color: #2f243a;
+    --fourth-color: #2a2464;
+    --bg-dark: #333;
+    --bg-white: #fff;
+}
+html {
+    font-size: 62.5%;
+}
+body {    
+    padding: 1rem;
+    font-family: calibri;
+    font-size: 1.6rem;
+}
+h1 {
+    color: #dc143c;
+    margin: 30px 0;
+    text-align: center;
+}
+.container {
+    margin: 2rem auto;
+    text-align: center;
+    color: var(--bg-white);
+}
+
+
+.box1 {
+    background-color: var(--first-color);
+    min-height: 5rem;
+}
+.box2 {
+    background-color: var(--second-color);
+    min-height: 5rem;
+}
+.box3 {
+    background-color: var(--third-color);
+    min-height: 5rem;
+}
+.box4 {
+    background-color: var(--fourth-color);
+    min-height: 5rem;
+}
+.ex-1 {
+    height: 100vh;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 200px); /*duas colunas de 200px*/
+    grid-template-rows: repeat(2, 50px); /*duas linhas de 50px*/
+   /* column-gap: 150px; espaço entre as colunas*/
+   /* row-gap: 10px; espaço entre as linhas*/
+    gap: 10px 150px;
+
+    /* alinhamento horizontal - eixo x */
+    /* justify-content: center; */
+
+    /* alinhamento vertical - eixo y*/
+    /* align-content: center; */
+
+    /*alinhamento conteudo - horizontal*/
+    /* justify-items: center; */
+
+    /*alinhamento conteudo - vertical*/
+    /* align-items: start; */
+} 
+
+/* deve ser aplicado em um elemento*/
+.out {
+    /*alinhamento horizontal*/
+    justify-self: self-start;
+
+    /*alinhamento vertical*/
+    /* align-self: self-end; */
+}
