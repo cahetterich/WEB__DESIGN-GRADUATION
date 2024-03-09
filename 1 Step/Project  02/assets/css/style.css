@@ -109,7 +109,6 @@ fieldset {
 
 .apresentacao_links {
     display: flex; 
-     flex-direction: column; 
     justify-content: space-between;     
     align-items: center;  
     gap: 3rem;
@@ -152,8 +151,6 @@ fieldset {
     font-size: 1.6rem;
 }
 
-
-
 .apresentacao_conteudo_texto a {
     text-decoration: none;
     color: var(--cor-tercearia);
@@ -312,9 +309,6 @@ fieldset {
      cursor: pointer;
 }
 
- /* {
-    display: none;
-} */
 
 @media only screen and (max-width: 1200px) {
 
@@ -354,6 +348,10 @@ fieldset {
         width: auto;
     }
 
+    .apresentacao_links {        
+        flex-direction: column;        
+    }
+
     .apresentacao_conteudo_texto li a.linkdocertificado {
         display: block;        
       }
@@ -366,3 +364,6 @@ fieldset {
       }
 
   }
+
+
+  
