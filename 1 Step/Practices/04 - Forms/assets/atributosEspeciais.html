@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - Outros Atributos</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <h1>Formulários - Atributos Especiais</h1>
+    
+   <form name="dados" id="dados" action="" method="post">
+     
+      <h2>Input - required (preenchimento obrigatório)</h2>
+      <fieldset>
+         <label for="usuario">Usuário</label>
+         <input type="text" id="usuario" name="usuario" required>
+      </fieldset>
+
+         <h2>Input - placeholder (frase visível dentro do campo)</h2>
+      <fieldset>
+         <label for="usuario2">Usuário</label>
+         <input type="text" id="usuario2" name="usuario2" required placeholder="Ex: user123789">
+      </fieldset>
+
+      <h2>Input - minlength (quantidade mínima de caracteres)</h2>
+      <fieldset>
+         <label for="usuario2">Frase com no mínimo 5 letras</label>
+         <input type="text" id="usuario2" name="usuario2" required placeholder="Inclua mais de 5 letras" minlength="5">
+      </fieldset>
+
+      <h2>Input - maxlength (quantidade máxima de caracteres)</h2>
+      <fieldset>
+         <label for="usuario2">Frase com no máximo 10 letras</label>
+         <input type="text" id="usuario2" name="usuario2" required placeholder="Inclua no máximo 10 letras" maxlength="10" >
+      </fieldset>
+
+      <fieldset>
+         <input type="submit" value="Enviar Dados">
+      </fieldset>
+
+      <h2>Disabled - desabilitar botão</h2>
+      <fieldset>
+         <input type="reset" value="Limpar Formulário" disabled>
+      </fieldset>
+
+      <h2>Readonly - não deixa inserir nenhuma informação </h2>
+      <fieldset>
+         <label for="usuario3">Tente escrever neste campo:</label>
+         <input type="text" id="usuario3" name="usuario3" readonly>
+      </fieldset>
+
+      <h2>Autofocus - foca em um elemento quando carrega a página </h2>
+      <fieldset>
+         <label for="usuario4">Foca no elemento:</label>
+         <input type="text" id="usuario4" name="usuario4" autofocus>
+      </fieldset>
+
+
+
+
+   </form>
+
+</body>
+</html>

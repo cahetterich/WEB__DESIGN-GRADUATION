@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - Campos de Seleção</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <h1>Campos de Seleção - Select / Option</h1>
+    
+   <form name="dados" id="dados" action="" method="post">
+
+      <h2>Select</h2>
+      <fieldset>
+         <legend>Dados do usuário</legend>
+         <label for="area">Área de atuação:</label>
+         <select id="area" name="area" required>
+         <option value="0" disabled selected>Selecione a sua opção</option>
+         <option value="1">Front-end</option>
+         <option value="2">Back-end</option>
+         <option value="3">Banco de Dados</option>
+         <option value="4">Gestão de Projetos</option>
+         </select>
+      </fieldset>
+
+      <h2>Datalist</h2>      
+         <fieldset>
+            <legend>Tecnologias Favoritas</legend>
+            <label for="tech">Selecione ou digite sua
+            tecnologia:</label>
+            <input list="myTech" id="tech" name="tech">
+            <datalist id="myTech">
+               <option value="Blockchain">
+               <option value="Cyber Security">
+               <option value="Cloud">
+               <option value="Hiperautomação">
+               <option value="IA">
+               <option value="IOT">
+               <option value="Metaverso">
+               <option value="Smart Cities">
+               <option value="XaaS">
+            </datalist>
+         </fieldset>
+      
+   </form>
+
+
+</body>
+</html>
