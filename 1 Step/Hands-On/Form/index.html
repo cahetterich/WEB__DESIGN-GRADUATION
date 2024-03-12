@@ -35,42 +35,42 @@
         <!-- formulário -->
         <div class="box box-60">
             <h2>Preencha seus dados</h2>
-            <form action="" class="form">
+            <form action="" id="dados" name="dados" class="form" method="post">
 
                 <div class="box-form-item">
-                    <label for="">Nome</label>
+                    <label for="nome">Nome</label>
                     <i class="fa-regular fa-user icon"></i>
-                    <input type="text" placeholder="Ex: Fulano">
+                    <input type="text" placeholder="Ex: Fulano" id="nome" name="nome" required>
                 </div>
 
                 <div class="box-form-item">
-                    <label for="">Sobrenome</label>
+                    <label for="sobreNome">Sobrenome</label>
                     <i class="fa-solid fa-user-tag icon"></i>
-                    <input type="text" placeholder="Ex: de Tal">
+                    <input type="text" placeholder="Ex: de Tal" id="sobreNome" name="sobreNome" required>
                 </div>
 
                 <div class="box-form-item">
-                    <label for="">Usuário</label>
+                    <label for="usuario">Usuário</label>
                     <i class="fa-solid fa-user-secret icon"></i>
-                    <input type="text" placeholder="Ex: user12345">
+                    <input type="text" placeholder="Ex: user12345" id="usuario" name="usuario" required>
                 </div>
 
                 <div class="box-form-item">
-                    <label for="">Senha</label>
+                    <label for="senha">Senha</label>
                     <i class="fa-solid fa-key icon"></i>
-                    <input type="password" placeholder="Ex: 123456!@#$%">
+                    <input type="password" placeholder="Ex: 123456!@#$%" id="senha" name="senha" required>
                 </div>
 
                 <div class="box-form-item">
-                    <label for="">Email</label>
+                    <label for="email">Email</label>
                     <i class="fa-regular fa-envelope icon"></i>
-                    <input type="email" placeholder="Ex: seuemail@email.com">
+                    <input type="email" placeholder="Ex: seuemail@email.com" id="email" name="email" required>
                 </div>
 
                 <div class="box-form-item">
-                    <label for="">Data de Nascimento</label>
+                    <label for="dataNascimento">Data de Nascimento</label>
                     <i class="fa-solid fa-cake-candles icon"></i>
-                    <input type="date">
+                    <input type="date" id="dataNascimento" name="dataNascimento" required>
                 </div>
 
                 <div class="box-form-item">
@@ -96,7 +96,7 @@
                 <div class="box-form-item">
                     <label for="" class="select">Área de atuação</label>
                     <select name="" id="">
-                        <option value="0">Selecione sua opção</option>
+                        <option value="0" disabled selected>Selecione sua opção</option>
                         <option value="1">Área 01</option>
                         <option value="2">Área 02</option>
                         <option value="3">Área 03</option>
@@ -105,7 +105,7 @@
                 </div>
 
                 <div class="box-form-button">
-                    <button>Criar conta</button>
+                    <button type="submit">Criar conta <i class="fa-regular fa fa-circle-right arrow"></i></button>
                 </div>
             </form>
         </div>
