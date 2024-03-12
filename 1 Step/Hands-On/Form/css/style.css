@@ -25,14 +25,16 @@
 .box-60{width: 55%;}
 .box {
     /* height: 80vh; */
-    min-height: 90%;
+    /* min-height: 50%; */
+    width: 50%;
+    height: 90%;
     color: var(--color-blue);
     margin-bottom: var(--margin-base);
 }
 
 .box h2 {
     font-size: 6vmin;
-    text-align: center;
+    /* text-align: center; */
     margin: var(--margin-base) 0;
 }
 
@@ -58,11 +60,12 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center; 
+    /* flex-wrap: wrap; */
 }
 
 .box-form-item label {
     font-size: 18px;  
-    margin-bottom: 0;  
+    /* margin-bottom: 0;   */
 }
 
 input,
@@ -71,18 +74,7 @@ select {
     height: 40px;
     padding-left: 40px;
     font-size: 18px;
-    border: 1px solid #20046e;
-}
-
-input:focus,
-select:focus {
-    outline-color: #20046e;
-}
-
-label:not(.radio label, .select) {
-    margin-bottom: 5px;
-    height: 10px;
-    
+    /* border: 1px solid #20046e; */
 }
 
 select {
@@ -94,6 +86,13 @@ select {
     top: 28px;
     left: 15px
 }
+
+input:focus,
+select:focus {
+    outline-color: #20046e;
+}
+
+
 
 .box-form-radio {
     width: 100%;
@@ -111,7 +110,7 @@ select {
     margin-top: 5px;
     display: flex;
     align-items: center;
-    column-gap:  5px;
+    column-gap:  7px;
 }
 
 .box-form-button {
@@ -122,7 +121,7 @@ select {
 }
 
 .box-form-button button {
-    margin-top: var(--margin-base);
+    margin-top: 20px;
     width: 200px;
     height: 50px;
     background-color: var(--color-blue);
@@ -133,15 +132,26 @@ select {
     cursor: pointer;
 }
 
+.arrow {
+    color: #6c98e5;
+    margin-left: 5px;
+}
+
+label:not(.radio label, .select) {
+    margin-bottom: 5px;
+    height: 10px;
+    
+}
+
 @media(max-width: 1080px) {
     .container {
         width: 100%;
         justify-content: center;
         text-align: center;
     }
-
+    
     .box {
-         width: 90%;     
+        width: 90%;     
     }
 
     .box p {
