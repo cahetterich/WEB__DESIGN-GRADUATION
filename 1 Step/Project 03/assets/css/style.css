@@ -1,0 +1,42 @@
+
+:root {
+    
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.container-tudo { 
+    /* width: 100%; */
+    max-width: 200vh;
+    border: 2px solid red;
+    margin: 0 auto;
+    overflow: hidden; /* Impede que o conteúdo ultrapasse o tamanho da tela */
+    display: flex;
+}
+
+header {
+    border: 2px solid rgb(0, 47, 255);
+    width: 100px;
+    height: 500px;
+}
+
+main {
+    border: 2px solid rgb(0, 255, 34);
+    width: 1100px;
+    height: 500px;
+}
+
+footer {
+    border: 2px solid rgb(212, 0, 255);
+    width: 80px;
+    height: 100px;
+}
