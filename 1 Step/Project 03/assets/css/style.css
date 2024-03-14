@@ -1,35 +1,65 @@
 
+@import url("./header.css");
+
+
 :root {
+    --color-primeira: #ffffff;
+    --color-segunda: #352fbd;
+    --color-terceira: #17837f;
+    --color-quarta: #60369e;
+
+    --font-principal: 'Catamaran', sans-serif;
+    /* --font-secundaria: ; */
+    
+    
+}
+
+body {
+    /* background: rgb(96,54,158);
+    background: linear-gradient(90deg, rgba(96,54,158,1) 0%, rgba(29,208,201,1) 47%, rgba(53,47,189,1) 98%); */ 
+    background-repeat: no-repeat; 
+    background-image: url(../img/pexels-jess-loiterton-5007946.jpg); 
+    background-position: center;
+    background-size: cover;
     
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%;    
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Catamaran', sans-serif;
+    font-family: var(--font-principal);  
+    color: var(--color-primeira);  
 }
 
 .container-tudo { 
-    /* width: 100%; */
+    width: 100%; 
     max-width: 200vh;
-    border: 2px solid red;
-    margin: 0 auto;
-    overflow: hidden; /* Impede que o conteúdo ultrapasse o tamanho da tela */
-    display: flex;
+    /* border: 2px solid var(--color-terceira); */
+    /* margin: 3rem 1rem; */
+    /* overflow: hidden; Impede que o conteúdo ultrapasse o tamanho da tela */
+    /* display: flex;     */
+     /* glass */    
+    background: rgba(0,0,0,0.25);
+    -webkit-backdrop-filter: blur(34px);
+    backdrop-filter: blur(34px);
+    border-radius: 15px;
 }
 
-header {
-    border: 2px solid rgb(0, 47, 255);
-    width: 100px;
-    height: 500px;
-}
+/* .container- {
+    max-width: 1050px;
+    width: 90%;
+    margin: auto;
+  } */
 
-main {
+
+
+
+/* main {
     border: 2px solid rgb(0, 255, 34);
     width: 1100px;
     height: 500px;
@@ -39,4 +69,5 @@ footer {
     border: 2px solid rgb(212, 0, 255);
     width: 80px;
     height: 100px;
-}
+} */
+
