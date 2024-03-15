@@ -1,0 +1,43 @@
+
+.container-secao {  
+    width: 50% auto;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;  
+    padding-bottom: 0;
+    gap: 1rem;  
+}
+
+.secao__imagem {
+    max-width: 12rem;
+    margin: auto;
+}
+
+.container-secao h2 {
+    text-align: center;    
+    font-size: 2.5rem;    
+}
+
+.container-secao p {
+    text-align: center;
+    font-size: 1.6rem;    
+}
+
+
+@media screen {
+    
+}
+
+
+
+/* <section class="container-secao">
+<img class="secao__imagem" src="./assets/img/11677533_.png_gamepad_joypad_joystick_console_icon.png" alt="Imagem de um controle de vídeo game roxo">
+<h2>Os melhores jogos nacionais em um só lugar</h2>
+<p>Aqui você pode se manter atualizado sobre as novas tendencias e jogos no mercado nacional!</p>
+</section> */
+
+
+@media screen {
+    
+}

@@ -1,16 +1,22 @@
 /* menu hamb */
 .cabecalho {
-max-width: 1050px;
+max-width: auto;
 width: 100%;
 display: flex;
 justify-content: space-between;
-box-shadow: 0 1px 4px rgba(82, 221, 226, 0.432);
-
+background-color: var(--color-quarta);
+box-shadow: 0 1px 20px var(--color-quarta);
+border-radius: 15px;
+top: 0;
+position: sticky;
+z-index: 1;
+/* white-space: nowrap;   */
 }
 
 .navbar {
-    width: 15rem;  
-  
+    width: 10%;  
+    height: auto;  
+    margin-bottom: 1rem;          
   }
   
   .nav-container {
@@ -47,7 +53,8 @@ box-shadow: 0 1px 4px rgba(82, 221, 226, 0.432);
     z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between;    
+    
 }
   
   .nav-container .hamburger-lines .line {
@@ -72,10 +79,10 @@ box-shadow: 0 1px 4px rgba(82, 221, 226, 0.432);
     transition: transform 0.4s ease-in-out;
 }
   
-.navbar__imagem {
+/* .navbar__imagem {
     max-width: 6rem;   
     margin: 0 5rem 2rem 5rem;
-}
+} */
 
 
 .navbar .nav-container li {
@@ -98,12 +105,15 @@ box-shadow: 0 1px 4px rgba(82, 221, 226, 0.432);
 
 .navbar .nav-container a:hover{
     font-weight: bolder;    
+    font-weight: 800;
 }
 
+
   .navbar .menu-items {
-    padding-top: 7rem;   
-    height: 100vh;
-    width: 150%;
+    padding-top: 2rem; 
+    padding-bottom: 1rem;  
+    height: auto;
+    width: 800%;
     transform: translate(-180%);
     display: flex;
     flex-direction: column;
@@ -114,11 +124,11 @@ box-shadow: 0 1px 4px rgba(82, 221, 226, 0.432);
     background: rgba(0, 0, 0, 0.822);
     -webkit-backdrop-filter: blur(34px);
     backdrop-filter: blur(34px);     
+    border-radius: 15px ;
   }
   
   .navbar .menu-items li {
-    margin-bottom: 2rem;        
-    font-weight: 500;
+    margin-bottom: 2rem;    
     display: flex;
     text-align: center;
     align-items: center;
@@ -129,16 +139,16 @@ box-shadow: 0 1px 4px rgba(82, 221, 226, 0.432);
     margin-bottom: 1rem;   
     font-size: 2.5rem;   
     text-align: center;
-    align-items: center; 
+    align-items: center;     
   }
 
   
-  .logo {    
-    font-size: 1.4rem;    
+  .logo {     
+    font-size: 1.1rem;    
     text-align: center;
     align-items: center;
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
+    margin-top: 1.5rem;
+    margin-right: 1.5rem;
     
   }
   
@@ -200,12 +210,11 @@ box-shadow: 0 1px 4px rgba(82, 221, 226, 0.432);
 } */
 
 
-@media screen {
-    
-    }
-    
+@media only screen and (max-width: 768px) {
+  
+}
 
-    
+
 @media screen {
         
     }

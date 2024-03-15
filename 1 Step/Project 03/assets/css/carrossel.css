@@ -1,0 +1,107 @@
+
+.container-carrossel{
+    width: 50% auto;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 0 1rem;   
+    padding-top: 4rem;   
+}
+
+.container-carrossel h2 {
+    text-align: center;    
+    font-size: 2.5rem;    
+}
+
+.container-carrossel__title {
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.secao__imagem-carrossel {
+    max-width: 6rem;
+    margin-right: 1rem;
+}
+
+/* card */
+
+.container-carrossel-card {   
+    height: auto;
+    width: auto;
+    padding-top: 2rem;
+    display: flex;    
+    flex-flow: row wrap;
+    text-align: center;
+  }
+  
+ 
+  .card {
+    background-color: var(--color-quarta); 
+    width: 100px;
+    height: 18rem;
+    margin: 1.5rem auto;
+    border-radius: 5px;
+    box-shadow: 0 1px 30px var(--color-quarta);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .card img {
+    width: 100%;
+    height: 10rem;
+    margin-bottom: 0.5rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-repeat: no-repeat; 
+    background-position: center;   
+     
+  }
+
+  .card div {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;    
+    height: 30%;
+  }
+
+  .card h3 {    
+    font-size: 1.2rem;
+    color: var(--color-primeira);
+  }
+
+  .card span {    
+    font-size: 1.5rem;
+    color: var(--color-primeira);    
+  }
+  
+ 
+  .card button {
+    background-color: var(--color-segunda);
+    height: 30px;
+    border: none;
+    padding: 4px;
+    width: 80%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .card button:hover {
+    background-color: var(--color-terceira);
+    cursor: pointer;
+  }
+
+
+  @media only screen and (max-width: 768px) {
+
+    /* .container-carrossel{     
+      padding: 0 4rem 0 4rem;   
+        
+  } */
+
+  }
