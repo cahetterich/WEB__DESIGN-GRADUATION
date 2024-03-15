@@ -195,7 +195,12 @@ z-index: 1;
 
 .container-sub-menu a{
     display: none;    
+}
 
+.icon-menu:hover {
+  color: var(--color-quinta);
+  cursor: pointer;
+ box-shadow: 0px 20px 61px 0px rgb(66, 235, 212);
 }
 
 /* sub menu fim */
