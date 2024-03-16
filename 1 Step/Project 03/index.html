@@ -1,263 +1,357 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iara Games</title>
 
     <!-- Chamada Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-</head>
-<body>
-    
-    <div class="container-tudo">    
-     
-        <header class="cabecalho">
-
-<!-- nav menu --> 
-                <nav class="navbar">
-                    <div class="container nav-container">
-                        <label for="menu">
-                        <input class="checkbox" id="menu" name="menu" type="checkbox" title="Menu da página" alt="Menu da página">           
-                        <div class="hamburger-lines">
-                            <span class="line line1"></span>
-                            <span class="line line2"></span>
-                            <span class="line line3"></span>
-                        </div>  
-                                                                
-                        <div class="menu-items">
-                        <nav>
-                           <ul>
-                                <li><i class="fa-solid fa-circle-user menu-lista"></i><a href="#">Minha conta</a></li>
-                                <li><i class="fa-solid fa-heart menu-lista"></i><a href="#">Favoritos</a></li>
-                                <li><i class="fa-solid fa-hand-holding-heart menu-lista"></i><a href="#">Recomendados</a></li>
-                                <li><i class="fa-solid fa-bookmark menu-lista"></i><a href="#">Lista</a></li>
-                                <li><i class="fa-solid fa-gears menu-lista"></i><a href="#">Configuração</a></li>
-                                <li><i class="fa-solid fa-right-from-bracket"></i><a href="#">Sair</a></li>
-                            </ul>
-                        </nav>
-                        </div> 
-                    </label>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container-tudo">
+      <header class="cabecalho">
+        <!-- nav menu -->
+        <nav class="navbar">
+          <div class="container nav-container">
+            <label for="menu">
+              <input
+                class="checkbox"
+                id="menu"
+                name="menu"
+                type="checkbox"
+                title="Menu da página"
+                alt="Menu da página"
+              />
+              <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
               </div>
-            </nav>            
-       
-<!-- nome empresa --> 
-            <div href="./index.html" class="pag-inicio">
-                <h1>Iara Games</h1>                
+
+              <div class="menu-items">
+                <nav>
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-circle-user menu-lista"></i
+                      ><a href="#">Minha conta</a>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-heart menu-lista"></i
+                      ><a href="#">Favoritos</a>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-hand-holding-heart menu-lista"></i
+                      ><a href="#">Recomendados</a>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-bookmark menu-lista"></i
+                      ><a href="#">Lista</a>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-gears menu-lista"></i
+                      ><a href="#">Configuração</a>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-right-from-bracket"></i
+                      ><a href="#">Sair</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </label>
+          </div>
+        </nav>
+
+        <!-- nome empresa -->
+        <div href="./index.html" class="pag-inicio">
+          <h1>Iara Games</h1>
+        </div>
+
+        <!-- sub menu -->
+        <div class="container-sub-menu">
+          <nav>
+            <ul>
+              <li>
+                <a href="./pesquisa.html"
+                  ><i class="fa-solid fa-magnifying-glass icon-menu"></i>
+                  Pesquisa</a
+                >
+              </li>
+              <li>
+                <a href="./notificacao.html"
+                  ><i class="fa-solid fa-bell icon-menu"></i> Notificações</a
+                >
+              </li>
+              <li>
+                <a href="./carrinho.html"
+                  ><i class="fa-solid fa-cart-shopping icon-menu"></i> Carrinho
+                  de Compras</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <!-- 1 seção -->
+        <section class="container-secao">
+          <img
+            class="secao__imagem"
+            src="./assets/img/11677533_.png_gamepad_joypad_joystick_console_icon.png"
+            alt="Desenho de um controle de vídeo game"
+          />
+          <h2>Os melhores jogos nacionais em um só lugar</h2>
+          <p>
+            Aqui você pode se manter atualizado sobre as novas tendências e
+            jogos no mercado nacional!
+          </p>
+        </section>
+        <!-- container img -->
+        <section class="container-carrossel">
+          <div class="container-carrossel__title">
+            <img
+              class="secao__imagem-carrossel"
+              src="./assets/img/11677535_.png_icon.png"
+              alt="Imagem de uma estrela de olhos fechados sorrindo"
+            />
+            <h2 class="page-title">Top 3 do momento</h2>
+          </div>
+
+          <div class="container-carrossel-card">
+            <div class="card">
+              <img
+                src="./assets/img/JogoDragon02PNG.PNG"
+                alt="Desenho de um dragão e uma pessoa ao fundo de uma floresta"
+              />
+              <div>
+                <h3>Dragon X</h3>
+                <span>R$ 150,50</span>
+                <button>Comprar</button>
+              </div>
             </div>
 
+            <div class="card">
+              <img
+                src="./assets/img/JogoFox01PNG.PNG"
+                alt="Desenho de uma raposa em uma floresta"
+              />
+              <div>
+                <h3>The Aventure Fox</h3>
+                <span>R$ 94,30</span>
+                <button>Comprar</button>
+              </div>
+            </div>
 
-<!-- sub menu --> 
-<div class="container-sub-menu">
-    <nav>
-        <ul>            
-            <li><a href="./pesquisa.html"><i class="fa-solid fa-magnifying-glass icon-menu"></i> Pesquisa</a></li>
-            <li><a href="./notificacao.html"><i class="fa-solid fa-bell icon-menu"></i> Notificações</a></li>
-            <li><a href="./carrinho.html"><i class="fa-solid fa-cart-shopping icon-menu"></i> Carrinho de Compras</a></li>                    
+            <div class="card">
+              <img
+                src="./assets/img/JogoMagician04PNG.PNG"
+                alt="Desenho de uma maga segurando uma esfera azul em uma das mãos e na outra um cajado"
+              />
+              <div>
+                <h3>The Magician</h3>
+                <span>R$ 190,90</span>
+                <button>Comprar</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- container img -->
+        <section class="container-carrossel">
+          <div class="container-carrossel__title">
+            <h2 class="page-title">Lista de jogos mais vendidos</h2>
+          </div>
+
+          <div class="container-carrossel-card">
+            <div class="card">
+              <img
+                src="./assets/img/JogoDragon02PNG.PNG"
+                alt="Desenho de um dragão e uma pessoa ao fundo de uma floresta"
+              />
+              <div>
+                <h3>Dragon X</h3>
+                <span>R$ 150,50</span>
+                <button>Comprar</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="./assets/img/JogoFox01PNG.PNG"
+                alt="Desenho de uma raposa em uma floresta"
+              />
+              <div>
+                <h3>The Aventure Fox</h3>
+                <span>R$ 94,30</span>
+                <button>Comprar</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="./assets/img/JogoMagician04PNG.PNG"
+                alt="Desenho de uma maga segurando uma esfera azul em uma das mãos e na outra um cajado"
+              />
+              <div>
+                <h3>The Magician</h3>
+                <span>R$ 190,90</span>
+                <button>Comprar</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="./assets/img/JogoDragon03PNG.PNG"
+                alt="Desenho de um olho azul de um dragão"
+              />
+              <div>
+                <h3>Eyes of The Dragon</h3>
+                <span>R$ 149,99</span>
+                <button>Comprar</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="./assets/img/JogoFire05PNG.PNG"
+                alt="Desenho de um homem em meio a chamas de fogo"
+              />
+              <div>
+                <h3>Fire One</h3>
+                <span>R$ 190,90</span>
+                <button>Comprar</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="./assets/img/JogoWhite07PNG.PNG"
+                alt="Desenho de metade da face de um homem pálido, de cabelos brancos e olhos vermelhos"
+              />
+              <div>
+                <h3>The White Matrix</h3>
+                <span>R$ 199,90</span>
+                <button>Comprar</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="./assets/img/JogoSamurai06PNG.PNG"
+                alt="Desenho de um homem segurando uma espada de luz da cor roxa"
+              />
+              <div>
+                <h3>Samurai of Light</h3>
+                <span>R$ 234,99</span>
+                <button>Comprar</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="./assets/img/JogoRainbow08PNG.PNG"
+                alt="Desenho de um homem com uma máscara preta no rosto, moletom branco e com luzes coloridas ao seu redor"
+              />
+              <div>
+                <h3>Rainbow</h3>
+                <span>R$ 90,90</span>
+                <button>Comprar</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="./assets/img/JogoWolf09PNG.PNG"
+                alt="Desenho de um homem com dois lobos ao seu redor"
+              />
+              <div>
+                <h3>Wolf</h3>
+                <span>R$ 134,90</span>
+                <button>Comprar</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="./assets/img/JogoPink10PNG.PNG"
+                alt="Desenho de uma mulher de quimono rosa e ao fundo uma cidade"
+              />
+              <div>
+                <h3>The Pink</h3>
+                <span>R$ 84,99</span>
+                <button>Comprar</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="./assets/img/JogoSparta11PNG.PNG"
+                alt="Desenho de uma mulher e ao fundo guerreiros"
+              />
+              <div>
+                <h3>Sparta</h3>
+                <span>R$ 84,99</span>
+                <button>Comprar</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="./assets/img/JogoCar12PNG.PNG"
+                alt="Desenho de um carro em alta velocidade com vários prédios ao fundo"
+              />
+              <div>
+                <h3>Car</h3>
+                <span>R$ 84,99</span>
+                <button>Comprar</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- footer-->
+      <footer>
+        <ul>
+          <li>
+            <i class="fa-brands fa-facebook" title="Logo do Facebook"></i
+            ><a href="#">Facebook</a>
+          </li>
+          <li>
+            <i class="fa-brands fa-twitter" title="Logo do Twitter"></i
+            ><a href="#">Twitter</a>
+          </li>
+          <li>
+            <i class="fa-brands fa-instagram" title="Logo do Instagram"></i
+            ><a href="#">Instagram</a>
+          </li>
+          <li>
+            <i class="fa-brands fa-youtube" title="Logo do Youtube"></i
+            ><a href="#">YouTube</a>
+          </li>
         </ul>
-    </nav>
-</div>
 
-    </header>
-        
-        <main>   
-<!-- 1 seção --> 
-            <section class="container-secao">
-                <img class="secao__imagem" src="./assets/img/11677533_.png_gamepad_joypad_joystick_console_icon.png" alt="Desenho de um controle de vídeo game">
-                <h2>Os melhores jogos nacionais em um só lugar</h2>
-                <p>Aqui você pode se manter atualizado sobre as novas tendências e jogos no mercado nacional!</p>
-            </section>
-
-            <section class="container-carrossel">
-
-                <div class="container-carrossel__title">
-                <img class="secao__imagem-carrossel" src="./assets/img/11677535_.png_icon.png" alt="Imagem de uma estrela de olhos fechados sorrindo">
-                <h2 class="page-title"> Top 3 do momento</h2>
-                </div>
-
-
-                <div class="container-carrossel-card">
-
-                    <div class="card">
-                        <img src="./assets/img/JogoDragon02PNG.PNG" alt="Desenho de um dragão e uma pessoa ao fundo de uma floresta" /> 
-                        <div>
-                          <h3>Dragon X</h3>                             
-                          <span>R$ 150,50</span>
-                          <button>Comprar</button>
-                        </div>
-                      </div>
-                                             
-                      
-                      <div class="card">
-                          <img src="./assets/img/JogoFox01PNG.PNG" alt="Desenho de uma raposa em uma floresta">
-                          <div>
-                              <h3>The Aventure Fox</h3>                              
-                              <span>R$ 94,30</span>
-                              <button>Comprar</button>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <img src="./assets/img/JogoMagician04PNG.PNG" alt="Desenho de uma maga segurando uma esfera azul em uma das mãos e na outra um cajado">
-                            <div>
-                                <h3>The Magician</h3>
-                                <span>R$ 190,90</span>
-                                <button>Comprar</button>
-                            </div>
-                        </div>
-                     </div>
-
-            </section>
-
-        
-            <section class="container-carrossel">
-
-                <div class="container-carrossel__title">                
-                <h2 class="page-title"> Lista de jogos mais vendidos</h2>
-                </div>
-
-                    <div class="container-carrossel-card">
-
-                        <div class="card">
-                            <img src="./assets/img/JogoDragon02PNG.PNG" alt="Desenho de um dragão e uma pessoa ao fundo de uma floresta" /> 
-                            <div>
-                              <h3>Dragon X</h3>                             
-                              <span>R$ 150,50</span>
-                              <button>Comprar</button>
-                            </div>
-                          </div>
-                                                 
-                          
-                          <div class="card">
-                              <img src="./assets/img/JogoFox01PNG.PNG" alt="Desenho de uma raposa em uma floresta">
-                              <div>
-                                  <h3>The Aventure Fox</h3>                              
-                                  <span>R$ 94,30</span>
-                                  <button>Comprar</button>
-                                </div>
-                            </div>
-                            
-                            <div class="card">
-                                <img src="./assets/img/JogoMagician04PNG.PNG" alt="Desenho de uma maga segurando uma esfera azul em uma das mãos e na outra um cajado">
-                                <div>
-                                    <h3>The Magician</h3>
-                                    <span>R$ 190,90</span>
-                                    <button>Comprar</button>
-                                </div>
-                            </div>
-                            
-                            <div class="card">
-                                <img src="./assets/img/JogoDragon03PNG.PNG" alt="Desenho de um olho azul de um dragão">
-                                <div>
-                                    <h3>Eyes of The Dragon</h3>
-                                    <span>R$ 149,99</span>
-                                    <button>Comprar</button>
-                                  </div>
-                              </div>
-
-                            <div class="card">
-                                <img src="./assets/img/JogoFire05PNG.PNG" alt="Desenho de um homem em meio a chamas de fogo">
-                                <div>
-                                    <h3>Fire One</h3>
-                                    <span>R$ 190,90</span>
-                                    <button>Comprar</button>
-                                  </div>
-                              </div>
-
-                            <div class="card">
-                                <img src="./assets/img/JogoWhite07PNG.PNG" alt="Desenho de metade da face de um homem pálido, de cabelos brancos e olhos vermelhos">
-                                <div>
-                                    <h3>The White Matrix</h3>
-                                    <span>R$ 199,90</span>
-                                    <button>Comprar</button>
-                                  </div>
-                              </div>
-                            
-                            <div class="card">
-                                <img src="./assets/img/JogoSamurai06PNG.PNG" alt="Desenho de um homem segurando uma espada de luz da cor roxa">
-                                <div>
-                                    <h3>Samurai of Light</h3>
-                                    <span>R$ 234,99</span>
-                                    <button>Comprar</button>
-                                  </div>
-                              </div>
-
-                            <div class="card">
-                                <img src="./assets/img/JogoRainbow08PNG.PNG" alt="Desenho de um homem com uma máscara preta no rosto, moletom branco e com luzes coloridas ao seu redor">
-                                <div>
-                                    <h3>Rainbow</h3>
-                                    <span>R$ 90,90</span>
-                                    <button>Comprar</button>
-                                  </div>
-                              </div>
-
-                            <div class="card">
-                                <img src="./assets/img/JogoWolf09PNG.PNG" alt="Desenho de um homem com dois lobos ao seu redor">
-                                <div>
-                                    <h3>Wolf</h3>
-                                    <span>R$ 134,90</span>
-                                    <button>Comprar</button>
-                                  </div>
-                              </div>
-
-                            <div class="card">
-                                <img src="./assets/img/JogoPink10PNG.PNG" alt="Desenho de uma mulher de quimono rosa e ao fundo uma cidade">
-                                <div>
-                                    <h3>The Pink</h3>
-                                    <span>R$ 84,99</span>
-                                    <button>Comprar</button>
-                                  </div>
-                              </div>
-
-                            <div class="card">
-                                <img src="./assets/img/JogoSparta11PNG.PNG" alt="Desenho de uma mulher e ao fundo guerreiros">
-                                <div>
-                                    <h3>Sparta</h3>
-                                    <span>R$ 84,99</span>
-                                    <button>Comprar</button>
-                                  </div>
-                              </div>
-
-                            <div class="card">
-                                <img src="./assets/img/JogoCar12PNG.PNG" alt="Desenho de um carro em alta velocidade com vários prédios ao fundo">
-                                <div>
-                                    <h3>Car</h3>
-                                    <span>R$ 84,99</span>
-                                    <button>Comprar</button>
-                                  </div>
-                              </div>
-                            
-                        </div>                  
-                                            
-              </section>                       
-
-            </main>
-        
-        <footer>
-
-            <ul>
-            <li><i class="fa-brands fa-facebook" title="Logo do Facebook"></i><a href="#">Facebook</a></li>
-            <li><i class="fa-brands fa-twitter" title="Logo do Twitter"></i><a href="#">Twitter</a></li>
-            <li><i class="fa-brands fa-instagram" title="Logo do Instagram"></i><a href="#">Instagram</a></li>
-            <li><i class="fa-brands fa-youtube" title="Logo do Youtube"></i><a href="#">YouTube</a></li>
-            </ul>
-        
-        <p>&copy; 2024 My Website. Desenvolvido por Carla Hetterich Worlitz no curso de Graduação de Web Design da FIAP.</p>
-       
-        </footer>
-
+        <p>
+          &copy; 2024 My Website. Desenvolvido por Carla Hetterich Worlitz no
+          curso de Graduação de Web Design da FIAP.
+        </p>
+      </footer>
     </div>
-
-</body>
+  </body>
 </html>

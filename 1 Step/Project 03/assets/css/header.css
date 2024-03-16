@@ -1,4 +1,3 @@
-/* menu hamb */
 .cabecalho {
 max-width: auto;
 width: 100%;
@@ -10,7 +9,6 @@ border-radius: 15px;
 top: 0;
 position: sticky;
 z-index: 1;
-/* white-space: nowrap;   */
 }
 
 .navbar {
@@ -24,16 +22,14 @@ z-index: 1;
     justify-content: space-between;
     align-items: center;
     height: 5rem;    
-  }
-  
+  }  
     
   .nav-container {
       display: block;    
     }
     
     .nav-container .checkbox {
-        position: absolute;
-        /* display: block; */
+        position: absolute;       
         height: 50px;
         width: 30px;
         top: 20px;
@@ -53,13 +49,12 @@ z-index: 1;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;    
-    
+    justify-content: space-between;       
 }
   
   .nav-container .hamburger-lines .line {
-      display: block;
-      height: 4px;
+    display: block;
+    height: 4px;
     width: 100%;
     border-radius: 10px;
     background: var(--color-primeira);
@@ -79,12 +74,6 @@ z-index: 1;
     transition: transform 0.4s ease-in-out;
 }
   
-/* .navbar__imagem {
-    max-width: 6rem;   
-    margin: 0 5rem 2rem 5rem;
-} */
-
-
 .navbar .nav-container li {
   margin: 1rem; 
  text-align: center;
@@ -106,7 +95,6 @@ z-index: 1;
     font-weight: bolder;    
     font-weight: 800;
 }
-
 
   .navbar .menu-items {
     padding-top: 2rem; 
@@ -133,7 +121,6 @@ z-index: 1;
     align-items: center;
     background-color: var(--color-terceira);
   }
-
 
   .navbar .menu-items i{
     margin: 1rem;    
@@ -170,13 +157,7 @@ z-index: 1;
   .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     transform: rotate(-45deg);
   }
-  
-   
-/* menu hamb fim */
-
-
-/* sub menu  */
-
+ 
 .container-sub-menu {       
     margin-top: 1.5rem;
     margin-right: 1rem;    
@@ -197,12 +178,12 @@ z-index: 1;
 } 
 
 .container-sub-menu a{   
-    display: inline-block; /* Exibir as tags <a> como blocos inline */
+    display: inline-block; 
     font-size: 0;
 }
 
 .container-sub-menu a .icon-menu {
-  font-size: 2rem; /* Definir o tamanho da fonte apenas para os ícones */
+  font-size: 2rem; 
 }
 
 .container-sub-menu a:hover .icon-menu,
@@ -212,17 +193,6 @@ z-index: 1;
   box-shadow: 0px 20px 61px 0px rgb(66, 235, 212);
 }
 
-/* sub menu fim */
-
- 
-    
-/* .container__titulo,
-.container__botao,
-.lista-menu-segundo, 
-.container__texto {
-    display: none;
-} */
-
 
 @media only screen and (min-width: 768px) {
   
@@ -231,7 +201,6 @@ z-index: 1;
       margin-top: auto;
       margin-right: auto;    
     }
-
      
     .navbar .menu-items {    
       width: 300%;   
@@ -245,9 +214,7 @@ z-index: 1;
       margin: auto 2rem auto 0;      
       font-size: 2rem; 
     } 
-
 }
-
 
 @media only screen and (min-width: 1024px) {
 
@@ -259,6 +226,4 @@ z-index: 1;
     .container-sub-menu ul{   
       gap: 5rem;
     }
-   
-
 }

@@ -9,24 +9,19 @@
 
 :root {
     --color-primeira: #ffffff;
-    --color-segunda: #712fbd;   /*rerere */
+    --color-segunda: #712fbd;   
     --color-terceira: #17837f6e;
     --color-quarta: #000000e5;
     --color-quinta: #07f7e3e5;
-
-    --font-principal: 'Catamaran', sans-serif;
-    /* --font-secundaria: ; */    
+    --font-principal: 'Catamaran', sans-serif;      
     
 }
 
-body {
-    /* background: rgb(96,54,158);
-    background: linear-gradient(90deg, rgba(96,54,158,1) 0%, rgba(29,208,201,1) 47%, rgba(53,47,189,1) 98%); */ 
+body {    
     background-repeat: no-repeat; 
     background-image: url(../img/pexels-jess-loiterton-5007946.jpg); 
     background-position: center;
-    background-size: cover;
-    
+    background-size: cover;    
 }
 
 html {
@@ -44,12 +39,8 @@ html {
 
 .container-tudo { 
     width: 95%; 
-    height: auto;     
-    /* border: 2px solid var(--color-terceira); */
-    margin: auto;
-    /* overflow: hidden; Impede que o conteúdo ultrapasse o tamanho da tela */
-    /* display: flex;     */
-     /* glass */    
+    height: auto;   
+    margin: auto;   
     background: rgba(0,0,0,0.25);
     -webkit-backdrop-filter: blur(34px);
     backdrop-filter: blur(34px);

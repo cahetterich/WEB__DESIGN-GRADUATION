@@ -16,7 +16,6 @@
     max-width: 8rem; 
 }
 
-
 .item-carrinho {
     display: flex;
     align-items: center;
@@ -57,7 +56,6 @@
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
-
 
 .total-carrinho button {
     padding: 1rem 2rem;
