@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Notificações</title>
+
+    <!-- Chamada Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+    
+    <div class="container-tudo">    
+     
+        <header class="cabecalho">
+
+<!-- nav menu --> 
+                <nav class="navbar">
+                    <div class="container nav-container">
+                        <label for="menu">
+                        <input class="checkbox" id="menu" name="menu" type="checkbox" title="Menu da página" alt="Menu da página">           
+                        <div class="hamburger-lines">
+                            <span class="line line1"></span>
+                            <span class="line line2"></span>
+                            <span class="line line3"></span>
+                        </div>  
+                                                                
+                        <div class="menu-items">
+                        <nav>
+                           <ul>
+                                <li><i class="fa-solid fa-circle-user menu-lista"></i><a href="#">Minha conta</a></li>
+                                <li><i class="fa-solid fa-heart menu-lista"></i><a href="#">Favoritos</a></li>
+                                <li><i class="fa-solid fa-hand-holding-heart menu-lista"></i><a href="#">Recomendados</a></li>
+                                <li><i class="fa-solid fa-bookmark menu-lista"></i><a href="#">Lista</a></li>
+                                <li><i class="fa-solid fa-gears menu-lista"></i><a href="#">Configuração</a></li>
+                                <li><i class="fa-solid fa-right-from-bracket"></i><a href="#">Sair</a></li>
+                            </ul>
+                        </nav>
+                        </div> 
+                    </label>
+              </div>
+            </nav>            
+       
+<!-- nome empresa --> 
+            <a href="./index.html" class="pag-inicio">
+                <h1>Iara Games</h1>                
+            </a>
+
+<!-- sub menu --> 
+<div class="container-sub-menu">
+    <nav>
+        <ul>            
+            <li><a href="./pesquisa.html"><i class="fa-solid fa-magnifying-glass icon-menu"></i> Pesquisa</a></li>
+            <li><a href="./notificacao.html"><i class="fa-solid fa-bell icon-menu"></i> Notificações</a></li>
+            <li><a href="./carrinho.html"><i class="fa-solid fa-cart-shopping icon-menu"></i> Carrinho de Compras</a></li>                    
+        </ul>
+    </nav>
+</div>
+
+    </header>
+        
+        <main>   
+
+        <section class="container-secao-notificacao">
+            <h2>Seus recados e novidades!</h2>      
+            <p>Informações de desconto, notificações e muito mais pertinho de você.</p>
+
+            <h2>Notificações :</h2>
+            <div class="notificacao">        
+            <div class="notificacao__conteudo">
+                <h3>Título da Notificação</h3>
+                <p>Data</p>
+            </div>
+            <div class="notificacao">
+                <img class="notificacao__imagem" src="./assets/img/11677536_1_speaker_audio_music_player_icon.png" alt="Imagem de um alto falante">
+                <div class="notificacao__conteudo">
+                    <h3>Descrição</h3>
+                    <p>Texto descritivo da notificação.</p>
+                </div>
+             </div>
+            </div>
+
+            <div class="notificacao">        
+                <div class="notificacao__conteudo">
+                    <h3>Título da Notificação</h3>
+                    <p>Data</p>
+                </div>
+                <div class="notificacao">
+                    <img class="notificacao__imagem" src="./assets/img/8707274_spaceship_rocket_launch_spacecraft_icon.png" alt="Imagem de um foguete">
+                    <div class="notificacao__conteudo">
+                        <h3>Descrição</h3>
+                        <p>Texto descritivo da notificação.</p>
+                    </div>
+                 </div>
+                </div>
+                 
+       </section>
+
+                              
+
+            </main>
+        
+        <footer>
+
+            <ul>
+            <li><i class="fa-brands fa-facebook" title="Logo do Facebook"></i><a href="#">Facebook</a></li>
+            <li><i class="fa-brands fa-twitter" title="Logo do Twitter"></i><a href="#">Twitter</a></li>
+            <li><i class="fa-brands fa-instagram" title="Logo do Instagram"></i><a href="#">Instagram</a></li>
+            <li><i class="fa-brands fa-youtube" title="Logo do Youtube"></i><a href="#">YouTube</a></li>
+            </ul>
+        
+        <p>&copy; 2024 My Website. Desenvolvido por Carla Hetterich Worlitz no curso de Graduação de Web Design da FIAP.</p>
+       
+        </footer>
+
+    </div>
+
+</body>
+</html>

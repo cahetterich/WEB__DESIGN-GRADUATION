@@ -39,7 +39,7 @@ text-align: center;
  
   .card {
     background-color: var(--color-quarta); 
-    width: 100px;
+    width: 10rem;
     height: 18rem;
     margin: 1.5rem auto;
     border-radius: 5px;
@@ -81,7 +81,7 @@ text-align: center;
  
   .card button {
     background-color: var(--color-segunda);
-    height: 30px;
+    height: 3rem;
     border: none;
     padding: 4px;
     width: 80%;
@@ -91,17 +91,63 @@ text-align: center;
     border-radius: 5px;
     cursor: pointer;
   }
+
   .card button:hover {
     background-color: var(--color-terceira);
     cursor: pointer;
   }
 
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 768px) {
 
-    /* .container-carrossel{     
-      padding: 0 4rem 0 4rem;   
-        
-  } */
+    .container-carrossel{     
+      padding: 3rem 0 4rem 0;        
+    }
+
+    .container-carrossel h2 {        
+      font-size: 3.5rem;    
+    }
+
+    .secao__imagem-carrossel {
+      max-width: 8rem;      
+    }
+
+    .container-carrossel-card {       
+     padding: 3rem 5rem 0 5rem;
+     gap: 1rem;
+    }
+
+    .card {     
+      width: 17rem;
+      height: 30rem;   
+    }
+
+    .card div {
+      padding-top: 1rem;
+      align-items: center;
+    }
+
+    .card img {     
+      height: 16rem;       
+    }
+
+    .card h3 {    
+      font-size: 2rem;      
+    }
+    
+    .card span {    
+    font-size: 2.2rem;      
+    }
+
+    .card button {      
+      height: 5rem;      
+      padding: 1rem;     
+      font-size: 2rem;     
+    }
+
 
   }
+
+
+
+ 

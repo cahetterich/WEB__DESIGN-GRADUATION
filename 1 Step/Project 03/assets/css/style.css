@@ -1,20 +1,21 @@
-
 @import url("./header.css");
 @import url("./secao.css");
 @import url("./carrossel.css");
 @import url("./rodape.css");
+@import url("./pesquisa.css");
+@import url("./notificacao.css");
+@import url("./carrinho.css");
 
 
 :root {
     --color-primeira: #ffffff;
-    --color-segunda: #352fbd;
+    --color-segunda: #712fbd;   /*rerere */
     --color-terceira: #17837f6e;
     --color-quarta: #000000e5;
     --color-quinta: #07f7e3e5;
 
     --font-principal: 'Catamaran', sans-serif;
-    /* --font-secundaria: ; */
-    
+    /* --font-secundaria: ; */    
     
 }
 
@@ -38,11 +39,12 @@ html {
     box-sizing: border-box;
     font-family: var(--font-principal);  
     color: var(--color-primeira);  
+    
 }
 
 .container-tudo { 
     width: 95%; 
-    max-width: 200vh;
+    height: auto;     
     /* border: 2px solid var(--color-terceira); */
     margin: auto;
     /* overflow: hidden; Impede que o conteúdo ultrapasse o tamanho da tela */
