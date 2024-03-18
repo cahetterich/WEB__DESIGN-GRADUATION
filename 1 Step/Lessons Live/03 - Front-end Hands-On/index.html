@@ -12,9 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/styles.css">
@@ -29,36 +27,45 @@
     <header class="header-page">
         <h1 class="logo"><i class="fa-solid fa-headphones"></i> Music</h1>
         <nav>
-            <ul>
+            <!--Classe Nav Menu-->
+            <ul class="nav-menu">
                 <li><a href="" class="item-menu">Playlist</a></li>
                 <li><a href="" class="item-menu">Artistas</a></li>
                 <li><a href="" class="item-menu">Downloads</a></li>
                 <li><a href="" class="item-menu btn">Login</a></li>
             </ul>
         </nav>
+        <!--Barras do Menu hamburguer-->
+        <div class="hamburguer">
+            <span class="barra"></span>
+            <span class="barra"></span>
+            <span class="barra"></span>        
+        </div>
     </header>
     <!-- fim header da página -->
 
     <!-- hero -->
     <section class="hero">
-        <div class="hero-text">
+        <!-- order-1 -->
+        <div class="hero-text order-1">
             <h2>Música para todos os</h2>
             <h2 class="title-color"> momentos de sua vida.</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, autem?</p>
             <a href="" class="btn">Vamos começar <i class="fa-solid fa-play"></i></a>
         </div>
-
-        <figure class="hero-image">
+        <!-- order-2 -->
+        <figure class="hero-image order-2">
             <img src="./images/user1.png" alt="Foto do Usuário 1">
         </figure>
     </section>
 
     <section class="hero">
-        <figure class="hero-image">
+         <!-- order-4 -->
+        <figure class="hero-image order-4 ">
             <img src="./images/user2.png" alt="Foto do Usuário 2">
         </figure>
-
-        <div class="hero-text">
+            <!-- order-3 -->
+        <div class="hero-text order-3">
             <h2 class="title-color">Ouça as suas músicas</h2>
             <h2>crie as suas playlists exclusivas.</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, autem?</p>
@@ -91,8 +98,49 @@
         </div>
     </section>
     <!-- fim artistas -->
+    <!--Footer-->
+    <footer class="footer">
+        <div class="menu-footer">
+            <nav>
+                <ul>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">trabalhe</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><a href="#">Comunidade</a></li>
+                    <li><a href="#">Artistas</a></li>
+                    <li><a href="#">Desenvolvedores</a></li>
+                    <li><a href="#">Direitos Legais</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><a href="#">Links</a></li>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Web Player</a></li>
+                    <li><a href="#">Free Moblie App</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <!--Redes sociais-->
+        <section class="social-area">
+            <div>
+                <i class="fa-brands fa-instagram social"></i>
+                <i class="fa-brands fa-x-twitter social"></i>
+                <i class="fa-brands fa-discord social"></i>
+            </div>
+        </section>
+    </footer>
+    <!--Final footer-->
 
 
+    <!--Chamando o javascript -->
+    <script src="./js/menu.js"></script>
 
 </body>
 
