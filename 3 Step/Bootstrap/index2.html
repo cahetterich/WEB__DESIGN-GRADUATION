@@ -1,25 +1,215 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu projeto Bootstrap 2</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/styles.css">    
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
+
 <body>
-       
-    <div class="container"></div>
-    <img src="./assets/img/downloadedImage (24).png" alt="imagem circular colorida">
+
     <h1 class="">Meu projeto Bootstrap 2!</h1>
-    <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet aspernatur, quo culpa ab mollitia ipsam esse impedit rem numquam, nemo sint eaque, id voluptate vel ex ipsum! Quam sit odio maiores minima provident perferendis necessitatibus quia reprehenderit impedit placeat dolor rerum, quod repellendus atque nulla at architecto eveniet labore sint.</p>
+    <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet aspernatur, quo culpa ab mollitia ipsam
+        esse impedit rem numquam, nemo sint eaque, id voluptate vel ex ipsum! Quam sit odio maiores minima provident
+        perferendis necessitatibus quia reprehenderit impedit placeat dolor rerum, quod repellendus atque nulla at
+        architecto eveniet labore sint.</p>
     <a href="">Mais informações</a>
+
+    <div class="container"></div>
+    <img class="img-thumbnail rounded mx-auto d-block" src="./assets/img/downloadedImage (24).png"
+        alt="imagem circular colorida">
+    </div>
+    <hr>
+
+    <div class="container"></div>
+    <div class="row my-5 ms-5">
+        <div class="col-sm-12 col-md-6">
+            <img class="img-fluid" src="./assets/img/downloadedImage (24).png" alt="imagem circular colorida">
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+            <img class="img-thumbnail" src="./assets/img/downloadedImage (24).png" alt="imagem circular colorida">
+        </div>
+    </div>
     </div>
 <hr>
-  
 
+    <h1 class="">Tabelas - Tables!</h1>
 
+        <div class="container my-5">            
+            <table class="table table-striped table-info table-hover text-center">
+                <thead>
+                    <tr class="table-dark">
+                        <th>Banda</th>
+                        <th>Data do Show</th>
+                        <th>Local do Show</th>
+                        <th>Ingresso Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Led Zeppelin</td>
+                    <td>04/03</td>
+                    <td>São Paulo</td>
+                    <td>R$1.500,00</td>
+                </tr>
+                <tr>
+                    <td>Pink Floyd</td>
+                    <td>05/06</td>
+                    <td>Rio de Janeiro</td>
+                    <td>R$1.500,00</td>
+                </tr>
+                <tr>
+                    <td>Rolling Stones</td>
+                    <td>07/08</td>
+                    <td>Belo Horizonte</td>
+                    <td>R$1.500,00</td>
+                </tr>
+                <tr>
+                    <td>The Who</td>
+                    <td>10/10</td>
+                    <td>Brasília</td>
+                    <td>R$1.300,00</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+<hr>
+
+<div class="container text-center my-4">
+    <h3 class="display-3 my-4">Meu projeto Web</h3>
+<table class="table table-striped table-bordered table-hover">
+    <thead class="text-center">
+        <tr>
+            <th>Código</th>
+            <th>Nome do Funcionário</th>
+            <th>Função</th>
+            <th>Departamento</th>
+        </tr>
+    </thead>
+    <tbody class="text-center">
+        <tr>
+            <th>01</th>
+            <td>Diana Prince</td>
+            <td>Desenvolvedor Full Stack</td>
+            <td>Tecnologia e Inovação</td>
+        </tr>
+        <tr>
+            <th>02</th>
+            <td>Tony Stark</td>
+            <td>Desenvolvedor Front-end</td>
+            <td>Agência Web</td>
+        </tr>
+        <tr>
+            <th>03</th>
+            <td>Peter Paker</td>
+            <td>UX Designer</td>
+            <td>Agência Web</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<hr>
+
+    <div class="container">
+        <h2>Usando Botões - Bottom</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo, autem esse nobis repellat nostrum non a illum quibusdam corporis. Necessitatibus ab tenetur nostrum eos? In placeat doloremque necessitatibus ducimus veritatis dolorem fugit assumenda adipisci dicta itaque incidunt et atque saepe vero illo, nemo porro sed! Voluptates dicta velit tenetur.</p>
+        <a href="" class="btn btn-danger btn-sm">Leia Mais</a>
+        <a href="" class="btn btn-danger">Leia Mais</a>
+        <a href="" class="btn btn-danger btn-lg">Leia Mais</a>
+        <a href="" class="btn btn-outline-primary">Leia Mais</a>
+        <a href="" class="btn btn-outline-dark">Leia Mais</a>
+        <button class="btn btn-success">Sou um botão</button>
+
+        <div class="my-4">
+            <h3 class="my-3">Dropdown</h3>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+        </div>
+    </div>
+
+<hr>
+
+    <div class="container text-center my-4">
+        <h3 class="display-3 my-4">Meu projeto Web</h3>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary </button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+    </div>
+
+<hr>
+
+<div class="container text-center my-4">
+    <h3 class="display-3 my-4">Meu projeto Web</h3>
+    <button type="button" class="btn btn-primary btn-lg">
+         Primary</button>
+    <button type="button" class="btn btn-secondary btn-lg">
+         Secondary </button>                
+    <button type="button" class="btn btn-success btn-lg">
+         Success</button>                
+    <button type="button" class="btn btn-danger btn-sm">
+         Danger</button>    
+    <button type="button" class="btn btn-warning btn-sm">
+         Warning</button>
+    <button type="button" class="btn btn-info btn-sm">
+         Info</button>
+  </div>
+
+<hr>  
+
+<div class="container text-center my-4">
+    <h3 class="display-3 my-4">Meu projeto Web</h3>
+    <div class="btn-group">
+       <button type="button" class="btn btn-danger">
+            Botão 01 </button>
+       <button type="button" class="btn btn-dark">
+            Botão 02 </button>
+       <button type="button" class="btn btn-warning">
+            Botão 03 </button>
+  </div>
+</div>
+
+<hr>
+
+<div class="container text-center my-4">
+    <h3 class="display-3 my-4">Meu projeto Web</h3>
+     <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" 
+          id="meudropdown" data-bs-toggle="dropdown">Menu Dropdown
+          </button>
+          <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Opção 
+                 1</a></li>
+              <li><a class="dropdown-item" href="#">Opção 
+                 2</a></li>
+              <li><a class="dropdown-item" href="#">Opção 
+                 3</a></li>
+          </ul>
+      </div>
+</div>
+
+<hr>
 
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
