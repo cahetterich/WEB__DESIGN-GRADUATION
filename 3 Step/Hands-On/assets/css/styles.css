@@ -31,7 +31,7 @@
 
 .my-title {
     color: var(--bg-blue-1);
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .bg-blue-2 {
@@ -50,6 +50,36 @@
 }
 
 .card {
-     /* 13min */
+    transition: .5s;
+}
+
+.card:hover {
+    background-color: var(--bg-blue-2);
+}
+
+.card:hover .icon {
+    transform: scale(1.5);
+}
+
+.icon-social,
+.icon-contato {
+    font-size: 2rem;
+    color: var(--bg-blue-1);
+    transition: .5s;
+}
+
+.icon-social:hover{
+    color: var(--bg-blue-3);
+}
+
+textarea {
+    resize: none;
+    height: 130px;
+}
+
+@media(max-width:959px) {
+    #sobre {
+        text-align: center;
+    }
 }
 
