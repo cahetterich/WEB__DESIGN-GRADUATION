@@ -58,7 +58,7 @@
 }
 
 .card:hover .icon {
-    transform: scale(1.5);
+     transform: scale(1.5); /* escala do tamanho do ícone aumenta */
 }
 
 .icon-social,
