@@ -123,5 +123,3 @@ console.log('---- Caixas de Diálogo ------');
 // let resposta = confirm('Deseja finalizar o aplicativo?');
 // console.log(resposta); //true or false
 
-// Operadores
-console.log('---- Operadores ------');
