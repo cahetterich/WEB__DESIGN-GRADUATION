@@ -1,3 +1,4 @@
+console.log('------------------------');
 // Operadores
 console.log('---- Operadores ------');
 
@@ -33,7 +34,7 @@ console.log(`${firstValue} % ${secondValue} = ${result}`);
 // potência
 result = (firstValue ** secondValue);
 console.log(`${firstValue} ** ${secondValue} = ${result}`);
-
+console.log('---------------------------------');
 // Operadores relacionais
 console.log('---- Operadores Relacionais------');
 
@@ -79,7 +80,7 @@ console.log(`${firstValue2} === ${secondValue2} = ${result2}`);
 // estritamente diferente de
 result2 = (firstValue2 !== secondValue2);
 console.log(`${firstValue2} !== ${secondValue2} = ${result2}`);
-
+console.log('-------------------------------');
 // Operadores lógicos
 console.log('---- Operadores Lógicos ------');
 
@@ -99,7 +100,7 @@ console.log(`O resultado da expressão é: ${result3}`);
 // Operador Não
 result3 = !((firstValue3 === secondValue3) && (firstValue3 >= secondValue3));
 console.log(`O resultado da expressão é: ${result3}`);
-
+console.log('----------------------------------------');
 // Operadores lógicos
 console.log('--- Operadores Indremento/Decremento ---');
 
@@ -117,21 +118,71 @@ value1++;
 value2--;
 console.log(`Novo Valor 1 ++ = ${value1}`);
 console.log(`Novo Valor 2 -- = ${value2}`);
-console.log('--------------------------');
+console.log('--------------------------------');
 
 //operação pré-fixada
-console.log('Operação pre-fixada');
+console.log(' ----- Operação ++pre-fixada -----');
 value1 = 50;
-total = ++value1 + 50;
-console.log(`Valor total ++ 50 = ${total}`);
-console.log(`Novo Valor 1  = ${value1}`);
+total = ++value1 + 50; //51
+total2 = --value1 + 50; //50
+console.log(`Novo Valor 1 = ${value1}`);
+console.log(`Valor ${value1} ++ 50 = ${total}`);
+console.log(`Novo ${value1} -- 50 = ${total2}`);
+
+console.log('------- outro exemplo --------');
+value1 = 30;
+value2 = 20;
+console.log(`Valor 1 = ${value1}`);
+console.log(`Valor 2 = ${value2}`);
+
+let resultado = ++value1 + ++value2;
+console.log(`${value1} + ${value2} = ${resultado}`); // resultado 52
+
 console.log('--------------------------');
 
+
 //operação pós-fixada
-console.log(`Operação pos-fixada`);
+console.log(`---- Operação pos-fixada++ ----`);
 
 value1 = 50;
 total = value1++ + 50;
 console.log(`Valor total = ${total}`);
 console.log(`Novo Valor 1 = ${value1}`);
+
+console.log('------- outro exemplo --------');
+value1 = 30;
+value2 = 20;
+console.log(`Valor 1 = ${value1}`);
+console.log(`Valor 2 = ${value2}`);
+
+let resultado2 = value1++ + value2++; // dois decrementos, altera os números após a soma
+console.log(`${value1} + ${value2} = ${resultado2}`);
+
+console.log('--------------------------');
+//operadores de atribuição
+console.log(`---- Operadores de Atribuição ----`);
+
+//criando variáveis
+let value = 50;
+console.log(`Valor = ${value}`);
+
+//aplicando operadores
+value += 10;
+console.log(`Novo valor += ${value}`);
+
+value -= 10;
+console.log(`Novo valor -= ${value}`);
+
+value *= 10;
+console.log(`Novo valor *= ${value}`);
+
+value /= 10;
+console.log(`Novo valor /= ${value}`);
+
+value **= 10;
+console.log(`Novo valor **= ${value}`);
+
+value %= 10;
+console.log(`Novo valor %= ${value}`);
+
 console.log('--------------------------');
