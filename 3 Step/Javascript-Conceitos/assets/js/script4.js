@@ -29,7 +29,6 @@ else {
 
 console.log(`Valor a pagar: ${valorFinal}`);
 
-// 6 minutos ---------------------estrutura if/else -----------------------------------------------***
 
 console.log('-------------------------------------');
 console.log('---------- If Else If ----------------');
@@ -52,6 +51,24 @@ else {
 ${numSorteado2}`);
 }
 
+console.log('-------------------------------------');
+
+let metodoPagamento = 'Cartão de Crédito'; 
+console.log(`Método de Pagamento escolhido: ${metodoPagamento}`);
+
+if(metodoPagamento === 'Cartão de Crédito') {
+    console.log('Você pode parcerlar em até 12x');
+}
+else if (metodoPagamento === 'Boleto'){
+    console.log('Você tem um desconto de 5% no valor da compra para boletos.');
+}
+else if (metodoPagamento === 'Pix'){
+    console.log('Você tem um desconto de 10% no valor da compra para pix.');
+}
+else {
+    console.log('Você tem um desconto de 11% para pagamentos com dinheiro.');
+}
+
 console.log('---------------------------------------');
 console.log('---------- If Ternário ----------------');
 
@@ -68,3 +85,11 @@ const semestre = (mes <= 6 ? 'primeiro semestre' : 'segundo semestre');
 console.log(`Estamos no mês ${mes}`);
 console.log(`Estamos no ${semestre} do ano de
 ${data.getFullYear()}`);
+
+console.log('---------------------------------------');
+
+let estoque = 0;
+let statusEstoque = (estoque > 0) ? 'Produto disponível' : 'Produto esgotado';
+
+console.log(`Total estoque = ${estoque}`);
+console.log(`Status produto = ${statusEstoque}`);
