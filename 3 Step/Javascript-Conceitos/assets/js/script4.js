@@ -93,3 +93,74 @@ let statusEstoque = (estoque > 0) ? 'Produto disponível' : 'Produto esgotado';
 
 console.log(`Total estoque = ${estoque}`);
 console.log(`Status produto = ${statusEstoque}`);
+
+
+console.log('---------------------------------------');
+// Switch / Case 
+console.log('---------- Switch / Case ----------------');
+
+let variavel = 0;
+let valor = 0;
+
+switch (variavel) {
+    case valor:  // primeiro valor a ser verificado 
+    //bloco de comandos
+    break;  //saída da instrução switch
+
+    case valor:  // segundo valor a ser verificado 
+    //bloco de comandos
+    break;  //saída da instrução switch
+
+    default:  //caso nenhuma opção seja executada
+    //bloco de comandos
+  }
+
+console.log('---------------------------------------');
+
+const regiao = 'Sudeste';
+let valorFrete = 0;
+
+switch(regiao) {
+    case 'Sudeste' :
+        valorFrete = 35.00;
+        break;
+
+    case 'Norte' :
+        valorFrete = 40.00;   
+        break;
+
+    case 'Sul' :
+        valorFrete = 45.00;   
+        break;
+
+        default :
+        valorFrete = 50.00;
+}
+
+console.log(`Região: ${regiao}`);
+console.log(`Valor do frete: R$${valorFrete}`);
+
+console.log('---------------------------------------');
+
+const codigo = Math.ceil(Math.random() * 5);
+let produto;
+switch (codigo) {
+      case 1:
+          produto = 'Notebook';
+          break;
+      case 2:
+          produto = 'Tablet';
+          break;
+      case 3:
+          produto = 'Videogame';
+          break;
+      case 4:
+          produto = 'Smartphone';
+          break;
+      default:
+      produto ='Drone';
+} 
+console.log(`Código do produto: ${codigo}`);
+console.log(`Tipo do produto: ${produto}`);
+
+console.log('---------------------------------------');
