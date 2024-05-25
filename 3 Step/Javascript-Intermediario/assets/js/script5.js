@@ -232,8 +232,206 @@ console.log(' ');
 console.log('------- Spred Operator ---------');
 console.log(' ');
 
-// 7 de 13
+// Spred Operator - cria um novo array/objetos com os dados de outros arrays - serve para manipular objetos/arrays
+
+//primeiro array
+const xMen = new Array('Ciclope', 'Wolverine', 'Fênix', 'Fera', 'Vampira');
+//segundo array
+const vingadores = ['Homem de Ferro', 'Capitão América', 'Thor', 'Valquíria', 'Capitã Marvel'];
+//gerando um novo array com o spread
+const novoArray1 = [...xMen, ...vingadores];
+//exibindo o novo array
+console.log(novoArray1);
+
+
+//array original
+const vingadores1 = ['Homem de Ferro', 'Capitão América', 'Thor', 'Valquíria', 'Capitã Marvel'];
+//copiando o array original para outro
+const novoArray2 =[...vingadores1];
+//exibindo o novo array
+console.log(novoArray2);
+
+
+//criando o objeto original
+const vingador = { 
+    nome: 'Clint Barton', 
+    email: 'clint@arqueiro.com' 
+};
+//exibindo o objeto original
+console.log(vingador);
+//criando um novo objeto com novas propriedades
+const upgradeVingador = {...vingador, forca: 82, pontaria: 100};
+//exibindo o novo objeto
+console.log(upgradeVingador);
+
 
 console.log(' ');
-console.log('------- criando métodos ---------');
+console.log('------- mais exemplos ---------');
 console.log(' ');
+
+
+const numeros1 = [1, 2, 3];
+console.log(`Array 1o números: ${numeros1}`);
+
+const numeros2 = [4, 5, 6];
+console.log(`Array 2o números: ${numeros2}`);
+
+const todosNumeros = [...numeros1, ...numeros2];
+console.log(`Array todos os números: ${todosNumeros}`);
+
+const novoArray = [12, 14, 16, 18, ...todosNumeros, 20, 22, 24];
+console.log(novoArray);
+
+console.log('---------------------------');
+
+// com objetos
+const carrinho = {
+    'Camiseta': 99.99,
+    'Calça': 159.99,
+    'Tênis': 289.98
+};
+
+// copia os itens do carrinho para um novo carrinho
+
+const carrinhoCopiado = {...carrinho};
+console.log(carrinho);
+console.log(carrinhoCopiado); // passamos os dados do objeto para um novo objeto
+
+
+console.log(' ');
+console.log('------- Rest Operator ---------');
+console.log(' ');
+
+// permite que a função receba um número indefinido de argumentos
+
+//criando a função passando o operador como parâmetro
+function somarNumeros(...numeros) {
+    let total = 0;     
+    numeros.forEach(numero => {
+        total+=numero;
+    })
+    return total;
+}
+console.log(`Somando os valores: ${somarNumeros(1, 2, 3, 4, 5, 
+6, 7, 8, 9)}`);
+console.log(`Somando os valores: ${somarNumeros(1, 2, 3, 4, 5, 
+6, 7, 8)}`);
+console.log(`Somando os valores: ${somarNumeros(1, 2, 3, 4, 5, 
+6, 7)}`);
+console.log(`Somando os valores: ${somarNumeros(1, 2, 3, 4, 5, 
+6)}`);
+
+
+console.log(' ');
+console.log('------- mais exemplos ---------');
+console.log(' ');
+
+// rest operator - operador que permite uma quantidade ilimitada em uma função
+
+function calcularSoma(...numeros) {
+    let soma = 0;
+    for (let numero of numeros) {
+        soma += numero;
+    }
+    return soma;
+}
+
+console.log(calcularSoma(10, 20, 30));
+console.log(calcularSoma(244, 365, 166, 897));
+
+console.log('---------------------------');
+
+function calcularMedia (...arr) {
+    let soma = 0;
+    for (let numero of arr) {
+        soma += numero;
+    }
+    return soma / arr.length; // soma / pelo quantidade de itens do array 
+}
+
+const numeros = [100, 200, 300, 400, 50, 60, 70, 80, 90, 1000];
+const media = calcularMedia(...numeros);
+
+console.log(`A média dos números do Array é: ${media}`);
+
+console.log(' ');
+console.log('------- Desestruturação ---------');
+console.log(' ');
+
+// permite acessar os valores existentes em objetos e arrays
+
+//em arrays
+
+const vingadores3 = ['Homem de Ferro', 'Capitão América', 
+'Thor', 'Valquíria', 'Capitã Marvel'];
+console.log(vingadores3);
+
+//fazendo a desestruturação com três variáveis e um array
+const [vingador1, vingador2, vingador3, 
+...outrosVingadores3] = vingadores3;
+// Exibindo as variáveis criadas
+console.log(`Vingador 1: ${vingador1}`);
+console.log(`Vingador 2: ${vingador2}`);
+console.log(`Vingador 3: ${vingador3}`);
+// Exibindo o novo array
+console.log(`Demais vingadores: ${outrosVingadores3}`);
+
+console.log('---------------------------');
+// em objetos 
+const usuario4 = {
+    nome: 'Clark Kent',
+    id: 12345,
+    idade: 38,
+    profissao: 'Repórter',
+    email: 'clark@planetadiario.com'
+}
+// Exibindo o objeto original
+console.log(usuario4);
+//fazendo a desestruturação com três variáveis e um objeto
+const {nome, id, profissao, ...demaisDados} = usuario4;
+console.log('Exibindo as variáveis');
+console.log(`Id: ${id}`);
+console.log(`Nome: ${nome}`);
+console.log(`Profissão: ${profissao}`);
+// Exibindo o novo objeto
+console.log(demaisDados);
+
+console.log(' ');
+console.log('------- mais exemplos ---------');
+console.log(' ');
+
+//  Desestruturação -  dividindo um array
+
+// em array
+
+const numeros01 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const [a, b, c, ...restanteNumeros] = numeros01; // a = 1, b = 2, c = 3
+console.log(a);  //1
+console.log(b);  //2
+console.log(c);  //3
+console.log(restanteNumeros);  // todos os outros
+
+console.log('---------------------------');
+// em objetos
+
+const livro = {
+    titulo: 'O Hobbit',
+    autor: 'J.R.R. Tolkien',
+    anoPublicacao: 1937,
+    editora: 'George Allen & Unwin',
+    paginas: 310,
+};
+
+console.log(livro.titulo);
+console.log(livro.autor);
+console.log(livro.editora);
+
+const { titulo, autor, anoPublicacao, editora, paginas } = livro;
+console.log(`Nome do Livro: ${titulo}`);
+console.log(`Nome do Autor: ${autor}`);
+console.log(`Ano de publicação: ${anoPublicacao}`);
+console.log(`Editora: ${editora}`);
+console.log(`Páginas: ${paginas}`);
+
+console.log('------------------------');
+
