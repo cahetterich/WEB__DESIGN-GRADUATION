@@ -1,0 +1,205 @@
+<!-- https://freefrontend.com/bootstrap-carousels/#google_vignette -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../ideias variadas/04carousel.css">
+</head>
+<body>
+
+<!-- <div class="container">
+    <div class="items">
+        <div><img src="../assets/img/games/game01.png" alt="Image 1"></div>
+        <div><img src="../assets/img/games/game01.png" alt="Image 2"></div>
+        <div><img src="../assets/img/games/game01.png" alt="Image 3"></div>
+        <div><img src="../assets/img/games/game01.png" alt="Image 4"></div>
+        <div><img src="../assets/img/games/game01.png" alt="Image 5"></div>
+        <div><img src="../assets/img/games/game01.png" alt="Image 6"></div>
+        <div><img src="../assets/img/games/game01.png" alt="Image 7"></div>
+    </div>
+</div> -->
+
+<!-- <div class="container">
+    <div class="items">
+        <div class="item" style="background-image: url('../assets/img/games/game01.png');">
+            <div class="content">
+                <h4>Title 1</h4>
+                <p>Description 1</p>
+                <p>Price: $100</p>
+                <div class="buttons">
+                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('../assets/img/games/game02.png');">
+            <div class="content">
+                <h4>Title 2</h4>
+                <p>Description 2</p>
+                <p>Price: $150</p>
+                <div class="buttons">
+                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('../assets/img/games/game03.png');">
+            <div class="content">
+                <h4>Title 3</h4>
+                <p>Description 3</p>
+                <p>Price: $200</p>
+                <div class="buttons">
+                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div> -->
+
+<!-- <div class="container">
+    <div class="items">
+        <div class="item " style="background-image: url('../assets/img/games/game01.png');">
+            <div class="content">
+                <h4>Title 1</h4>
+                <p>Description 1</p>
+                <p>Price: $100</p>
+                <div class="buttons">
+                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('../assets/img/games/game02.png');">
+            <div class="content">
+                <h4>Title 2</h4>
+                <p>Description 2</p>
+                <p>Price: $150</p>
+                <div class="buttons">
+                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('../assets/img/games/game03.png');">
+            <div class="content">
+                <h4>Title 3</h4>
+                <p>Description 3</p>
+                <p>Price: $200</p>
+                <div class="buttons">
+                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('../assets/img/games/game03.png');">
+            <div class="content">
+                <h4>Title 3</h4>
+                <p>Description 3</p>
+                <p>Price: $200</p>
+                <div class="buttons">
+                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Adicione mais itens conforme necessário -->
+    </div>
+</div> 
+
+<section class="container mt-5">
+    <h2 class="text-center mb-4">Our Products</h2> <!-- Título da seção -->
+    <div class="items">
+        <div class="item" style="background-image: url('../assets/img/games/game01.png');">
+            <div class="content">
+                <h4>Title 1</h4>
+                <p>Description 1</p>
+                <p>Price: $100</p>
+                <div class="buttons">
+                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('../assets/img/games/game02.png');">
+            <div class="content">
+                <h4>Title 2</h4>
+                <p>Description 2</p>
+                <p>Price: $150</p>
+                <div class="buttons">
+                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('../assets/img/games/game03.png');">
+            <div class="content">
+                <h4>Title 3</h4>
+                <p>Description 3</p>
+                <p>Price: $200</p>
+                <div class="buttons">
+                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('../assets/img/games/game03.png');">
+            <div class="content">
+                <h4>Title 3</h4>
+                <p>Description 3</p>
+                <p>Price: $200</p>
+                <div class="buttons">
+                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('../assets/img/games/game03.png');">
+            <div class="content">
+                <h4>Title 3</h4>
+                <p>Description 3</p>
+                <p>Price: $200</p>
+                <div class="buttons">
+                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Adicione mais itens conforme necessário -->
+    </div>
+</section>
+
+
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<!-- Slick JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- Script para inicialização do carrossel -->
+<script>
+$(document).ready(function(){
+    $('.items').slick({
+        infinite: true,
+        lazyLoad: 'ondemand',
+        slidesToShow: 3,
+        slidesToScroll: 3
+    });
+});
+</script>
+
+</body>
+</html>

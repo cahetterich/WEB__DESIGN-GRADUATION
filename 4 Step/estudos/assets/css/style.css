@@ -1,0 +1,104 @@
+
+:root {
+    --colors-white: #F0F0EF;    
+    --colors-dark: #000000;     
+    --colors-darkBlue: #041832;     
+    --colors-blue: #144480;     
+    --colors-acqua: #2bdefd;     
+    --colors-darkPurple: #251251;     
+    --colors-purple: rgb(103, 32, 136);   
+    --colors-green: rgb(46, 136, 32);   
+    --colors-red: rgb(165, 3, 17);   
+
+    --gradiente-ligth: background: rgb(20,68,128);
+    background: linear-gradient(74deg, rgba(20,68,128,1) 1%, rgba(240,240,239,1) 24%, rgba(240,240,239,1) 80%, rgba(37,18,81,1) 99%);
+
+    --font-Goldman: "Goldman", sans-serif;      /* <weight>: Use a value from 400 ou 700 */
+    --font-OpenSans: "Open Sans", sans-serif;     /* <weight>: Use a value from 300 to 80 */
+}
+
+* {
+    
+}
+
+body {
+    font-family: var(--font-OpenSans);
+    background-color: var(--gradiente-ligth);   
+}
+
+ .bg-glass {  
+    background: rgb(20, 68, 128, 0.33);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.288);
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);
+    /* border-bottom: 1px solid rgba(185, 185, 185, 0.5); */
+} 
+
+.btn-color {      
+  font-family: var(--font-Goldman);  
+  border-radius: 15px;    
+  background: rgb(20, 68, 128, 0.70);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.288);
+  backdrop-filter: blur(8.6px);
+  -webkit-backdrop-filter: blur(8.6px);
+}
+
+.btn-color:hover {     
+    border-radius: 15px;   
+    background-color: rgb(43, 222, 253, 0.70);    
+    box-shadow: 0 2px 5px rgb(255, 255, 255);
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);    
+    text-shadow: #bbbbbb 0px 0px 10px, #9e9e9e 0px 0px 10px, 2px 2px 2px rgba(190, 190, 190, 0.288);
+}
+
+
+/*  Card Jogos */
+
+.btn-info {  
+    border: none;   
+    color: var(--colors-white);
+    font-family: var(--font-Goldman);  
+    border-radius: 15px;    
+    background: rgb(103, 32, 136);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.288);
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);
+  }
+  
+  .btn-info:hover {     
+      color: var(--colors-white);
+      border-radius: 15px;   
+      background-color: var(--colors-dark);   
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.288);
+      backdrop-filter: blur(8.6px);
+      -webkit-backdrop-filter: blur(8.6px);    
+      text-shadow: #bbbbbb 0px 0px 10px, #9e9e9e 0px 0px 10px, 2px 2px 2px rgba(190, 190, 190, 0.288);
+  }
+
+
+
+/* theme DARK */
+
+input[type=checkbox] {
+    border: 1px solid #ffffff60;
+    background-color: rgba(255, 255, 255, 0.192);
+    box-shadow: none;
+    }
+
+[data-bs-theme="dark"] {       
+    color: var(--colors-white);
+    
+    background-color: rgb(20,68,128);
+    background: linear-gradient(74deg, rgba(20,68,128,1) 1%, rgba(4,24,50,1) 24%, rgba(4,24,50,1) 80%, rgba(37,18,81,1) 99%);
+    
+    .nav-link, .card-body, .offcanvas, .accordion, .btn {
+      --bs-nav-link-color: var(--colors-white);
+      --bs-card-color: var(--colors-white);
+      --bs-offcanvas-color: var(--colors-white);
+      --bs-accordion-color: var(--colors-white);
+      --bs-body-color: var(--colors-white);      
+    } 
+
+  }
+
