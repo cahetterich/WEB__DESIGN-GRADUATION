@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iara Games - Sua plataforma de Jogos</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/carousel.css">
+</head>
+<body data-bs-theme="dark">
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top font-navbar bg-glass navbar-custom">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/img/logo01.png" alt="Logo" width="50" height="45" class="rounded-circle">
+                </a>
+                <a class="navbar-brand logo-text" href="#"><span class="brand-iara">IARA</span> <span class="brand-games">GAMES</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-navbar" href="#pesquisa"><i class="bi bi-search"></i></a>
+                        </li>
+                        <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-navbar" href="#cadastro">Cadastre-se</a>
+                        </li>
+                        <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-navbar" href="#login">Login</a>
+                        </li>
+                        <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="modo-noturno">
+                                    <label class="form-check-label" for="modo-noturno">Modo noturno</label>
+                                </div>
+                            </a>
+                        </li>   
+                    </ul>    
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="p-4">
+        <!-- Section Search 1 - Introdução -->
+        <section class="container pt-5 px-5 banner-custom">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-2 my-4 fw-semibold">Lorem ipsum dolor sit amet.</h1>
+                    <h3 class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, illum!</h3>  
+                    <a href="#" class="btn btn-lg mb-5 btn-color">Crie Sua Conta</a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="assets/img/img01.png" alt="descrição da imagem" class="img-fluid banner-img">
+                </div>
+            </div>
+        </section>
+        <!-- Section Search 2 - JOGOS - BUSCA -->
+        <section class="container px-5 mb-5 bg-glass rounded-3">
+            <div class="container p-3">
+                <form class="row gy-3 gx-3 justify-content-center align-items-center">
+                    <div class="col">
+                        <label class="visually-hidden" for="autoSizingInput">Pesquisar</label>
+                        <input type="text" class="form-control" id="autoSizingInput" placeholder="Pesquisar">
+                    </div>
+                    <div class="col">
+                        <label class="visually-hidden" for="autoSizingSelect">Gênero</label>
+                        <select class="form-select" id="autoSizingSelect">
+                            <option selected>Gênero</option>
+                            <option value="1">FPS</option>
+                            <option value="2">Battle Royale</option>
+                            <option value="3">FPA</option>
+                            <option value="4">PVP</option>
+                            <option value="5">RTS</option>
+                            <option value="6">MOBA</option>
+                            <option value="7">RPG</option>
+                            <option value="8">MMORPG</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label class="visually-hidden" for="autoSizingSelect">Ordenar por:</label>
+                        <select class="form-select" id="autoSizingSelect">
+                            <option selected>Ordenar por:</option>
+                            <option value="1">Gratuitos</option>
+                            <option value="2">Preço (mais baixo primeiro)</option>
+                            <option value="3">Preço (mais alto primeiro)</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-info">Buscar Jogos</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Section 2 - Lista de Jogos -->
+        <section class="container px-5 mb-5 bg-glass rounded-3">
+            <div class="container p-5">
+                <div class="container">
+                    <div class="carousel">
+                        <input type="radio" name="slides" checked="checked" id="slide-1">
+                        <input type="radio" name="slides" id="slide-2">
+                        <input type="radio" name="slides" id="slide-3">
+                        <input type="radio" name="slides" id="slide-4">
+                        <input type="radio" name="slides" id="slide-5">
+                        <input type="radio" name="slides" id="slide-6">
+                        <ul class="carousel__slides">
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="https://picsum.photos/id/1041/800/450" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Tim Marshall</span>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="https://picsum.photos/id/1043/800/450" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Christian Joudrey</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="https://picsum.photos/id/1044/800/450" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Steve Carter</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="https://picsum.photos/id/1045/800/450" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Aleksandra Boguslawska</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="https://picsum.photos/id/1049/800/450" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Thomas Tucker</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="https://picsum.photos/id/1052/800/450" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Karl Magnuson</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <ul class="carousel__thumbnails">
+                            <li>
+                                <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150" alt=""></label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="pt-5 pb-5">
+        <div class="container">
+            <p class="mb-0 text-center">&copy; 2024 Iara Games. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
