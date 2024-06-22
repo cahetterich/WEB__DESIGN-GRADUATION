@@ -1,4 +1,11 @@
 
+ /* detalhes section - FACILIDADES */
+.color-theme {
+  color: var(--colors-purple);
+}
+
+
+
 /* theme DARK */
 
 input[type=checkbox] {
@@ -20,4 +27,9 @@ input[type=checkbox] {
       --bs-accordion-color: var(--colors-white);
       --bs-body-color: var(--colors-white);      
     } 
+
+    /* detalhes section - FACILIDADES */
+    .color-theme {
+      color: var(--colors-acqua);
+    }
   }
