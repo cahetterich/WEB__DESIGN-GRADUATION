@@ -1,0 +1,11 @@
+.descricao-card {
+    display: none;
+}
+
+@media screen {
+
+    .descricao-card {
+        display: none;
+    }
+
+}
