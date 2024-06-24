@@ -5,7 +5,6 @@
 }
 
 
-
 /* theme DARK */
 
 input[type=checkbox] {
@@ -32,4 +31,13 @@ input[type=checkbox] {
     .color-theme {
       color: var(--colors-acqua);
     }
+  
+    .content {
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .item:hover .content {     
+      background: rgba(0, 0, 0, 0.8); /* Torna o fundo mais opaco ao passar o mouse */
+  }
+  
   }

@@ -4,9 +4,9 @@
     --colors-white: #F0F0EF;    
     --colors-dark: #000000;     
     --colors-darkBlue: #041832;     
-    --colors-blue: #144480;     
-    --colors-acqua: #2bdefd;     
-    --colors-darkPurple: #251251;     
+    --colors-blue: rgb(20, 68, 128);     
+    --colors-acqua: rgb(43, 222, 253);     
+    --colors-darkPurple: rgb(37, 18, 81);     
     --colors-purple: rgb(103, 32, 136);   
     --colors-green: rgb(46, 136, 32);   
     --colors-red: rgb(165, 3, 17);   

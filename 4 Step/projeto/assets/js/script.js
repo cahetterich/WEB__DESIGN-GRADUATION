@@ -57,14 +57,12 @@ $(document).ready(function(){
 });
 
 
-// API Google
-
-// Script para inicializar o mapa 
+// Script para inicializar o mapa - API Google
 
 function initMap() {
     var location = {lat: -23.55052, lng: -46.633308}; // Coordenadas de São Paulo, SP (modifique conforme necessário)
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 19,
+        zoom: 18,
         center: location
     });
     var marker = new google.maps.Marker({

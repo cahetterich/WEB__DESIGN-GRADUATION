@@ -1,6 +1,7 @@
 
 @import url(./abstract/roots.css);
 @import url(./abstract/variaveis.css);
+
 @import url(./component/headerNavbar.css);
 @import url(./component/botao.css);
 @import url(./component/darkMode.css);
@@ -9,13 +10,7 @@
 @import url(./component/banner.css);
 
 
- .bg-glass {  
-    background: rgb(20, 68, 128, 0.33);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.288);
-    backdrop-filter: blur(8.6px);
-    -webkit-backdrop-filter: blur(8.6px);
-    /* border-bottom: 1px solid rgba(185, 185, 185, 0.5); */
-} 
+
 
 
 
