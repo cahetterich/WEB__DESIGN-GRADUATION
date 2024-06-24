@@ -1,0 +1,28 @@
+.font-h2 {
+    font-family: var(--font-Goldman);
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.bg-glass {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#map {
+    border-radius: 150px;
+}
+
+/* @media(min-width: 768px) {  	
+
+    .mapGoogle {
+        height: 400px;
+        width: 100%;
+    }
+} */

@@ -2,10 +2,11 @@
     display: none;
 }
 
-@media screen {
+/* md */
+@media(min-width: 768px) {  	
 
     .descricao-card {
-        display: none;
+        display: contents;              
     }
 
 }

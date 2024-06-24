@@ -41,7 +41,7 @@
 }
 
 .item:hover .content {
-    height: 65%; /* Altura ao passar o mouse */
+    height: 75%; /* Altura ao passar o mouse */
     background: rgba(0, 0, 0, 0.8); /* Torna o fundo mais opaco ao passar o mouse */
 }
 
@@ -51,4 +51,13 @@
 
 .buttons .btn {
     margin: 5px;
+}
+
+
+@media(min-width: 365px) {  	
+
+    .item:hover .content {
+        height: 60%; /* Altura ao passar o mouse */        
+}
+
 }
