@@ -1,7 +1,12 @@
 
  /* detalhes section - FACILIDADES */
 .color-theme {
-  color: var(--colors-purple);
+  color: var(--colors-blue);
+}
+
+.bg-input {
+  background-color: var(--colors-white);
+ 
 }
 
 
@@ -29,7 +34,7 @@ input[type=checkbox] {
 
     /* detalhes section - FACILIDADES */
     .color-theme {
-      color: var(--colors-acqua);
+      color: var(--colors-white);
     }
   
     .content {
@@ -39,5 +44,8 @@ input[type=checkbox] {
     .item:hover .content {     
       background: rgba(0, 0, 0, 0.8); /* Torna o fundo mais opaco ao passar o mouse */
   }
-  
+
+    .bg-input {
+      background-color: var(--colors-darkBlue);
+    }
   }

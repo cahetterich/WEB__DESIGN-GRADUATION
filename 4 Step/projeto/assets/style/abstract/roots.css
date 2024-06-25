@@ -3,7 +3,7 @@
     /* cores */
     --colors-white: #F0F0EF;    
     --colors-dark: #000000;     
-    --colors-darkBlue: #041832;     
+    --colors-darkBlue: rgb(4, 24, 50);     
     --colors-blue: rgb(20, 68, 128);     
     --colors-acqua: rgb(43, 222, 253);     
     --colors-darkPurple: rgb(37, 18, 81);     
