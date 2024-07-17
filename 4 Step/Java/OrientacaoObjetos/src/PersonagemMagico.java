@@ -7,6 +7,8 @@ public class PersonagemMagico {
 
     String poderMagico;
 
+    HabilidadeEspecial habilidadeEspecial;
+
     //método implementado
     public PersonagemMagico(String nome, int nivelEnergia, String poderMagico) {
         this.nome = nome;
@@ -16,8 +18,9 @@ public class PersonagemMagico {
 
     public PersonagemMagico(String nome){
         this.nome = nome;
+    }
 
-        
+    public PersonagemMagico() {
 
     }
 
