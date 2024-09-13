@@ -9,6 +9,8 @@ document.querySelector('form').addEventListener('submit', function (e) {
     // cancelar o evento 
     e.preventDefault();
 
+    // console.log(e);
+    
     //recuperar os campos
     const campos = [
         document.querySelector('#artista'),
@@ -19,21 +21,24 @@ document.querySelector('form').addEventListener('submit', function (e) {
         document.querySelector('#banner')
     ];
 
+    // console.log(campos);
+
     // criar uma TR para escrever no tbody
     const tr = document.createElement('tr');
 
     // vamos montar um forEach para percorrer o Array e para cada ocorrência , criar uma td e vincular à tr
     campos.forEach((campo) => {
-
+ 
         // criar a td 
         const td = document.createElement('td');
 
         //verificando o tipo de campo por causa do file
         if (campo.type == 'file') {
+            // console.log(campo.value);
             //criando a variável para receber o endereço da imagem            
             let src = String(campo.value);
             //arrumando o endereço da imagem
-            src = src.replace('C:\fakepath\', './images/');
+            src = src.replace('C:\\fakepath\\', './imagens/');
             //inserindo a imagem na td
             td.innerHTML = `<img src="${src}" width="200" height="auto">`;
             //inserindo a imagem no array
