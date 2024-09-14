@@ -7,20 +7,29 @@
     <title>Recruta AI - Plataforma de Recrutamento</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Personalização mínima */
         body {
             scroll-behavior: smooth;
         }
 
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
+        
         section {
             padding: 60px 0;
+        }
+
+        /* Seção Sobre com imagem de fundo */
+        #sobre {
+            background: url('./assets/img//pexels-olly-3861814.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+        }
+
+        #sobre h2, #sobre p {
+            color: white;
         }
 
         /* Estilo dos planos */
@@ -29,7 +38,7 @@
         }
 
         .planos .card:hover {
-            transform: scale(1.05);
+            transform: scale(1.05);          
         }
 
         /* Estilo do footer */
@@ -48,7 +57,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Recruta AI</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,26 +93,30 @@
             <h1 class="display-4">Bem-vindo ao <span class="text-primary">Recruta AI</span></h1>
             <p class="lead">Conectando candidatos e empresas de forma inteligente com nossa tecnologia de IA.</p>
             <a href="#" class="btn btn-primary btn-lg">Criar meu perfil</a>
-            <img src="https://via.placeholder.com/500x300" alt="Imagem de recrutamento" class="img-fluid mt-4">
+            <img src="./assets/img/downloadedImage (28).png" alt="Imagem de recrutamento" class="img-fluid rounded  mt-4">
         </div>
     </section>
 
+    
     <!-- Seção: Publicar Vaga -->
     <section class="bg-primary text-white text-center">
         <div class="container">
             <h2>Publique sua vaga!</h2>
             <p>Encontre os melhores talentos para sua empresa usando nossa plataforma avançada de IA.</p>
-            <a href="#" class="btn btn-light">Poste sua vaga aqui</a>
-            <div class="row mt-5">
+            <a href="#" class="btn btn-light mb-4">Poste sua vaga aqui</a>
+            <div class="row bg-dark rounded p-4">
                 <div class="col-md-4">
+                    <i class="fas fa-clock fa-2x mb-3"></i> 
                     <h3>Rapidez</h3>
                     <p>Poste sua vaga e encontre o candidato ideal rapidamente.</p>
                 </div>
                 <div class="col-md-4">
+                    <i class="fas fa-bullseye fa-2x mb-3"></i> 
                     <h3>Precisão</h3>
                     <p>Melhor sistema de IA do mercado para garantir precisão nas contratações.</p>
                 </div>
                 <div class="col-md-4">
+                    <i class="fas fa-headset fa-2x mb-3"></i> 
                     <h3>Suporte 24h</h3>
                     <p>Conte com nosso suporte técnico sempre disponível para você.</p>
                 </div>
@@ -111,15 +124,18 @@
         </div>
     </section>
 
+    
     <!-- Seção: Planos -->
     <section id="planos" class="container planos text-center">
         <h2>Assine nossos planos</h2>
+        <p>Escolha o plano que melhor se adequar às suas necessidades e comece a aproveitar nossos servições exclusivos:</p>
         <div class="row justify-content-center mt-5">
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm">
                     <div class="card-body">
+                        <i class="fas fa-user fa-2x mb-3"></i>
                         <h5 class="card-title">Plano Gratuito</h5>
-                        <p class="card-text">Descrição do plano Free.</p>
+                        <p class="card-text">Para quem quer novas oportunidades.</p>
                         <p><strong>Gratuito</strong></p>
                         <a href="#" class="btn btn-primary">Cadastre-se</a>
                     </div>
@@ -128,8 +144,9 @@
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm">
                     <div class="card-body">
+                        <i class="fas fa-briefcase fa-2x mb-3"></i>
                         <h5 class="card-title">Plano Profissional</h5>
-                        <p class="card-text">Ideal para quem quer alavancar sua carreira.</p>
+                        <p class="card-text">Ideal para profissionais de RH.</p>
                         <p><strong>R$49,90/mês</strong></p>
                         <a href="#" class="btn btn-primary">Cadastre-se</a>
                     </div>
@@ -138,8 +155,9 @@
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm">
                     <div class="card-body">
+                        <i class="fas fa-building fa-2x mb-3"></i> 
                         <h5 class="card-title">Plano Empresarial</h5>
-                        <p class="card-text">Soluções completas para grandes corporações.</p>
+                        <p class="card-text">Soluções para grandes corporações.</p>
                         <p><strong>R$99,90/mês</strong></p>
                         <a href="#" class="btn btn-primary">Cadastre-se</a>
                     </div>
@@ -148,23 +166,45 @@
         </div>
     </section>
 
+    <!-- Seção: Sobre Nós -->
+    <section id="sobre">
+        <div class="container text-center">
+            <h2>Sobre a Recruta AI</h2>
+            <p>A Recruta AI revoluciona o mercado de recrutamento com o poder da Inteligência Artificial. Nossa plataforma conecta empresas e talentos de maneira eficiente e personalizada, acelerando os processos de contratação e garantindo melhores resultados.</p>
+        </div>
+    </section>
+
+
     <!-- Seção: Diferenciais -->
-    <section id="diferenciais" class="container text-center">
+    <section id="diferenciais" class="text-center">
+        <div class="container">
         <h2>Nossos Diferenciais</h2>
-        <div class="row mt-5">
+        <p class="mb-4">Veja o que nos torna únicos e porque somos a melhor escolha para candidatos e empresas: </p>
+        <div class="row bg-dark text-white rounded p-4">            
             <div class="col-md-4">
+                <i class="fas fa-robot fa-2x mb-3"></i>
                 <h5>IA Avançada</h5>
                 <p>Nossa tecnologia de IA melhora o processo de recrutamento.</p>
             </div>
             <div class="col-md-4">
+                <i class="fas fa-headset fa-2x mb-3"></i> 
                 <h5>Suporte Personalizado</h5>
                 <p>Oferecemos suporte dedicado para garantir sua satisfação.</p>
             </div>
             <div class="col-md-4">
+                <i class="fas fa-database fa-2x mb-3"></i> 
                 <h5>Base de Dados Completa</h5>
                 <p>Temos uma vasta rede de candidatos e empresas cadastrados.</p>
             </div>
         </div>
+    </div>
+    </section>
+
+    <!-- Chamada para Ação -->
+    <section class="container text-center">
+        <h3 class="text-center">Pronto para alavancar o seu futuro?</h3>
+        <p class="text-center"> Venha fazer parte do futuro das contratações.</p>
+        <a href="#" class="btn btn-primary">Criar meu perfil</a>   
     </section>
 
     <!-- Footer -->
