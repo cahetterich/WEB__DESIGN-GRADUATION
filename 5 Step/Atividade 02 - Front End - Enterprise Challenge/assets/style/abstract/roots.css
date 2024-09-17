@@ -2,8 +2,9 @@
 :root {
     /* cores */
     --colors-white: #ffffff;    
-    --colors-dark: #000000;        
-    --colors-blue: #0d6efd;    
+    --colors-dark: rgb(0, 0, 0);        
+    --colors-blue: rgb(13, 110, 253);    
+    --colors-blueDark: rgb(6, 45, 104);    
    
     --colors-green:  #198754;   
     --colors-red: #dc3545;      

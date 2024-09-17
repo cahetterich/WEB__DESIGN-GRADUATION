@@ -53,7 +53,7 @@
                 <hr class="border border-secondary border-1 opacity-50">
                 <ul class="nav flex-column ">
                     <li class="nav-item m-1">
-                        <a href="/assets/pages/inicio.html" class="nav-link text-white btn btn-primary active"
+                        <a href="/assets/pages/inicio.html" class="nav-link text-white btn btn-secondary"
                             aria-label="Início">
                             <i class="fa-solid fa-house me-2"></i>
                             Início
@@ -72,13 +72,13 @@
                         </a>
                     </li>
                     <li class="nav-item m-1">
-                        <a href="/assets/pages/empregos.html" class="nav-link text-white btn btn-secondary">
+                        <a href="./empregos.html" class="nav-link text-white btn btn-secondary">
                             <i class="fa-solid fa-briefcase me-2"></i>
                             Empregos
                         </a>
                     </li>
                     <li class="nav-item m-1">
-                        <a href="./favoritos.html" class="nav-link text-white btn btn-secondary">
+                        <a href="./favoritos.html" class="nav-link text-white btn btn-primary active">
                             <i class="fa-regular fa-star me-2"></i>
                             Favoritos
                         </a>
@@ -115,8 +115,7 @@
                 <hr class="border border-secondary border-1 opacity-80">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="/assets/pages/inicio.html" class="nav-link text-white btn btn-primary active"
-                            aria-label="Início">
+                        <a href="/assets/pages/inicio.html" class="nav-link text-white btn btn-secondary">
                             <i class="fa-solid fa-house me-2"></i> Início
                         </a>
                     </li>
@@ -132,12 +131,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/assets/pages/empregos.html" class="nav-link text-white btn btn-secondary">
+                        <a href="./empregos.html" class="nav-link text-white btn btn-secondary">
                             <i class="fa-solid fa-briefcase me-2"></i> Empregos
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./favoritos.html" class="nav-link text-white btn btn-secondary">
+                        <a href="./favoritos.html" class="nav-link text-white btn btn-primary active">
                             <i class="fa-regular fa-star me-2"></i> Favoritos
                         </a>
                     </li>
@@ -162,7 +161,7 @@
                             aria-label="Menu do usuário">
                             <img src="/assets/img/downloadedImage (27).png" alt="Foto do perfil do usuário" width="35"
                                 height="35" class="rounded-circle me-2">
-                            <strong>Conta</strong>
+                            <strong>Sua conta</strong>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow mt-2"
                             aria-labelledby="dropdownUser1">
@@ -179,133 +178,103 @@
     </nav>
     <!-- Main -->
     <main class="col-lg-9 ms-auto me-5 px-5 pt-4">
-        <h2 class="mb-3">Que bom ver você!</h2>
-        <section class="filter-jobs bg-light p-3 rounded">
-            <form class="d-flex ms-auto">
-                <input class="form-control me-2" type="search" placeholder="Digite a sua busca aqui..."
-                    aria-label="Search">
-                <button class="btn btn-outline-primary" type="submit">Buscar</button>
-            </form>
-        </section>
-        <section class="mt-5">
-            <div class="row g-4 pb-4 bg-dark rounded">
-                <div class="col-md-4">
-                    <div class="card  p-2 bg-body rounded h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Complete seu perfil</h5>
-                            <p class="card-text">Melhore suas chances de encontrar o emprego dos seus sonhos atualizando
-                                suas informações </p>
-                            <button class="btn btn-primary w-100">Atualize seu perfil</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card shadow-lg p-2 bg-body rounded h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Tendências de mercado</h5>
-                            <p class="card-text">Fique por dentro das tendências do mercado de trabalho e saiba onde
-                                estão as melhores oportunidades.</p>
-                            <button class="btn btn-primary w-100">Ver tendências</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card shadow-lg p-2 bg-body rounded h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Pesquisa de vagas</h5>
-                            <p class="card-text">Explore as vagas disponíveis de acordo com seu perfil e localidade. Não
-                                perca as melhores oportunidades!</p>
-                            <button class="btn btn-primary w-100">Buscar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Seção de Atividades Recentes -->
-        <section class="recent-activities my-5">
-            <h4 class="mb-4">Suas atividades recentes</h4>
+        <!-- Título da página -->
+        <h2 class="mb-3">Seus Favoritos e Sugestões</h2>
+        <!-- Seção de Vagas Favoritas -->
+        <section class="vagas-favoritas my-5">
+            <h4>Vagas Favoritas</h4>
             <div class="row">
-                <div class="col-md-12">
-                    <div class="card  p-2 bg-secondary rounded h-100">
-                        <ul class="list-group">
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Candidatura enviada para: Desenvolvedor Web - Tech Solutions
-                                <span class="badge bg-primary rounded-pill">Enviado ontem</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Vaga visualizada: Gerente de Projetos - Inovatech
-                                <span class="badge bg-secondary rounded-pill">Visualizado há 2 dias</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Empresa visitada: App Innovators
-                                <span class="badge bg-secondary rounded-pill">Visitado há 3 dias</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Mensagem recebida de: Recrutador - Digital Marketing Solutions
-                                <span class="badge bg-success rounded-pill">Recebida hoje</span>
-                            </li>
-                        </ul>
+                <div class="col-md-3">
+                    <div class="card p-3 bg-light mb-4">
+                        <h6 class="text-primary">Dev Full Stack</h6>
+                        <p>Empresa: Tech Corp</p>
+                        <p>Localização: São Paulo, SP</p>
+                        <button class="btn btn-primary w-100">Ver Detalhes</button>
+                    </div>
+                </div>
+                <!-- Repetir para outras vagas -->
+                <div class="col-md-3">
+                    <div class="card p-3 bg-light mb-4">
+                        <h6 class="text-primary">Analista de Dados</h6>
+                        <p>Empresa: Amper</p>
+                        <p>Localização: São Paulo, SP</p>
+                        <button class="btn btn-primary w-100">Ver Detalhes</button>
+                    </div>
+                </div>
+                <!-- Repetir para outras vagas -->
+                <div class="col-md-3">
+                    <div class="card p-3 bg-light mb-4">
+                        <h6 class="text-primary">Dev Full Stack</h6>
+                        <p>Empresa: Cash Star</p>
+                        <p>Localização: São Paulo, SP</p>
+                        <button class="btn btn-primary w-100">Ver Detalhes</button>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Seção de Sugestões de Vagas -->
-        <section class="suggestions-jobs my-5">
-            <h4 class="mb-4">Sugestões de vagas para você</h4>
-            <div class="card p-2 bg-dark rounded h-100">
-                <div class="row m-2">
-                    <!-- Sugestão de Vaga 1 -->
-                    <div class="col-md-3">
-                        <div class="suggestion-job-card bg-light p-3 mb-4 border rounded">
-                            <h6 class="text-primary">Desenvolvedor Full Stack</h6>
-                            <p>Empresa: Tech Corp</p>
-                            <p>Localização: São Paulo, SP</p>
-                            <button class="btn btn-primary w-100">Ver mais detalhes</button>
-                        </div>
+        <!-- Seção de Empresas Favoritas -->
+        <section class="empresas-favoritas my-5">
+            <h4>Empresas Favoritas</h4>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card p-3 bg-light mb-4">
+                        <h6 class="text-primary">Tech Innovations</h6>
+                        <p>Localização: Remoto</p>
+                        <span class="badge bg-success">Nova vaga compatível</span>
+                        <button class="btn btn-primary w-100 mt-2">Ver Vagas</button>
                     </div>
-                    <!-- Sugestão de Vaga 2 -->
-                    <div class="col-md-3">
-                        <div class="suggestion-job-card bg-light p-3 mb-4 border rounded">
-                            <h6 class="text-primary">Analista de Dados</h6>
-                            <p>Empresa: Data Insights</p>
-                            <p>Localização: Remoto</p>
-                            <button class="btn btn-primary w-100">Ver mais detalhes</button>
-                        </div>
+                </div>
+                <!-- Repetir para outras empresas -->
+                <div class="col-md-3">
+                    <div class="card p-3 bg-light mb-4">
+                        <h6 class="text-primary">Amper</h6>
+                        <p>Localização: São Paulo</p>
+                        <span class="badge bg-danger">Sem vaga compatível</span>
+                        <button class="btn btn-primary w-100 mt-2">Ver Vagas</button>
                     </div>
-                    <!-- Sugestão de Vaga 3 -->
-                    <div class="col-md-3">
-                        <div class="suggestion-job-card bg-light p-3 mb-4 border rounded">
-                            <h6 class="text-primary">Engenheiro de Software</h6>
-                            <p>Empresa: Code Innovations</p>
-                            <p>Localização: Curitiba, PR</p>
-                            <button class="btn btn-primary w-100">Ver mais detalhes</button>
-                        </div>
-                    </div>
-                    <!-- Sugestão de Vaga 3 -->
-                    <div class="col-md-3">
-                        <div class="suggestion-job-card bg-light p-3 mb-4 border rounded">
-                            <h6 class="text-primary">Desenvolvedor Front-End</h6>
-                            <p>Empresa: Code Innovations</p>
-                            <p>Localização: Curitiba, PR</p>
-                            <button class="btn btn-primary w-100">Ver mais detalhes</button>
-                        </div>
+                </div>
+                <!-- Repetir para outras empresas -->
+                <div class="col-md-3">
+                    <div class="card p-3 bg-light mb-4">
+                        <h6 class="text-primary">Innovations</h6>
+                        <p>Localização: Remoto</p>
+                        <span class="badge bg-success">Nova vaga compatível</span>
+                        <button class="btn btn-primary w-100 mt-2">Ver Vagas</button>
                     </div>
                 </div>
             </div>
-            <!-- Paginação centralizada -->
-            <nav aria-label="Paginação de sugestões de vagas" class="d-flex justify-content-center m-4">
-                <ul class="pagination">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Próximo</a>
-                    </li>
-                </ul>
-            </nav>
+        </section>
+        <!-- Seção de Recomendações de Empresas e Vagas -->
+        <section class="sugestoes-perfil my-5">
+            <h4>Empresas e Vagas que Correspondem ao seu Perfil</h4>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card p-3 bg-light mb-4">
+                        <h6 class="text-primary">Engenheiro de Software</h6>
+                        <p>Empresa: Code Innova</p>
+                        <p>Localização: Remoto</p>
+                        <button class="btn btn-primary w-100">Ver Detalhes</button>
+                    </div>
+                </div>
+                <!-- Repetir para outras sugestões -->
+                <div class="col-md-3">
+                    <div class="card p-3 bg-light mb-4">
+                        <h6 class="text-primary">Software Eng.</h6>
+                        <p>Empresa: Tech Raid</p>
+                        <p>Localização: Remoto</p>
+                        <button class="btn btn-primary w-100">Ver Detalhes</button>
+                    </div>
+                </div>
+                <!-- Repetir para outras sugestões -->
+                <div class="col-md-3">
+                    <div class="card p-3 bg-light mb-4">
+                        <h6 class="text-primary">Analista de Dados</h6>
+                        <p>Empresa: Spanzen</p>
+                        <p>Localização: Remoto</p>
+                        <button class="btn btn-primary w-100">Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <!-- Footer -->

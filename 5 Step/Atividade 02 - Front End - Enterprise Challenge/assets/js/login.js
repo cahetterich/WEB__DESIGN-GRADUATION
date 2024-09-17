@@ -38,7 +38,10 @@
             console.log('Username:', username);
             console.log('Password:', password);
 
-            // Aqui, você pode adicionar uma lógica para enviar os dados via API
+            // Redirecionar o usuário para outra página
+            window.location.href = './inicio.html';
+
+            // Adicionar uma lógica para enviar os dados via API
         }
     });
 

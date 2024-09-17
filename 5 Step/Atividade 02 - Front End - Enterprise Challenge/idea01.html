@@ -10,132 +10,187 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/style/component/index.css">  
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        .navbar, .sidebar {
-            z-index: 1000;
-        }
-        .content {
-            margin-left: 280px;
-            padding: 20px;
-        }
-        .sidebar {
-            width: 280px;
-            position: fixed;
-            top: 56px;
-            bottom: 0;
-            left: 0;
-            background-color: #343a40;
-        }
-        .footer {
-            margin-top: auto;
-            padding: 10px;
-            background-color: #343a40;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/style/component/index.css">
+    <link rel="stylesheet" href="/assets/style/component/dashboard.css">
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Main navigation">
-        <div class="container">           
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Navbar superior para telas grandes -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <!-- Ícone de alerta -->
-                    <li class="nav-item me-3">
-                        <a href="#" class="nav-link" aria-label="Notificações">
-                            <i class="fas fa-bell" aria-hidden="true"></i>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a href="#" class="d-flex align-items-center text-secondary text-decoration-none dropdown-toggle"
+                        id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Menu do usuário">
+                        <img src="/assets/img/downloadedImage (27).png" alt="Foto do perfil do usuário" width="35"
+                            height="35" class="rounded-circle me-2">
+                        <!-- <strong>Sua conta</strong> -->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="./edicaoPerfil.html">Editar perfil</a></li>
+                        <li><a class="dropdown-item" href="./planoUso.html">Plano de uso</a></li>
+                        <li><a class="dropdown-item" href="./configuracao.html">Configurações</a></li>
+                        <hr class="dropdown-divider">
+                        <li><a class="dropdown-item" href="../../index.html">Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Grid layout -->
+    <div class="container-fluid" style="padding-top: 50px;">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-lg-2 d-none d-lg-block bg-dark text-white sidebar vh-100 fixed-top pt-4">
+                <!-- Logo e Toggler para telas pequenas -->
+                <a href="/assets/pages/inicio.html" class="navbar-brand d-flex align-items-center text-white m-auto">
+                    <img src="/assets/img/logo.png" alt="Logo Recruta AI" width="40" height="40" class="me-2">
+                    <h4>Recruta AI</h4>
+                </a>
+                <hr class="border border-secondary border-1 opacity-50">
+                <ul class="nav flex-column ">
+                    <li class="nav-item m-1">
+                        <a href="/assets/pages/inicio.html" class="nav-link text-white btn btn-secondary"
+                            aria-label="Início">
+                            <i class="fa-solid fa-house me-2"></i>
+                            Início
                         </a>
                     </li>
-                    <!-- Ícone de usuário com dropdown -->
-                    <li class="nav-item dropdown">
-                        <a href="#" class="d-flex align-items-center text-secondary text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Menu do usuário">
-                            <img src="/assets/img/downloadedImage (27).png" alt="Foto do perfil do usuário" width="35" height="35" class="rounded-circle me-2">
-                            <strong>User</strong>
+                    <li class="nav-item m-1">
+                        <a href="./perfil.html" class="nav-link text-white btn btn-secondary" aria-label="Perfil">
+                            <i class="fa-solid fa-user me-2"></i>
+                            Perfil
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                            <li><a class="dropdown-item" href="#">Novo projeto...</a></li>
-                            <li><a class="dropdown-item" href="#">Configurações</a></li>
-                            <li><a class="dropdown-item" href="#">Perfil</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Sair</a></li>
-                        </ul>
+                    </li>
+                    <li class="nav-item m-1">
+                        <a href="./dashboard.html" class="nav-link text-white btn btn-secondary">
+                            <i class="fa-solid fa-chart-line me-2"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item m-1">
+                        <a href="./empregos.html" class="nav-link text-white btn btn-primary active">
+                            <i class="fa-solid fa-briefcase me-2"></i>
+                            Empregos
+                        </a>
+                    </li>
+                    <li class="nav-item m-1">
+                        <a href="./favoritos.html" class="nav-link text-white btn btn-secondary">
+                            <i class="fa-regular fa-star me-2"></i>
+                            Favoritos
+                        </a>
+                    </li>
+                    <li class="nav-item m-1">
+                        <a href="./mensagens.html" class="nav-link text-white btn btn-secondary">
+                            <i class="fa-solid fa-envelope me-2"></i>
+                            Mensagens
+                        </a>
+                    </li>
+                    <li class="nav-item m-1">
+                        <a href="./alertas.html" class="nav-link text-white btn btn-secondary">
+                            <i class="fas fa-bell me-2"></i>
+                            Alertas
+                        </a>
+                    </li>
+                    <!-- Outras opções da sidebar -->
+                </ul>
+                <hr class="border border-secondary border-1 opacity-50">
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar para telas pequenas -->
+    <nav class="navbar navbar-dark bg-dark fixed-top d-lg-none">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="/assets/img/logo.png" alt="Logo Recruta AI" width="40"
+                    height="40" class="me-2">Recruta AI</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSmall"
+                aria-controls="navbarSmall" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSmall">
+                <hr class="border border-secondary border-1 opacity-80">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/assets/pages/inicio.html" class="nav-link text-white btn btn-secondary">
+                            <i class="fa-solid fa-house me-2"></i> Início
+                        </a>
+                    </li>
+                    <li class="nav-item m-1">
+                        <a href="./perfil.html" class="nav-link text-white btn btn-secondary" aria-label="Perfil">
+                            <i class="fa-solid fa-user me-2"></i>
+                            Perfil
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./dashboard.html" class="nav-link text-white btn btn-secondary">
+                            <i class="fa-solid fa-chart-line me-2"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./empregos.html" class="nav-link text-white btn btn-primary active">
+                            <i class="fa-solid fa-briefcase me-2"></i> Empregos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./favoritos.html" class="nav-link text-white btn btn-secondary">
+                            <i class="fa-regular fa-star me-2"></i> Favoritos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./mensagens.html" class="nav-link text-white btn btn-secondary">
+                            <i class="fa-solid fa-envelope me-2"></i> Mensagens
+                        </a>
+                    </li>
+                    <li class="nav-item m-1">
+                        <a href="./alertas.html" class="nav-link text-white btn btn-secondary">
+                            <i class="fas fa-bell me-2"></i>
+                            Alertas
+                        </a>
                     </li>
                 </ul>
+                <hr class="border border-secondary border-1 opacity-80">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropend">
+                        <a href="#"
+                            class="d-flex align-items-center text-secondary text-decoration-none dropdown-toggle"
+                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false"
+                            aria-label="Menu do usuário">
+                            <img src="/assets/img/downloadedImage (27).png" alt="Foto do perfil do usuário" width="35"
+                                height="35" class="rounded-circle me-2">
+                            <strong>Sua conta</strong>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow mt-2"
+                            aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="./edicaoPerfil.html">Editar perfil</a></li>
+                            <li><a class="dropdown-item" href="./planoUso.html">Plano de uso</a></li>
+                            <li><a class="dropdown-item" href="./configuracao.html">Configurações</a></li>
+                            <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="../../index.html">Sair</a></li>
+                </ul>
+                <hr class="border border-secondary border-1 opacity-80">
             </div>
         </div>
     </nav>
+    <!-- Main -->
+    <main class="col-lg-9 ms-auto me-5 px-5 pt-4">
 
-    <!-- Sidebar -->
-    <nav class="sidebar" aria-label="Navegação lateral">
-        <a class="navbar-brand text-center" href="/assets/pages/dashboard.html">
-            <img src="/assets/img/logo.png" alt="Logo Recruta AI" width="40" height="40" class="d-inline-block">
-            Recruta AI
-        </a>
-        <hr>
-        <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item">
-                <a href="#" class="nav-link text-white btn btn-secondary active" aria-current="page" aria-label="Página inicial">
-                    <i class="fa-solid fa-house me-2" aria-hidden="true"></i>
-                    Home
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link text-white btn btn-secondary" aria-label="Dashboard">
-                    <i class="fa-solid fa-chart-line me-2" aria-hidden="true"></i>
-                    Dashboard
-                </a>
-            </li>     
-            <li class="nav-item">
-                <a href="#" class="nav-link text-white btn btn-secondary" aria-label="Vagas de emprego">
-                    <i class="fa-solid fa-briefcase me-2" aria-hidden="true"></i>
-                    Jobs
-                </a>
-            </li>      
-            <li class="nav-item">
-                <a href="#" class="nav-link text-white btn btn-secondary" aria-label="Favoritos">
-                    <i class="fa-regular fa-star me-2" aria-hidden="true"></i>
-                    Favorites
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link text-white btn btn-secondary" aria-label="Mensagens">
-                    <i class="fa-solid fa-envelope me-2" aria-hidden="true"></i>
-                    Messages
-                </a>
-            </li>
-        </ul>
-        <hr>
-    </nav>
+            
 
-    <!-- Main content -->
-    <main class="content" aria-label="Conteúdo principal">
-        <!-- Seu conteúdo principal vai aqui -->
+
+
     </main>
-
     <!-- Footer -->
-    <footer class="footer text-white text-center">
-        <div class="container">
-            <img src="./assets/img/logo.png" alt="Logo Recruta AI" width="50" height="50" class="mb-3">
-            <p>&copy; 2024 Recruta AI - Todos os direitos reservados.</p>
-            <p>
-                <a href="#" class="text-white">Política de Privacidade</a> | 
-                <a href="#" class="text-white">Termos de Uso</a>
-            </p>
-        </div>
+    <footer class="footer text-white text-center bg-dark pt-3">
+        <p> © 2024 | Todos os direitos reservados | <a href="#">Termos de uso</a> | <a href="#">Política de
+                privacidade</a> | <a href="#">FAQ</a> | <a href="#">Contato</a> </p>
+        <img src="/assets/img/logo.png" alt="Logo Recruta AI" width="30" height="30" class="mb-3">
     </footer>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
-

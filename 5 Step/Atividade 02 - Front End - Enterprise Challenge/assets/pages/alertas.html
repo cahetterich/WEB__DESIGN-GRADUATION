@@ -53,7 +53,7 @@
                 <hr class="border border-secondary border-1 opacity-50">
                 <ul class="nav flex-column ">
                     <li class="nav-item m-1">
-                        <a href="/assets/pages/inicio.html" class="nav-link text-white btn btn-primary active"
+                        <a href="/assets/pages/inicio.html" class="nav-link text-white btn btn-secondary"
                             aria-label="Início">
                             <i class="fa-solid fa-house me-2"></i>
                             Início
@@ -72,7 +72,7 @@
                         </a>
                     </li>
                     <li class="nav-item m-1">
-                        <a href="/assets/pages/empregos.html" class="nav-link text-white btn btn-secondary">
+                        <a href="./empregos.html" class="nav-link text-white btn btn-secondary">
                             <i class="fa-solid fa-briefcase me-2"></i>
                             Empregos
                         </a>
@@ -90,7 +90,7 @@
                         </a>
                     </li>
                     <li class="nav-item m-1">
-                        <a href="./alertas.html" class="nav-link text-white btn btn-secondary">
+                        <a href="./rtasale.html" class="nav-link text-white btn btn-primary active">
                             <i class="fas fa-bell me-2"></i>
                             Alertas
                         </a>
@@ -115,8 +115,7 @@
                 <hr class="border border-secondary border-1 opacity-80">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="/assets/pages/inicio.html" class="nav-link text-white btn btn-primary active"
-                            aria-label="Início">
+                        <a href="/assets/pages/inicio.html" class="nav-link text-white btn btn-secondary">
                             <i class="fa-solid fa-house me-2"></i> Início
                         </a>
                     </li>
@@ -132,7 +131,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/assets/pages/empregos.html" class="nav-link text-white btn btn-secondary">
+                        <a href="./empregos.html" class="nav-link text-white btn btn-secondary">
                             <i class="fa-solid fa-briefcase me-2"></i> Empregos
                         </a>
                     </li>
@@ -147,7 +146,7 @@
                         </a>
                     </li>
                     <li class="nav-item m-1">
-                        <a href="./alertas.html" class="nav-link text-white btn btn-secondary">
+                        <a href="./alertas.html" class="nav-link text-white btn btn-primary active">
                             <i class="fas fa-bell me-2"></i>
                             Alertas
                         </a>
@@ -162,7 +161,7 @@
                             aria-label="Menu do usuário">
                             <img src="/assets/img/downloadedImage (27).png" alt="Foto do perfil do usuário" width="35"
                                 height="35" class="rounded-circle me-2">
-                            <strong>Conta</strong>
+                            <strong>Sua conta</strong>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow mt-2"
                             aria-labelledby="dropdownUser1">
@@ -178,134 +177,66 @@
         </div>
     </nav>
     <!-- Main -->
-    <main class="col-lg-9 ms-auto me-5 px-5 pt-4">
-        <h2 class="mb-3">Que bom ver você!</h2>
-        <section class="filter-jobs bg-light p-3 rounded">
-            <form class="d-flex ms-auto">
-                <input class="form-control me-2" type="search" placeholder="Digite a sua busca aqui..."
-                    aria-label="Search">
-                <button class="btn btn-outline-primary" type="submit">Buscar</button>
-            </form>
-        </section>
-        <section class="mt-5">
-            <div class="row g-4 pb-4 bg-dark rounded">
-                <div class="col-md-4">
-                    <div class="card  p-2 bg-body rounded h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Complete seu perfil</h5>
-                            <p class="card-text">Melhore suas chances de encontrar o emprego dos seus sonhos atualizando
-                                suas informações </p>
-                            <button class="btn btn-primary w-100">Atualize seu perfil</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card shadow-lg p-2 bg-body rounded h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Tendências de mercado</h5>
-                            <p class="card-text">Fique por dentro das tendências do mercado de trabalho e saiba onde
-                                estão as melhores oportunidades.</p>
-                            <button class="btn btn-primary w-100">Ver tendências</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card shadow-lg p-2 bg-body rounded h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Pesquisa de vagas</h5>
-                            <p class="card-text">Explore as vagas disponíveis de acordo com seu perfil e localidade. Não
-                                perca as melhores oportunidades!</p>
-                            <button class="btn btn-primary w-100">Buscar</button>
-                        </div>
-                    </div>
-                </div>
+    <main class="col-lg-9 ms-auto me-5 px-5 pt-4 container my-5">
+        <h2 class="mb-4">Área de Alertas</h2>
+        <!-- Alerta de Mensagens -->
+        <div class="alert alert-primary d-flex align-items-center justify-content-between" role="alert">
+            <div>
+                <h5 class="alert-heading">Nova Mensagem</h5>
+                <p>Você recebeu uma nova mensagem de Camila da Silva. <a href="#" class="alert-link">Ver mensagens</a>.
+                </p>
             </div>
-        </section>
-        <!-- Seção de Atividades Recentes -->
-        <section class="recent-activities my-5">
-            <h4 class="mb-4">Suas atividades recentes</h4>
+            <button type="button" class="btn btn-outline-primary btn-sm">Ver Agora</button>
+        </div>
+        <!-- Alerta de Vagas -->
+        <div class="alert alert-info d-flex align-items-center justify-content-between" role="alert">
+            <div>
+                <h5 class="alert-heading">Vaga Compatível Encontrada</h5>
+                <p>Uma nova vaga de Desenvolvedor Full Stack foi encontrada para você. <a href="#"
+                        class="alert-link">Ver vaga</a>.</p>
+            </div>
+            <button type="button" class="btn btn-outline-info btn-sm">Ver Agora</button>
+        </div>
+        <!-- Alerta do Plano de Uso Gratuito -->
+        <div class="alert alert-warning d-flex align-items-center justify-content-between" role="alert">
+            <div>
+                <h5 class="alert-heading">Limite do Plano Gratuito</h5>
+                <p>Você está próximo de atingir o limite do plano gratuito. Considere fazer o upgrade para continuar
+                    utilizando todos os recursos.</p>
+            </div>
+            <button type="button" class="btn btn-outline-warning btn-sm">Fazer Upgrade</button>
+        </div>
+        <!-- Alerta de Notificação de Solicitação de Contato -->
+        <div class="alert alert-success d-flex align-items-center justify-content-between" role="alert">
+            <div>
+                <h5 class="alert-heading">Nova Solicitação de Contato</h5>
+                <p>A empresa Tech Innovations solicitou entrar em contato com você. <a href="#" class="alert-link">Ver
+                        detalhes</a>.</p>
+            </div>
+            <button type="button" class="btn btn-outline-success btn-sm">Responder</button>
+        </div>
+        <!-- Exemplo de alertas empilhados -->
+        <section class="alertas-adicionais my-5">
+            <h4>Outros Alertas</h4>
             <div class="row">
-                <div class="col-md-12">
-                    <div class="card  p-2 bg-secondary rounded h-100">
-                        <ul class="list-group">
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Candidatura enviada para: Desenvolvedor Web - Tech Solutions
-                                <span class="badge bg-primary rounded-pill">Enviado ontem</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Vaga visualizada: Gerente de Projetos - Inovatech
-                                <span class="badge bg-secondary rounded-pill">Visualizado há 2 dias</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Empresa visitada: App Innovators
-                                <span class="badge bg-secondary rounded-pill">Visitado há 3 dias</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Mensagem recebida de: Recrutador - Digital Marketing Solutions
-                                <span class="badge bg-success rounded-pill">Recebida hoje</span>
-                            </li>
-                        </ul>
+                <div class="col-md-6">
+                    <div class="alert alert-secondary" role="alert">
+                        <h5 class="alert-heading">Notificação Genérica</h5>
+                        <p>Esta é uma notificação informativa sobre atualizações recentes em sua conta.</p>
+                        <hr>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">Ver Mais</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert alert-danger" role="alert">
+                        <h5 class="alert-heading">Erro ao Processar</h5>
+                        <p>Ocorreu um erro ao tentar processar sua última solicitação. <a href="#"
+                                class="alert-link">Tentar Novamente</a>.</p>
+                        <hr>
+                        <button type="button" class="btn btn-outline-danger btn-sm">Tentar Novamente</button>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Seção de Sugestões de Vagas -->
-        <section class="suggestions-jobs my-5">
-            <h4 class="mb-4">Sugestões de vagas para você</h4>
-            <div class="card p-2 bg-dark rounded h-100">
-                <div class="row m-2">
-                    <!-- Sugestão de Vaga 1 -->
-                    <div class="col-md-3">
-                        <div class="suggestion-job-card bg-light p-3 mb-4 border rounded">
-                            <h6 class="text-primary">Desenvolvedor Full Stack</h6>
-                            <p>Empresa: Tech Corp</p>
-                            <p>Localização: São Paulo, SP</p>
-                            <button class="btn btn-primary w-100">Ver mais detalhes</button>
-                        </div>
-                    </div>
-                    <!-- Sugestão de Vaga 2 -->
-                    <div class="col-md-3">
-                        <div class="suggestion-job-card bg-light p-3 mb-4 border rounded">
-                            <h6 class="text-primary">Analista de Dados</h6>
-                            <p>Empresa: Data Insights</p>
-                            <p>Localização: Remoto</p>
-                            <button class="btn btn-primary w-100">Ver mais detalhes</button>
-                        </div>
-                    </div>
-                    <!-- Sugestão de Vaga 3 -->
-                    <div class="col-md-3">
-                        <div class="suggestion-job-card bg-light p-3 mb-4 border rounded">
-                            <h6 class="text-primary">Engenheiro de Software</h6>
-                            <p>Empresa: Code Innovations</p>
-                            <p>Localização: Curitiba, PR</p>
-                            <button class="btn btn-primary w-100">Ver mais detalhes</button>
-                        </div>
-                    </div>
-                    <!-- Sugestão de Vaga 3 -->
-                    <div class="col-md-3">
-                        <div class="suggestion-job-card bg-light p-3 mb-4 border rounded">
-                            <h6 class="text-primary">Desenvolvedor Front-End</h6>
-                            <p>Empresa: Code Innovations</p>
-                            <p>Localização: Curitiba, PR</p>
-                            <button class="btn btn-primary w-100">Ver mais detalhes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Paginação centralizada -->
-            <nav aria-label="Paginação de sugestões de vagas" class="d-flex justify-content-center m-4">
-                <ul class="pagination">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Próximo</a>
-                    </li>
-                </ul>
-            </nav>
         </section>
     </main>
     <!-- Footer -->
