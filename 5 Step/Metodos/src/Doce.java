@@ -1,2 +1,8 @@
-package PACKAGE_NAME;public class Doce {
+public class Doce {
+
+    String nome;
+
+    public void dizerNome() {
+        System.out.print("Eu sou o " + nome);
+    }
 }
