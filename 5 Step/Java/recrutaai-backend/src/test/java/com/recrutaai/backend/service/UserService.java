@@ -33,8 +33,8 @@ public class UserService {
         return Optional.empty();
     }
 
-    public Optional<User> getUserProfile(Long userId) {
-        return userRepository.findById(userId);
+    public Optional<User> getUserByUsername(String username) {
+        return userRepository.findByUsername(username);
     }
 
     public User updateUserProfile(Long userId, User updatedUser) {
@@ -44,7 +44,7 @@ public class UserService {
             user.setEmail(updatedUser.getEmail());
             user.setPhone(updatedUser.getPhone());
             user.setCity(updatedUser.getCity());
-            // Campos
+            // Atualize outros campos conforme necessário
             return userRepository.save(user);
         }).orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
     }
