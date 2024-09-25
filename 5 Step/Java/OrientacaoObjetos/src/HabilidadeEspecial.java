@@ -12,4 +12,9 @@ public class HabilidadeEspecial {
         this.habilitada = habilitada;
 
     }
+
+    public void ativarHabilidade(){
+        habilitada = true;
+    }
+
 }
