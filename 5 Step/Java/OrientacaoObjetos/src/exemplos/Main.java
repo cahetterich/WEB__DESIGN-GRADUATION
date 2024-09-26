@@ -1,4 +1,4 @@
-package br.com.fiap.game.view;
+package exemplos;
 
 import br.com.fiap.game.model.PersonagemMagico;
 

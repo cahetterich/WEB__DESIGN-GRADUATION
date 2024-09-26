@@ -1,3 +1,5 @@
+package exemplos;
+
 public class EnderecoCompleto {
 
     int cep;

@@ -1,4 +1,4 @@
-import br.com.fiap.game.model.HabilidadeEspecial;
+package br.com.fiap.game.model;
 
 public class PersonagemMagico {
 

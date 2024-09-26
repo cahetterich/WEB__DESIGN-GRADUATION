@@ -1,3 +1,4 @@
+package exemplos;
 
 import java.util.Scanner;
 
@@ -9,7 +10,7 @@ import java.util.Scanner;
             int op;
 
             do {
-                System.out.println("Escolha uma opção: \n1-Cadastrar Produto \n2-Exibir Produto \n3-Comprar \n4-Adicionar Estoque \n5-Aplicar Desconto \n0-Sair");
+                System.out.println("Escolha uma opção: \n1-Cadastrar exemplos.Produto \n2-Exibir exemplos.Produto \n3-Comprar \n4-Adicionar Estoque \n5-Aplicar Desconto \n0-Sair");
                         op = sc.nextInt();
 
                 switch (op) {
