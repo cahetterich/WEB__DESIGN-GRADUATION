@@ -1,3 +1,7 @@
+package br.com.fiap.game;
+
+import br.com.fiap.game.model.Item;
+
 import java.util.Scanner;
 
 public class ViewItem {
@@ -9,7 +13,7 @@ public class ViewItem {
         int op;
 
         do{
-            System.out.println("Escolha uma opção: \n1-Cadastrar Item \n2-Exibir Item \n0-Sair");
+            System.out.println("Escolha uma opção: \n1-Cadastrar item \n2-Exibir item \n0-Sair");
 
             op = sc.nextInt();
 

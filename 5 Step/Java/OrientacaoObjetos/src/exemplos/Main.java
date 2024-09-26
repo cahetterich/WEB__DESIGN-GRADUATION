@@ -1,3 +1,7 @@
+package br.com.fiap.game.view;
+
+import br.com.fiap.game.model.PersonagemMagico;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {

@@ -1,3 +1,5 @@
+import br.com.fiap.game.model.HabilidadeEspecial;
+
 public class PersonagemMagico {
 
     //classes
