@@ -1,5 +1,4 @@
 package br.com.fiap.game.view;
-
 import br.com.fiap.game.model.Item;
 
 import java.util.Scanner;
@@ -12,10 +11,9 @@ public class ViewItem {
         Item item = null;
         int op;
 
-        do{
-            System.out.println("Escolha uma opção: \n1-Cadastrar item \n2-Exibir item \n0-Sair");
-
-            op = sc.nextInt();
+        do {
+            System.out.println("Escolha uma opção: \n1-Cadastrar \n2-Exibir \n0-Sair");
+                    op = sc.nextInt();
 
             switch (op) {
                 case 1:
@@ -23,7 +21,7 @@ public class ViewItem {
                     String nome = sc.next() + sc.nextLine();
                     System.out.println("Digite a descrição do item:");
                     String descricao = sc.next() + sc.nextLine();
-                    System.out.println("O item é raro (true/false)?");
+                    System.out.println("O item é raro? (true/false):");
                     boolean raro = sc.nextBoolean();
                     System.out.println("Digite o nível de poder do item:");
                     int nivelPoder = sc.nextInt();
@@ -31,19 +29,20 @@ public class ViewItem {
                     break;
                 case 2:
                     if (item != null) {
-                        System.out.println("Nome: " + item.nome + ", Descrição: " + item.descricao + ", Raro: " + item.raro + ", Nível de poder: " + item.nivelPoder);
+                        System.out.println("Nome: " + item.getNome() + " Descrição: " + item.getDescricao() + " Raro: " + item.isRaro() + " Nível de poder: " + item.getNivelPoder());
                     } else {
                         System.out.println("Nenhum item cadastrado ainda.");
                     }
                     break;
                 case 0:
-                    System.out.println("Finalizando o programa!");
+                    System.out.println("Finalizando o programa");
                     break;
                 default:
-                    System.out.println("Opção inválida!");
+                    System.out.println("Opção inválida");
             }
-        }while (op != 0);
+        } while (op != 0);
 
         sc.close();
+
     }
 }

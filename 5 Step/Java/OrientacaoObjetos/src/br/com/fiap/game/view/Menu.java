@@ -24,9 +24,9 @@ public class Menu {
                     String poder =  sc.next() + sc.nextLine();
                     System.out.println("Digite o nível de energia:");
                     int energia = sc.nextInt();
-                    personagem.nome = nome;
-                    personagem.nivelEnergia = energia;
-                    personagem.poderMagico = poder;
+                    personagem.setNome(nome);
+                    personagem.setNivelEnergia(energia);
+                    personagem.setPoderMagico(poder);
                     System.out.println("Digite o nome da habilidade especial:");
                     String nomeHabilidade = sc.next() + sc.nextLine();
                     System.out.println("Digite o custo de energia para usar a habilidade especial:");
@@ -36,11 +36,11 @@ public class Menu {
                     //Criando o objeto que representa a habilidade especial com os valores informados pelo usuário
                     HabilidadeEspecial habilidadeEspecial = new HabilidadeEspecial(nomeHabilidade, nivelEnergia, ativada);
                     //Atribuindo o objeto habilidade especial ao personagem
-                    personagem.habilidadeEspecial = habilidadeEspecial;
+                    personagem.setHabilidadeEspecial(habilidadeEspecial);
                     break;
                 case 2:
-                    System.out.println("Nome: " + personagem.nome + ", Poder: " + personagem.poderMagico + ", Nível energia: " + personagem.nivelEnergia);
-                    System.out.println("Habilidade: " + personagem.habilidadeEspecial.nome + ", Custo energia: " + personagem.habilidadeEspecial.custoEnergia + ", Habilitada: " + personagem.habilidadeEspecial.habilitada);
+                    System.out.println("Nome: " + personagem.getNome() + ", Poder: " + personagem.getPoderMagico() + ", Nível energia: " + personagem.getNivelEnergia());
+                    System.out.println("Habilidade: " + personagem.getHabilidadeEspecial().getNome() + ", Custo energia: " + personagem.getHabilidadeEspecial().getCustoEnergia() + ", Habilitada: " + personagem.getHabilidadeEspecial().isHabilitada());
                     break;
                 case 3:
                     System.out.println("Digite o nome do ataque:");
@@ -57,7 +57,7 @@ public class Menu {
                     personagem.ativarHabilidadeEspecial();
                     break;
                 case 6:
-                    personagem.habilidadeEspecial.ativarHabilidade();
+                    personagem.getHabilidadeEspecial().ativarHabilidade();
                     break;
                 case 0:
                     System.out.println("Finalizando o programa");
