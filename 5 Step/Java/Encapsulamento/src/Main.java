@@ -1,15 +1,13 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+package br.com.fiap.loja.model;// private: pode ser acessado somente pela própria classe
+//public: pode ser acessado por qualquer outra classe
+//default (sem modificador) pode ser acessado por qualquer classe que esteja no mesmo pacote
+//protected: pode ser acessado por qualquer classe do mesmo pacote de classe ou por qualquer classe que herde da classe
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+public class Main {
+
+        public static void main(String[] args) {
+            Cliente cliente = new Cliente();
+            cliente.nome = "Thiago";
+            cliente.exibirDados();
         }
     }
-}
