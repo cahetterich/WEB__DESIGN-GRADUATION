@@ -1,2 +1,4 @@
-package br.com.usbsystem.view;public class ViewVendedor {
+package br.com.usbsystem.view;
+
+public class ViewVendedor {
 }
