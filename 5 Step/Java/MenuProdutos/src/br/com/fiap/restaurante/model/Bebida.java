@@ -2,27 +2,28 @@ package br.com.fiap.restaurante.model;
 
 public class Bebida extends Produto {
 
-    private Integer tamanho;
+    private int tamanho;
 
     public Bebida() {
         super();
     }
 
-    public Bebida(String nome, String ingredientes, Double preco, Integer tamanho) {
+    @Override
+    public String getResumo() {
+        return "Nome: " + this.getNome() + "\nIngredientes: " + this.getIngredientes() + "\nPreco: R$" + this.getPreco() + "\nQuantidade: " + this.getTamanho() + "ml";
+    }
+
+    public Bebida(String nome, String ingredientes, double preco, int tamanho) {
         super(nome, ingredientes, preco);
         this.tamanho = tamanho;
     }
 
-    @Override
-    public String getResumo() {
-        return "";
-    }
 
-    public Integer getTamanho() {
+    public int getTamanho() {
         return tamanho;
     }
 
-    public void setTamanho(Integer tamanho) {
+    public void setTamanho(int tamanho) {
         this.tamanho = tamanho;
     }
 

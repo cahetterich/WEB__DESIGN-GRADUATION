@@ -9,7 +9,7 @@ public class PratoQuente extends Produto {
 
     @Override
     public String getResumo() {
-        return "";
+        return "Nome: " + this.getNome() + "\nIngredientes: " + this.getIngredientes() + "\nPreco: R$" + this.getPreco() + "\nServe: " + this.getServe() + "pessoas";
     }
 
     public PratoQuente(String nome, String ingredientes, double preco, int serve) {
