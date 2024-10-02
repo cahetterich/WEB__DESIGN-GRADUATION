@@ -1,9 +1,11 @@
 package br.com.fiap.empresa.view;
 
+import br.com.fiap.empresa.exception.PercentualInvalidoException;
 import br.com.fiap.empresa.model.Funcionario;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class FuncionarioView {
+public class FuncionarioView2 {
 
     public static void main(String[] args) {
 
@@ -15,8 +17,10 @@ public class FuncionarioView {
             int p = sc.nextInt();
             fun.aumentarSalario(p);
             System.out.println("Novo salário: " + fun.getSalario());
-        } catch (Exception e) {
-            System.err.println("e.getMessage());
+        } catch (PercentualInvalidoException e) {
+            System.err.println("O percentual não pode ser negativo");
+        } catch (InputMismatchException e){
+            System.err.println("Valor percentual inválido");
         } finally {
             sc.close();
         }
