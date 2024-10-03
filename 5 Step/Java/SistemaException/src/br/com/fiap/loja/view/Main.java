@@ -14,11 +14,8 @@ public class Main {
 
         int op;
         do {
-            System.out.println("Escolha:
-                    1-Adicionar estoque
-                    2-Remover estoque
-                    0-Sair");
-                    op = sc.nextInt();
+            System.out.println("Escolha: \n1-Adicionar estoque \n2-Remover estoque \n0-Sair");
+            op = sc.nextInt();
             switch (op) {
                 case 1:
                     try {
@@ -28,6 +25,7 @@ public class Main {
                         System.out.println("Estoque atual: " + produto.getEstoque());
                     } catch (InputMismatchException e){
                         System.out.println("Valor digitado inválido para a quantidade");
+                        sc.nextLine();
                     }
                     break;
                 case 2:
@@ -40,6 +38,7 @@ public class Main {
                         System.err.println(e.getMessage());
                     } catch (InputMismatchException e){
                         System.out.println("Valor digitado inválido para a quantidade");
+                        sc.nextLine();
                     }
                     break;
                 case 0:
