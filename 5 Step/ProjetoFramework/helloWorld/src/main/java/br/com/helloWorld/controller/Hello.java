@@ -1,7 +1,15 @@
 package br.com.helloWorld.controller;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController;
+
 public class Hello {
 
-    public String dizerOla()
+    @GetMapping ("/hello")
+    public String dizerOla() {
+        return "Olá Mundo!";
+    }
 
 }
