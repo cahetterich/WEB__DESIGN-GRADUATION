@@ -1,7 +1,7 @@
 
 // LOGIN
 function efetuarLogin(){
-    var url = "http://localhost:8080/login";
+    var url = "http://localhost:1521/login";
     var usuario = {
         // "email": "bill@gates.com",
         // "senha": "123"
@@ -50,7 +50,7 @@ function carregarUsuario(){
 
 // NOVO USUARIO
 function gravar(){
-    var url = "http://localhost:8080/usuario";
+    var url = "http://localhost:1521/usuario";
     var usuario = {
         'nome': document.getElementById("txtNome").value,
         'foto': document.getElementById("txtFoto").value,
@@ -80,7 +80,7 @@ function gravar(){
 // TODOS OS USUARIOS
 
 // function listarUsuarios(){
-//     fetch("http://localhost:8080/usuario")
+//     fetch("http://localhost:1521/usuario")
 //         .then(res => res.json())
 //         .then(res => montarTabela(res))
 // }
@@ -113,7 +113,7 @@ function gravar(){
 // }
 
 function listarUsuarios(){
-       var url ="http://localhost:8080/usuario";
+       var url ="http://localhost:1521/usuario";
 
        fetch(url)
             .then(res => res.json())
@@ -140,7 +140,7 @@ function listarUsuarios(){
                  "<td>" + listaUsuarios[cont].nome + "</td>" +
                  "<td>" + listaUsuarios[cont].email + "</td>" +
                  "<td>" + listaUsuarios[cont].foto + "</td>" +
-                 "<td><button onclick='apagar(" + listaUsuarios.[cont].id + ")'type='button' class='btn btn-danger'>Apagar</button></td>" +
+                 "<td><button onclick='apagar(" + listaUsuarios[cont].id + ")'type='button' class='btn btn-danger'>Apagar</button></td>" +
                  "</tr>";
             }
 
