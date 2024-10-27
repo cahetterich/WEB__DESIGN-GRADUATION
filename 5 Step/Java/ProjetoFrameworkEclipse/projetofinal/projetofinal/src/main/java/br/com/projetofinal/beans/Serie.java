@@ -1,10 +1,13 @@
 package br.com.projetofinal.beans;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -28,7 +31,58 @@ public class Serie {
 	@Column(name="lancamento")
 	private boolean lancamento;
 	
+	@ManyToOne
+	@JsonIgnoreProperties("series")
 	private Provedora provedora; 
 	
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getGenero() {
+		return genero;
+	}
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getSinopse() {
+		return sinopse;
+	}
+
+	public void setSinopse(String sinopse) {
+		this.sinopse = sinopse;
+	}
+
+	public boolean isLancamento() {
+		return lancamento;
+	}
+
+	public void setLancamento(boolean lancamento) {
+		this.lancamento = lancamento;
+	}
+
+	public Provedora getProvedora() {
+		return provedora;
+	}
+
+	public void setProvedora(Provedora provedora) {
+		this.provedora = provedora;
+	}
+
 
 }
