@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/serie.js"></script>
+</head>
+<body onload="atualizarDados()">
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col-12">
+          <h3 style="text-align: center;">Cadastro de Séries</h3>
+        </div>
+      </div>
+      <br>
+      <div class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="addon-wrapping">Título</span>
+        </div>
+        <input id="txtTitulo" type="text" class="form-control" placeholder="Digite o titulo" aria-label="Username" aria-describedby="addon-wrapping">
+      </div>
+      <br>
+      <div class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="addon-wrapping">Sinopse</span>
+        </div>
+        <input id="txtSinopse" type="text" class="form-control" placeholder="Digite sinopse" aria-label="Username" aria-describedby="addon-wrapping">
+      </div>
+      <br>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Gênero</label>
+        </div>
+        <select id="txtGenero" class="custom-select">
+          <option selected>Ficção</option>
+          <option>Comédia</option>
+          <option>Romance</option>
+          <option>Terror</option>
+        </select>
+      </div>
+      <br>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="addon-wrapping">Lançamento?</span>
+          <div class="input-group-text">
+            <input value="1" name="lancamento" id="optsim" type="radio" aria-label="Radio button for following text input">Sim &nbsp;&nbsp;&nbsp; <input value="0" name="lancamento" id="optnao" type="radio" aria-label="Radio button for following text input">Não
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Provedora</label>
+        </div>
+        <select id="ddlProvedora" class="custom-select"></select> <!-- Provedora BACKEND -->
+      </div>
+      <br>
+      <br>
+      <br>
+      <button onclick="gravar()" type="button" class="btn btn-primary">Gravar Série</button>
+      <div class="row">
+        <div class="col-12">
+          <h3 style="text-align: center;">Séries Cadastradas</h3>
+        </div>
+      </div>
+      <divclass="row">
+        <div id="series" class="col-12"></div>
+    </div>
+    </div>
+  </body>
+  </html>
