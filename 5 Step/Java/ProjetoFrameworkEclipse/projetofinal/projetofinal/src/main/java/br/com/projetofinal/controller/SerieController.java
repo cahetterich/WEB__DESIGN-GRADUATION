@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.projetofinal.beans.Serie;
@@ -29,7 +31,7 @@ public class SerieController {
 	}
 	
 	@GetMapping("/serie/{codigo}")
-	public ResponseEntity<Serie> buscarSerie(int codigo) {
+	public ResponseEntity<Serie> buscarSerie(@PathVariable int codigo) {
 		
 		Serie result = serieDao.findById(codigo).orElse(null);
 		
@@ -43,7 +45,7 @@ public class SerieController {
 	}
 	
 	@PostMapping("/serie")
-	public ResponseEntity<Serie> salvarSerie(Serie serie) {
+	public ResponseEntity<Serie> salvarSerie(@RequestBody Serie serie) {
 		try {
 			Serie result = serieDao.save(serie);
 		
