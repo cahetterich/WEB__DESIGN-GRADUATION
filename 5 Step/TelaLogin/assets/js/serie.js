@@ -1,9 +1,13 @@
+//ATUALIZAR DADOS
 function atualizarDados(){
     recuperarProvedoras();
     recuperarSeries();
   }
 
+  // RECUPERAR PROVEDORAS
   function recuperarProvedoras(){
+    // var url = "http://localhost:1521/provedora";
+
     fetch("http://localhost:1521/provedora")
     .then(res => res.json())
     .then(res => montarDropDown(res))
@@ -20,7 +24,7 @@ function atualizarDados(){
     document.getElementById("ddlProvedora").innerHTML = saida;
   }
 
-
+ // RECUPERAR SERIES
   function recuperarSeries(){
     fetch("http://localhost:1521/serie")
         .then(res => res.json())
@@ -56,6 +60,7 @@ function atualizarDados(){
     document.getElementById("series").innerHTML = tabela;
   }
 
+  // GRAVAR - CRIAR SERIE
   function gravar(){
     var url = "http://localhost:1521/serie";
 
@@ -84,7 +89,7 @@ function atualizarDados(){
     fetch(url,envelope)
         .then(res => res.json())
         .then(res => {
-            window.alert("Série criado com sucesso!")
+            window.alert("Série criada com sucesso!")
             window.location = "serie.html";
         })
         .catch(err => {
