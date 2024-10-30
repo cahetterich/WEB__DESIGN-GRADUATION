@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.projetofinal.beans.Provedora;
 import br.com.projetofinal.dao.ProvedoraDao;
+import br.com.projetofinal.dto.ProvedoraFiltro;
 
 @RestController
 @CrossOrigin("*")
@@ -58,4 +59,16 @@ public class ProvedoraController {
 		}				
 	}
 	
+	@PostMapping("/provedora/filter")
+	public ResponseEntity<List<Provedora>> filtrarProvedoras(@RequestBody ProvedoraFiltro filtro){
+		
+		if(filtro.getNome()!= null) {
+			List<Provedora> result = provedoraDao.findByNomeStartingWith(filtro.getNome());
+			return ResponseEntity.ok(result);
+		}
+		
+		return ResponseEntity.status(404).build();
+	}
+
 }
+
