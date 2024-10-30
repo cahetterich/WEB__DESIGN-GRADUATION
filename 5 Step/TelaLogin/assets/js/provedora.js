@@ -47,9 +47,30 @@ function pesquisar(){
         return;
     }
 
-    if(filtroTitulo == true){
+    // if(filtroTitulo == true){
+    //     filtro = {
+    //         'nome': document.getElementById("txtProvedora").value
+    //     }
+    // }
+
+    else if(filtroTitulo == true && filtroData == false){
         filtro = {
             'nome': document.getElementById("txtProvedora").value
+        }
+    }
+
+    else if(filtroTitulo == false && filtroData == true){
+        filtro = {
+            'dataInicial': document.getElementById("txtDataInicial").value.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1'),
+            'dataFinal': document.getElementById("txtDataFinal").value.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1')
+        }
+    }
+
+    else if (filtroTitulo == true && filtroData == true){
+        filtro = {
+            'nome': document.getElementById("txtProvedora").value,
+            'dataInicial': document.getElementById("txtDataInicial").value.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1'),
+            'dataFinal': document.getElementById("txtDataFinal").value.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1')
         }
     }
 
@@ -69,4 +90,28 @@ function pesquisar(){
         .catch(err => {
             window.alert("Nenhuma provedora encontrada para o filtro selecionado");
         });
+}
+
+// APAGAR 
+
+function apagar(id){
+    var resposta = window.confirm("Clique em OK para EXCLUIR o usuário!");
+    if (resposta == true) {
+        var usuariologado = JSON.parse(localStorage.getItem("usuarioLogado"));
+        if (id == usuariologado.id) {
+            window.alert("Não pode apagar o usuário logado");
+        } else {
+            fetch("http://localhost:8080/usuario/" + id,
+                {
+                    method: 'DELETE'
+                })
+                .then(res => {
+                    window.alert("Usuário apagado");
+                    listarUsuarios();
+            })
+            .catch(err => {
+                window.alert("Ocorreu um erro... não foi possível excluir o usuário!");
+            });
+        }
+    }
 }
