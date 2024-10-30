@@ -62,13 +62,30 @@ public class ProvedoraController {
 	@PostMapping("/provedora/filter")
 	public ResponseEntity<List<Provedora>> filtrarProvedoras(@RequestBody ProvedoraFiltro filtro){
 		
-		if(filtro.getNome()!= null) {
-			List<Provedora> result = provedoraDao.findByNomeStartingWith(filtro.getNome());
-			return ResponseEntity.ok(result);
+		List<Provedora> result;
+		if(filtro.getNome()!= null &&
+			(filtro.getDataInicial() == null && filtro.getDataFinal() == null)) {
+			 result = provedoraDao.findByNomeStartingWith(filtro.getNome());
+		}
+		else if(filtro.getNome() == null &&
+				(filtro.getDataInicial() != null && filtro.getDataFinal() != null)) {
+			    result = provedoraDao.findByFundacaoBetween(filtro.getDataInicial(), 
+                                                            filtro.getDataFinal());
+     	}
+		else if(filtro.getNome() != null &&
+				(filtro.getDataInicial() != null && filtro.getDataFinal() != null)) {
+				 result = provedoraDao.findByNomeStartingWithAndFundacaoBetween
+						(filtro.getNome(), filtro.getDataInicial(), filtro.getDataFinal());
+		}
+		else {
+			return ResponseEntity.status(403).build();	
 		}
 		
+		if(result.size() == 0) {
 		return ResponseEntity.status(404).build();
+		}
+		else {
+			return ResponseEntity.ok(result);
+		}
 	}
-
 }
-
