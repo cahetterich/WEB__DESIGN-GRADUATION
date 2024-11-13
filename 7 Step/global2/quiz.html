@@ -4,33 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz sobre Energia Sustentável</title>
-    <link rel="stylesheet" href="./assets/style/styles.css">
-    <link rel="stylesheet" href="./assets/style/quiz.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style/styles.css"> <!-- CSS principal -->
+    <link rel="stylesheet" href="./assets/style/quiz.css"> <!-- CSS específico do quiz -->
 </head>
-<body>
-    <header>
+<body class="bg-light">
+    <!-- Cabeçalho -->
+    <header class="bg-dark text-white text-center py-4">
         <h1>Quiz sobre Energia Sustentável</h1>
     </header>
 
-    <main>
-        <div id="quiz-container">
-            <div id="question-container">
-                <p id="question">Pergunta será exibida aqui</p>
-                <div class="options">
-                    <button onclick="checkAnswer(0)">Opção 1</button>
-                    <button onclick="checkAnswer(1)">Opção 2</button>
-                    <button onclick="checkAnswer(2)">Opção 3</button>
+    <!-- Área principal do quiz -->
+    <main class="container my-4">
+        <div id="quiz-container" class="text-center">
+            <div id="question-container" class="mb-4">
+                <p id="question" class="lead text-dark">Pergunta será exibida aqui</p>
+                <div class="options d-flex justify-content-around flex-wrap">
+                    <button class="btn btn-success m-2" onclick="checkAnswer(0)">Opção 1</button>
+                    <button class="btn btn-warning m-2" onclick="checkAnswer(1)">Opção 2</button>
+                    <button class="btn btn-primary m-2" onclick="checkAnswer(2)">Opção 3</button>
                 </div>
             </div>
-            <button id="next-btn" onclick="nextQuestion()">Próxima Pergunta</button>
-            <p id="score">Pontuação: 0</p>
+            <button id="next-btn" class="btn btn-dark btn-lg my-3" onclick="nextQuestion()">Próxima Pergunta</button>
+            <p id="score" class="font-weight-bold text-dark">Pontuação: 0</p>
         </div>
     </main>
 
-    <footer>
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3">
         <p>Conscientização Sustentável - Quiz sobre Energia</p>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/quiz.js"></script>
 </body>
 </html>

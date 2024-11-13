@@ -1,19 +1,19 @@
 function openQuiz() {
-    alert("Abrir Quiz sobre Energia");
+    window.location.href = "./quiz.html";
 }
 
 function openMemoryGame() {
-    alert("Abrir Jogo da Memória");
+    window.location.href = "./memory.html"; // Página do Jogo da Memória (criamos depois)
 }
 
 function openInfo() {
-    alert("Abrir Informações e Links");
+    window.location.href = "./info.html"; // Página com Informações e Links (criamos depois)
 }
 
 function openDragAndDrop() {
-    alert("Abrir Jogo de Arrastar e Soltar");
+    window.location.href = "./drag-drop.html"; // Página de Arrastar e Soltar (criamos depois)
 }
 
 function openColoringGame() {
-    alert("Abrir Jogo de Colorir");
+    window.location.href = "./coloring.html"; // Página do Jogo de Colorir (criamos depois)
 }

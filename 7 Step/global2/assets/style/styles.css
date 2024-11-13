@@ -39,3 +39,56 @@ footer {
     background-color: #4CAF50;
     color: white;
 }
+
+
+/* index + bootstrap */
+
+body, header, footer {
+    color: #ffffff;
+}
+
+.bg-light {
+    background-color: #ffffff !important;
+}
+
+.bg-dark {
+    background-color: #333333 !important;
+}
+
+.btn-success {
+    background-color: #32CD32;
+    border-color: #32CD32;
+    color: #ffffff;
+}
+
+.btn-warning {
+    background-color: #FFD700;
+    border-color: #FFD700;
+    color: #333333;
+}
+
+.btn-dark {
+    background-color: #000000;
+    border-color: #000000;
+    color: #ffffff;
+}
+
+.btn-light {
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    color: #333333;
+}
+
+button.btn-lg {
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 10px 0;
+}
+
+h1, p {
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+}

@@ -1,0 +1,30 @@
+/* Fundo do Banner */
+.banner {
+    background: linear-gradient(to right, #00aaff, #00ffaa);
+    padding: 100px 0;
+}
+
+/* Estilos de Texto e Botões */
+.banner h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.banner p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.welcome-section h2, .games-section h2, .project-section h2, .info-section h2, .about-section h2 {
+    color: #00aaff;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+}
+footer h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
