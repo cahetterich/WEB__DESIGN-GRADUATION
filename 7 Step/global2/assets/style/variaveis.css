@@ -1,9 +1,9 @@
 
 body {  
     font-family: var(--font-Robot);
-    background-color: var(--gradiente); 
+    background: var(--gradiente); 
     color: var(--colors-dark);  
-    padding: 100px 0;
+    padding: 100px 0 0 0;
 }
 
 .font-h1 {
