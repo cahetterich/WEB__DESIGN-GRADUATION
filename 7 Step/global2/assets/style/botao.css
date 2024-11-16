@@ -1,0 +1,109 @@
+
+/* Jogos - Index */
+.btn-energia {
+    background-color: var(--colors-amarelo);    
+    color: var(--colors-dark);
+    font-weight: bold;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.btn-memoria {
+    background-color: var(--colors-vermelho);
+    color: var(--colors-dark);
+    font-weight: bold;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.btn-arrasta {
+    background-color: var(--colors-verde);
+    color: var(--colors-dark);
+    font-weight: bold;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.btn-pintar {
+    background-color: var(--colors-azul);
+    color: var(--colors-dark);
+    font-weight: bold;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px #0098B4, 0 6px 20px #0098B4;
+    transform: translateY(-5px); /* Opcional: levanta o card levemente */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Quiz */
+.btn-quiz {
+    background-color: var(--colors-white);
+    color: var(--colors-verde-oceno);
+    border: 2px solid var(--colors-verde-oceno); /* Green */
+    font-weight: bold;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;    
+}
+
+
+.btn-energia:hover,
+.btn-arrasta:hover,
+.btn-memoria:hover,
+.btn-pintar:hover,
+.btn-quiz:hover {     
+    background-color: var( --colors-verde-oceno);
+    color: var(--colors-white);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);   
+}
+
+/*PERGUNTA*/
+.btn-pergunta {
+    background-color: var(--colors-dark);
+    color: var(--colors-white);
+    
+    font-weight: bold;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+
+
+.btn-pergunta span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+ 
+.btn-pergunta:hover span {
+    padding-right: 20px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

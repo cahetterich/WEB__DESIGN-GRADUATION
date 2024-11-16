@@ -7,7 +7,6 @@ let timerInterval;
 let secondsElapsed = 0;
 
 function startGame() {
-    // Limpa o tabuleiro e reseta as variáveis
     const memoryGame = document.getElementById("memory-game");
     memoryGame.innerHTML = "";
     matchedPairs = 0;
@@ -23,7 +22,7 @@ function startGame() {
 
     cards.forEach(icon => {
         const card = document.createElement("div");
-        card.classList.add("card");
+        card.classList.add("memory-card");
         card.dataset.icon = icon;
 
         const cardFront = document.createElement("div");
@@ -89,3 +88,17 @@ function updateTimer() {
 }
 
 document.addEventListener("DOMContentLoaded", startGame);
+
+
+function flipCard(card) {
+    if (flippedCards.length < 2 && !card.classList.contains("flip")) {
+        card.classList.add("flip");
+        card.querySelector(".card-front").style.display = "none";
+        card.querySelector(".card-back").style.display = "block";
+        flippedCards.push(card);
+
+        if (flippedCards.length === 2) {
+            checkMatch();
+        }
+    }
+}

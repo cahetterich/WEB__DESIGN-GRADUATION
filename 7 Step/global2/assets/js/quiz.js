@@ -130,7 +130,7 @@ function nextQuestion() {
 // Função para finalizar o quiz
 function endQuiz() {
     questionElement.textContent = "Parabéns! Você completou o quiz.";
-    feedbackElement.textContent = `Sua pontuação final é: ${score} de ${questions.length}`;
+    feedbackElement.textContent = `Você acertou: ${score} de ${questions.length}`;
 
     // Oculta os botões de opções e de próxima pergunta
     const optionsButtons = document.querySelectorAll('.options button');

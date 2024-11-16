@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Dados sobre as fontes de energia
     const renewableSources = ["solar", "wind", "hydro", "biomass"];
-    const nonRenewableSources = ["coal", "oil", "gas"];
+    const nonRenewableSources = ["coal", "oil", "gas", "nuc"];
 
     // Funções de arrastar e soltar
     draggables.forEach(draggable => {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ) {
                 zone.appendChild(draggedElement);
                 feedback.textContent = "Correto! Continue assim.";
-                feedback.style.color = "green";
+                feedback.style.color = "dark";
             } else {
                 feedback.textContent = "Oops! Tente novamente.";
                 feedback.style.color = "red";

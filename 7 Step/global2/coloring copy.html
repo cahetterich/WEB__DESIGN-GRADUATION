@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Colorir - Energia Sustentável</title>
+    <!-- Links para os estilos do Bootstrap e CSS do projeto -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style/styles1.css">
+    <link rel="stylesheet" href="./assets/style/coloringcopy.css">
+</head>
+<body class="bg-light">
+
+    <!-- Cabeçalho -->
+    <header class="bg-dark text-white text-center py-4">
+        <h1>Escolha um Desenho para Colorir!</h1>
+        <button class="btn btn-warning mt-3" onclick="window.location.href = 'index.html'">Voltar para a Página Inicial</button>
+    </header>
+
+    <main class="container my-4">
+        <!-- Seção de seleção do desenho com o layout do Bootstrap -->
+        <div class="row text-center mb-4">
+            <div class="col-md-4">
+                <button class="btn btn-success" onclick="startColoring('./assets/img/ImgColoring1.jpeg')">
+                    <img src="./assets/img/ImgColoring1.jpeg" alt="Torre Eólica" class="img-fluid">
+                    Torre Eólica
+                </button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary" onclick="startColoring('./assets/img/ImgColoring2.jpeg')">
+                    <img src="./assets/img/ImgColoring2.jpeg" alt="Painel Solar" class="img-fluid">
+                    Painel Solar
+                </button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-warning" onclick="startColoring('./assets/img/ImgColoring3.jpeg')">
+                    <img src="./assets/img/ImgColoring3.jpeg" alt="Biomassa" class="img-fluid">
+                    Biomassa
+                </button>
+            </div>
+        </div>
+
+        <!-- Área de colorir (inicialmente oculta) -->
+        <div id="coloring-area" class="hidden text-center">
+            <div id="color-palette" class="mb-3">
+                <span>Escolha uma cor:</span>
+                <input type="color" id="color-picker" value="#000000" class="form-control d-inline-block">
+                <label for="brush-size" class="ml-2">Tamanho do Pincel:</label>
+                <input type="range" id="brush-size" min="5" max="50" value="10" class="form-control d-inline-block w-25">
+            </div>
+
+            <canvas id="coloring-canvas" width="600" height="400" class="border rounded"></canvas>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>Conscientização Sustentável - Projeto Educativo</p>
+    </footer>
+
+    <!-- Script do Jogo de Colorir -->
+    <script src="./assets/js/coloring.js"></script>
+
+</body>
+</html>
