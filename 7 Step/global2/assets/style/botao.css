@@ -54,8 +54,8 @@
 /* Quiz */
 .btn-quiz {
     background-color: var(--colors-white);
-    color: var(--colors-verde-oceno);
-    border: 2px solid var(--colors-verde-oceno); /* Green */
+    color: var(--colors-dark);
+    border: 1px solid var(--colors-dark); /* Green */
     font-weight: bold;
     padding: 15px 32px;
     text-align: center;
@@ -73,14 +73,13 @@
 .btn-quiz:hover {     
     background-color: var( --colors-verde-oceno);
     color: var(--colors-white);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);   
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.19);   
 }
 
 /*PERGUNTA*/
 .btn-pergunta {
     background-color: var(--colors-dark);
-    color: var(--colors-white);
-    
+    color: var(--colors-white);    
     font-weight: bold;
     padding: 15px 32px;
     text-align: center;
@@ -88,6 +87,11 @@
     display: inline-block;
     font-size: 16px;
     transition: all 0.5s;
+}
+
+.btn-pergunta:hover {
+    border: 2px solid var(--colors-dark); 
+    box-shadow: 0 2px 2px #0c0c0c, 0 2px 2px #ffffff;
 }
 
 
@@ -107,3 +111,24 @@
     opacity: 1;
     right: 0;
   }
+
+  /*Jogar Online*/
+.btn-jg {
+    background-color: var(--colors-white);
+    color: var(--colors-dark);    
+    font-weight: bold;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+
+.btn-jg:hover {
+    border: 2px solid var(--colors-white); 
+    /* color: var(--colors-white);    */
+    box-shadow: 0 2px 2px #ffffff, 0 2px 2px #ffffff;
+}
+
+

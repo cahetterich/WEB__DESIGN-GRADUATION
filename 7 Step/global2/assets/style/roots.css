@@ -2,16 +2,16 @@
     /* cores */
     --colors-white: #F0F0EF;    
     --colors-dark: #000000;     
-    --colors-amarelo: #FFE580;     
-    --colors-vermelho: #fda8b3;     
-    --colors-verde: #A6FF95;     
-    --colors-azul: #89D0F3;     
-    --colors-verde-oceno: #0098B4;   
+    --colors-amarelo: #ffe680b6;     
+    --colors-vermelho: #fda8b3ad;     
+    --colors-verde: #a7ff95c4;     
+    --colors-azul: #2999a871;     
+    --colors-verde-oceno: #038197b4;   
    /* --colors-green: rgb(46, 136, 32);   
     --colors-red: rgb(165, 3, 17);    */ 
     /* gradiente */
     --gradiente: background-color: rgb(20,68,128);
-    background: linear-gradient(to right, #0098B4, #ABEFA5);
+    background: linear-gradient(to right, #0099b4e1, #ABEFA5);
     /* fontes */
     --font-Josefin: "Josefin Sans", serif;      /* <weight>: Use a value from 400 ou 700 */
     --font-Robot: "Roboto", serif;     /* <weight>: Use a value from 300 to 80 */
