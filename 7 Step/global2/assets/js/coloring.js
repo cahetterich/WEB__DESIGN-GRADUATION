@@ -18,14 +18,16 @@ function startColoring(imageSrc) {
     const img = new Image();
     img.src = imageSrc;
 
-    img.onload = function() {
-        // Ajustar o tamanho do canvas para a imagem
+    img.onload = function () {
+        // Ajustar o tamanho do canvas
         canvas.width = img.width;
         canvas.height = img.height;
-
-        // Desenhar a imagem no canvas
+    
+        // Limpar canvas e desenhar a nova imagem
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(img, 0, 0, img.width, img.height);
     };
+    
 
     // Definir o comportamento para desenhar no canvas
     let painting = false;
@@ -47,16 +49,23 @@ function startColoring(imageSrc) {
     // Função para desenhar
     function draw(e) {
         if (!painting) return;
+    
+        // Obter as coordenadas corretas do mouse no canvas
+        const rect = canvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+    
+        // Configurar pincel
         ctx.lineWidth = brushSize;
         ctx.lineCap = 'round';
         ctx.strokeStyle = currentColor;
-
-        // Ajustar a posição do mouse para a posição do canvas
-        ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+    
+        ctx.lineTo(x, y);
         ctx.stroke();
         ctx.beginPath();
-        ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+        ctx.moveTo(x, y);
     }
+    
 
     // Adicionar os eventos de mouse
     canvas.addEventListener('mousedown', startPosition);

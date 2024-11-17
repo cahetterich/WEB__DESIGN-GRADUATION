@@ -4,59 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de Colorir - Energia Sustentável</title>
-    <!-- Links para os estilos do Bootstrap e CSS do projeto -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/style/styles1.css">
-    <link rel="stylesheet" href="./assets/style/coloring.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/style/styles.css">    
 </head>
-<body class="bg-light">
 
-    <!-- Cabeçalho -->
-    <header class="bg-dark text-white text-center py-4">
-        <h1>Escolha um Desenho para Colorir!</h1>
-        <button class="btn btn-warning mt-3" onclick="window.location.href = 'index.html'">Voltar para a Página Inicial</button>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top font-navbar bg-glass">
+            <div class="container px-5 py-2">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="./assets/img/logo1.png" alt="Logo da Energia Criativa" width="40" height="40" class="rounded-circle">
+                </a>
+                <a class="navbar-brand logo-text" href="#inicio">Energia Criativa</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-navbar" href="/index.html"><i class="bi bi-chevron-double-left"></i>Voltar para a página principal</a>
+                        </li>                    
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <main class="container my-4">
-        <!-- Seção de seleção do desenho com o layout do Bootstrap -->
-        <div class="row text-center mb-4">
-            <div class="col-md-4">
-                <button class="btn btn-success" onclick="startColoring('./assets/img/ImgColoring1.jpeg')">
-                    <img src="./assets/img/ImgColoring1.jpeg" alt="Torre Eólica" class="img-fluid">
-                    Torre Eólica
-                </button>
+<main> 
+             
+        <section class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="fw-bold font-h2">DIVIRTA-SE PINTANDO!</h2>
+                    <h5 class="my-2 fw-light">Escolha um desenho de uma energia renovável para pintar. </h5>                    
+                </div>
+                <div class="col-md-6 text-center my-4">
+                    <img src="./assets/img/draw3.png" width="40%" alt="Icone do Quiz sobre energia" class="img-fluid mb-5">
+                </div>
             </div>
-            <div class="col-md-4">
-                <button class="btn btn-primary" onclick="startColoring('./assets/img/ImgColoring2.jpeg')">
-                    <img src="./assets/img/ImgColoring2.jpeg" alt="Painel Solar" class="img-fluid">
-                    Painel Solar
-                </button>
+        </section>
+   
+
+
+    <!-- Cabeçalho -->
+    <section class="bg-white text-center py-4">
+        <h2 class="fw-bold font-h2">Escolha um Desenho para Colorir:</h2>       
+    </section>
+
+    <section class="container my-4">
+            <!-- Seção de seleção do desenho com o layout do Bootstrap -->
+            
+            <div class="row text-center mb-4 g-4">
+                <div class="col-md-4">
+                    <button class="btn btn-light" onclick="startColoring('./assets/img/ImgColoring1.jpeg')">
+                        <img src="./assets/img/ImgColoring1.jpeg" alt="Torre Eólica" class="img-fluid">
+                        Torre Eólica
+                    </button>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-light" onclick="startColoring('./assets/img/ImgColoring2.jpeg')">
+                        <img src="./assets/img/ImgColoring2.jpeg" alt="Painel Solar" class="img-fluid">
+                        Painel Solar
+                    </button>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-light" onclick="startColoring('./assets/img/ImgColoring3.jpeg')">
+                        <img src="./assets/img/ImgColoring3.jpeg" alt="Biomassa" class="img-fluid">
+                        Biomassa
+                    </button>
+                </div>
             </div>
-            <div class="col-md-4">
-                <button class="btn btn-warning" onclick="startColoring('./assets/img/ImgColoring3.jpeg')">
-                    <img src="./assets/img/ImgColoring3.jpeg" alt="Biomassa" class="img-fluid">
-                    Biomassa
-                </button>
+    
+
+            <!-- Área de colorir (inicialmente oculta) -->        
+            <div id="coloring-area" class="hidden text-center p-5 rounded bg-white">
+                <div id="color-palette" class="row mb-3 align-items-center justify-content-between">
+                    <!-- Escolha de cor -->
+                    <div class="col-12 col-md-6 text-md-start mb-3 mb-md-0">
+                        <span>Escolha uma cor:</span>
+                        <input type="color" id="color-picker" value="#FF0000" class="form-control d-inline-block w-10">
+                    </div>
+
+                    <!-- Tamanho do pincel -->
+                    <div class="col-12 col-md-6 text-md-end">
+                        <label for="brush-size" class="me-2">Tamanho do Pincel:</label>
+                        <input type="range" id="brush-size" min="5" max="50" value="10" class="form-control d-inline-block w-10">
+                    </div>
+                </div>
+
+    <!-- Canvas --> 
+     <canvas id="coloring-canvas" width="600" height="400" class="border rounded"></canvas>
+</div>
+
+ <!-- Canvas
+ <div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+        <canvas id="coloring-canvas" class="border rounded img-fluid"></canvas>
+    </div>
+</div> -->
+
+        </section>
+    
+        <!-- Seção Saiba Mais -->
+    <section id="saiba-mais" class="py-5 bg-glass">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Quer saber mais sobre energia sustentável?</h2>
+                    <p class="fw-light">
+                        Aprenda mais sobre as diferentes fontes de energia e como elas impactam nosso planeta.
+                    </p>
+                    <a href="/info.html" class="btn btn-jg mt-3">Saiba Mais</a>
+                </div>
+                <div class="col-md-6 text-center my-4">
+                    <img src="./assets/img/energiaSolar2.jpg" alt="Desenho de painéis solares em um campo." class="img-fluid rounded" style="max-width: 100%;">
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Área de colorir (inicialmente oculta) -->
-        <div id="coloring-area" class="hidden text-center">
-            <div id="color-palette" class="mb-3">
-                <span>Escolha uma cor:</span>
-                <input type="color" id="color-picker" value="#000000" class="form-control d-inline-block">
-                <label for="brush-size" class="ml-2">Tamanho do Pincel:</label>
-                <input type="range" id="brush-size" min="5" max="50" value="10" class="form-control d-inline-block w-25">
-            </div>
-
-            <canvas id="coloring-canvas" width="600" height="400" class="border rounded"></canvas>
+    <!-- Newsletter -->
+    <section id="newsletter" class="py-5 bg-white">
+        <div class="container text-center">
+            <img src="./assets/img/menino123.PNG" width="20%" alt="Desenho de um menino de olhos azuis e camisa com os tons verde, azul e roxo, com desenhos de folhas verdes" class="img-fluid rounded-circle">
+            <h2 class="my-4 fw-bold font-h4 text-center">Assine nossa Newsletter</h2>
+            <p class="">Receba nossas novidades e conteúdos educativos sobre energia sustentável diretamente no seu e-mail!</p>
+            
+            <form action="newsletter" method="post" class="row justify-content-center">
+                <div class="col-md-6 col-sm-8 mb-3">
+                    <input type="email" name="email" placeholder="Digite seu e-mail" class="form-control" required>
+                </div>
+                <div class="col-md-2 col-sm-4">
+                    <button type="submit" class="btn btn-dark w-100">Assinar</button>
+                </div>
+            </form>
         </div>
+    </section>
+
     </main>
 
     <!-- Rodapé -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>Conscientização Sustentável - Projeto Educativo</p>
+    <footer class="bg-dark text-white text-center p-3">
+        <p>Energia Criativa &copy; Conscientização Sustentável - Quiz sobre Energia</p>
+        <p class="small">Aumente seu conhecimento e seja parte da mudança!</p>
+        <img src="./assets/img/logo1.png" alt="Logo da Energia Criativa" width="50" height="50" class="rounded-circle">
     </footer>
+
 
     <!-- Script do Jogo de Colorir -->
     <script src="./assets/js/coloring.js"></script>

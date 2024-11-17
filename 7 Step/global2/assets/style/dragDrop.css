@@ -1,0 +1,19 @@
+.card-renovaveis {
+    background-color: var(--colors-verde);
+}
+
+.card-NaoRenovaveis {
+    background-color: var( --colors-vermelho);    
+}
+
+.card-renovaveis:hover {
+    box-shadow: 0 8px 16px #cddfc993, 0 6px 20px #b0e0a693;
+    transform: translateY(-5px); /* Opcional: levanta o card levemente */
+    transition: all 0.3s ease-in-out;
+}
+
+.card-NaoRenovaveis:hover {
+    box-shadow: 0 8px 16px #fda8b37e, 0 6px 20px #fda8b35d;
+    transform: translateY(-5px); /* Opcional: levanta o card levemente */
+    transition: all 0.3s ease-in-out;
+}

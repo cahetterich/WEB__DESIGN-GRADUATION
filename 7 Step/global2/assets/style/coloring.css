@@ -1,36 +1,3 @@
-.hidden {
-    display: none;
-}
-
-header button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.drawing-selection button {
-    background-color: #32CD32;
-    color: white;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-/* Estilo para garantir que as imagens sejam responsivas e não desproporcionais */
-.drawing-selection img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do botão */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 10px; /* Borda arredondada para um visual mais suave */
-    margin-bottom: 10px; /* Espaçamento abaixo das imagens */
-}
-
-
 /* Garantir que o canvas ocupe 100% da largura disponível */
 #coloring-area {
     display: none; /* Inicialmente oculto */
@@ -39,18 +6,19 @@ header button {
 }
 
 #coloring-canvas {
-    width: 100%;
-    max-width: 600px; /* Limite de largura */
-    height: auto; /* Manter a proporção da imagem */
-    border: 1px solid #000;
-    display: block; /* Centraliza o canvas */
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;    
 }
 
-/* Controla o tamanho da área de paleta de cores */
-#color-palette {
-    margin-bottom: 20px;
-}
+/* #coloring-canvas {
+    width: 100%; /
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    border: 1px solid #000; 
+} */
+
 
 canvas {
     border: 2px solid #333;
@@ -58,6 +26,6 @@ canvas {
     cursor: crosshair;
 }
 
-
-/* /// */
-
+#coloring-area .form-control {
+    max-width: 200px; /* Define um tamanho máximo para os controles em telas grandes */
+}
