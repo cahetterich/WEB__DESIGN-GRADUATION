@@ -17,3 +17,23 @@
     transform: translateY(-5px); /* Opcional: levanta o card levemente */
     transition: all 0.3s ease-in-out;
 }
+
+@media(min-width: 768px) {  
+    
+   
+    
+}
+
+@media(min-width: 992px) {  
+
+
+
+}
+
+
+@media(min-width: 1200px) {  
+    
+  
+   
+    
+}

@@ -4,35 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informações e Links - Energia Sustentável</title>
-    <link rel="stylesheet" href="./assets/style/styles1.css">
-    <link rel="stylesheet" href="./assets/style/info.css">
-</head>
+     <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+     <!-- Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Bootstrap Icons -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+     <!-- Custom CSS -->
+     <link rel="stylesheet" href="./assets/style/styles.css">   
+     <link rel="stylesheet" href="./assets/style/info.css"> 
+ </head>
 <body>
+
     <header>
-        <h1>Informações sobre Energia Sustentável</h1>
-        <button onclick="window.location.href = 'index.html'">Voltar para a Página Inicial</button>
+        <nav class="navbar navbar-expand-lg fixed-top font-navbar bg-glass">
+            <div class="container px-5 py-2">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="./assets/img/logo1.png" alt="Logo da Energia Criativa" width="40" height="40" class="rounded-circle">
+                </a>
+                <a class="navbar-brand logo-text" href="#inicio">Energia Criativa</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-navbar" href="/index.html"><i class="bi bi-chevron-double-left"></i>Voltar para a página principal</a>
+                        </li>                    
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <main>
-        <section class="info-section">
-            <h2>O que é Energia Sustentável?</h2>
-            <p>
-                A energia sustentável é gerada a partir de fontes renováveis, como a energia solar, eólica, hídrica e biomassa.
-                Essas fontes são chamadas de "renováveis" porque se regeneram naturalmente e têm baixo impacto ambiental,
-                ao contrário dos combustíveis fósseis, que são limitados e poluentes.
-            </p>
-            
-            <h2>Principais Fontes de Energia Renovável</h2>
-            <ul>
-                <li><strong>Solar:</strong> Captada através de painéis solares, utiliza a luz do sol para gerar eletricidade.</li>
-                <li><strong>Eólica:</strong> Aproveita a força dos ventos para movimentar turbinas que geram energia.</li>
-                <li><strong>Hídrica:</strong> Usa a força da água em rios e represas para produzir eletricidade.</li>
-                <li><strong>Biomassa:</strong> Produzida a partir de resíduos orgânicos, como plantas e animais, transformando-os em energia.</li>
-            </ul>
-        </section>
+<main> 
+      
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="fw-bold font-h2">QUER APRENDER MAIS?</h2>
+                    <h5 class="my-2 fw-light">Aqui você encontra tudo sobre energia sustentável, informações sobre as suas principais fontes e links para aprofundar mais o seu conhecimento no assunto!</h5>                    
+                </div>
+                <div class="col-md-6 text-center my-4">
+                    <img src="./assets/img/energiaSolar2.jpg" alt="Desenho de painéis solares em um campo." class="img-fluid rounded" style="max-width: 100%;">
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Seção Informações -->
+    <section id="" class="bg-white">
+
+        <div class="container py-5">
+            <h2 class="fw-bold font-h2">O que é Energia Sustentável?</h2>
+            <h5 class="my-2 fw-light">A energia sustentável é gerada a partir de fontes renováveis, como a energia solar, eólica, hídrica, biomassa, geotérmica e marinha.            
+            <h5 class="my-2 mb-4 fw-light">Essas fontes são chamadas de "renováveis" porque se regeneram naturalmente e têm baixo impacto ambiental, ao contrário dos combustíveis fósseis, que são limitados e poluentes.</h5>            
+        </div>
+
+        <div class="container pb-5">
+            <h2 class="mb-4 font-h2">Principais Fontes de Energia Renovável</h2>
+            <div class="row">
+
+                <div class="col-md-4 mb-3">
+                    <div class="card" style="width: 20rem;">
+                        <img src="./assets/img/energiaSolar2.JPG" class="card-img-top mx-auto" alt="Desenho de painéis solares em um campo.">
+                        <div class="card-body">
+                          <h5 class="card-title">Solar</h5>
+                          <p class="card-text">Através de painéis solares utiliza a luz do sol para gerar eletricidade.</p>                    
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card" style="width: 20rem;">
+                        <img src="./assets/img/energiaEolica.JPG" class="card-img-top mx-auto" alt="Desenho de torre eólica em um campo.">
+                        <div class="card-body">
+                          <h5 class="card-title">Eólica</h5>
+                          <p class="card-text">Usa a força dos ventos para gerar energia.</p>                    
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card" style="width: 20rem;">
+                        <img src="./assets/img/hidra1.jpg" class="card-img-top mx-auto" alt="Desenho de uma hidrelétrica.">
+                        <div class="card-body">
+                          <h5 class="card-title">Hídrica</h5>
+                          <p class="card-text">Usa a força da água em rios e represas para produzir eletricidade.</p>                    
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card" style="width: 20rem;">
+                        <img src="./assets/img/geotermal1.JPG" class="card-img-top mx-auto" alt="Desenho de uma usina geotérmica.">
+                        <div class="card-body">
+                          <h5 class="card-title">Geotérmica</h5>
+                          <p class="card-text">Produzida a partir do calor proveniente do interior da Terra.</p>                    
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card" style="width: 20rem;">
+                        <img src="./assets/img/biomass1.JPG" class="card-img-top mx-auto" alt="Desenho de uma planta.">
+                        <div class="card-body">
+                          <h5 class="card-title">Biomassa</h5>
+                          <p class="card-text">Produzida a partir de resíduos orgânicos, como plantas e animais.</p>                    
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card" style="width: 20rem;">
+                    <img src="./assets/img/oceanica.JPG" class="card-img-top mx-auto" alt="Desenho de uma fonte de energia marinha.">
+                    <div class="card-body">
+                      <h5 class="card-title">Marinha</h5>
+                      <p class="card-text">Produzida por movimentos das correntes marítimas, marés e ondas.</p>                    
+                    </div>
+                  </div>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="container pb-5">
+            <h2 class="mb-4 font-h2">A importância da Energia Renovável</h2>
+            <h5 class="my-2 fw-light">Energia renovável é um tipo de energia que vem da natureza e que nunca acaba, como o sol, o vento e a água. Essas energias são importantes porque não poluem o ar nem a água e ajudam a cuidar do meio ambiente. </h5>         
+            <h5 class="my-2 mb-4 fw-light">Diferente de outras fontes de energia, como o petróleo e o carvão, que são retirados do ambiente e um dia vão acabar, as energias renováveis sempre estarão disponíveis. Além disso, usar essas energias ajuda a reduzir o aquecimento global, que é o que faz o planeta ficar muito quente e pode causar problemas, como secas e enchentes.</h5>         
+            <h5 class="my-2 fw-light">Se nós cuidarmos do meio ambiente agora e usarmos mais energias renováveis, vamos deixar um planeta melhor para nós e as próximas gerações!</h5>     
+        </div>
+
+    </section>   
+
+  
         <section class="links-section">
-            <h2>Links para Saber Mais</h2>
+            <h2 class="mb-4 font-h2">Links para Saber Mais</h2>
             <ul>
                 <li><a href="https://www.wwf.org.br/" target="_blank">WWF Brasil - Sustentabilidade e Meio Ambiente</a></li>
                 <li><a href="https://www.greenpeace.org/brasil/" target="_blank">Greenpeace Brasil - Energia Renovável</a></li>
@@ -40,11 +152,52 @@
                 <li><a href="https://www.nationalgeographicbrasil.com/" target="_blank">National Geographic - Educação Ambiental</a></li>
             </ul>
         </section>
-    </main>
+    
 
-    <footer>
-        <p>Conscientização Sustentável - Projeto Educativo</p>
-    </footer>
+    <!-- Seção Projeto -->
+    <section id="" class="py-5 bg-glass">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Apoie nosso projeto</h2>
+                    <p class="fw-light">
+                    Procuramos patrocinadores que possam somar nesse projeto. 
+                    </p>
+                    <a href="/info.html" class="btn btn-jg mt-3">Seja um parceiro</a>
+                </div>
+                <div class="col-md-6 text-center my-4">
+                    <img src="./assets/img/SolarEolica1.JPG" alt="Desenho de painéis solarese torres eólicas em um campo." class="img-fluid rounded" style="max-width: 100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="newsletter" class="py-5 bg-white">
+        <div class="container text-center">
+            <img src="./assets/img/menino123.PNG" width="20%" alt="Desenho de um menino de olhos azuis e camisa com os tons verde, azul e roxo, com desenhos de folhas verdes" class="img-fluid rounded-circle">
+            <h2 class="my-4 fw-bold font-h4 text-center">Assine nossa Newsletter</h2>
+            <p class="">Receba nossas novidades e conteúdos educativos sobre energia sustentável diretamente no seu e-mail!</p>
+            
+            <form action="newsletter" method="post" class="row justify-content-center">
+                <div class="col-md-6 col-sm-8 mb-3">
+                    <input type="email" name="email" placeholder="Digite seu e-mail" class="form-control" required>
+                </div>
+                <div class="col-md-2 col-sm-4">
+                    <button type="submit" class="btn btn-dark w-100">Assinar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<!-- Rodapé -->
+<footer class="bg-dark text-white text-center p-3">
+    <p>Energia Criativa &copy; Conscientização Sustentável - Informações e Mais</p>
+    <p class="small">Aumente seu conhecimento e seja parte da mudança!</p>
+    <img src="./assets/img/logo1.png" alt="Logo da Energia Criativa" width="50" height="50" class="rounded-circle">
+</footer>
 
     <!-- <script src="info.js"></script> -->
 </body>

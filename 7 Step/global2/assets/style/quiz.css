@@ -11,6 +11,10 @@
     margin: 20px 0;
 }
 
+.text-feedback {
+    color: var(--colors-verde);
+}
+
 button {
     padding: 10px;
     font-size: 16px;
@@ -28,3 +32,6 @@ button:hover {
 #next-btn {
     margin-top: 20px;
 }
+
+
+

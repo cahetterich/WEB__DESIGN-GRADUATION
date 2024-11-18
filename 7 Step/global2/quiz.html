@@ -48,23 +48,23 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <h2 class="fw-bold font-h2">BEM-VINDO AO QUIZ!</h2>
-                    <h5 class="my-2 fw-light">Aqui você poderá aprender mais sobre energia sustentável e ver o quanto sabe sobre o tema.<br>Responda cada pergunta e desafie seus conhecimentos. Boa sorte!</h5>                    
+                    <h5 class="my-2 fw-light">Aqui você poderá aprender mais sobre energia sustentável e ver o quanto sabe sobre o tema. Responda cada pergunta e desafie seus conhecimentos. Boa sorte!</h5>                    
                 </div>
                 <div class="col-md-6 text-center my-4">
                     <img src="./assets/img/star1.png" width="40%" alt="Icone do Quiz sobre energia" class="img-fluid mb-5">
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-       <section class="pb-5">
+       <section class="bg-white">
             <!-- Área principal do quiz -->   
             <div class="container d-flex justify-content-center">               
             <button id="start-btn" class="btn btn-pergunta my-4 mt-3" onclick="startQuiz()">Iniciar Quiz</button>
           </div>        
-         </div>
-        </div>
+        
          <!-- Container do quiz principal -->    
+         <div class="container">
         <div id="quiz-container" class="border-top p-5 d-none bg-white">
             <h5 class="text-dark">PERGUNTA <span id="question-number">1</span> DE 10</h5>
             <div id="question-container" class="mb-4">
@@ -82,44 +82,45 @@
             <!-- Botão para tentar novamente -->
             <button id="next-btn" class="btn btn-pergunta btn-lg my-3 " onclick="nextQuestion()"><span>Próxima Pergunta<i class="bi bi-chevron-double-right"></i></span></button>    
         </div>
+    </div>
 
        </section>
 
-    <!-- Seção Saiba Mais -->
-    <section id="saiba-mais" class="py-5 bg-glass">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2 class="fw-bold">Quer saber mais sobre energia sustentável?</h2>
-                    <p class="fw-light">
-                        Aprenda mais sobre as diferentes fontes de energia e como elas impactam nosso planeta.
-                    </p>
-                    <a href="/info.html" class="btn btn-jg mt-3">Saiba Mais</a>
-                </div>
-                <div class="col-md-6 text-center my-4">
-                    <img src="./assets/img/energiaSolar2.jpg" alt="Desenho de painéis solares em um campo." class="img-fluid rounded" style="max-width: 100%;">
+        <!-- Seção Saiba Mais -->
+        <section id="saiba-mais" class="py-5 bg-glass">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold">Quer saber mais sobre energia sustentável?</h2>
+                        <p class="fw-light">
+                            Aprenda mais sobre as diferentes fontes de energia e como elas impactam nosso planeta.
+                        </p>
+                        <a href="/info.html" class="btn btn-jg mt-3">Saiba Mais</a>
+                    </div>
+                    <div class="col-md-6 text-center my-4">
+                        <img src="./assets/img/energiaSolar2.jpg" alt="Desenho de painéis solarese torres eólicas em um campo." class="img-fluid rounded" style="max-width: 100%;">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Newsletter -->
-    <section id="newsletter" class="py-5 bg-white">
-        <div class="container text-center">
-            <img src="./assets/img/menino123.PNG" width="20%" alt="Desenho de um menino de olhos azuis e camisa com os tons verde, azul e roxo, com desenhos de folhas verdes" class="img-fluid rounded-circle">
-            <h2 class="my-4 fw-bold font-h4 text-center">Assine nossa Newsletter</h2>
-            <p class="">Receba nossas novidades e conteúdos educativos sobre energia sustentável diretamente no seu e-mail!</p>
-            
-            <form action="newsletter" method="post" class="row justify-content-center">
-                <div class="col-md-6 col-sm-8 mb-3">
-                    <input type="email" name="email" placeholder="Digite seu e-mail" class="form-control" required>
-                </div>
-                <div class="col-md-2 col-sm-4">
-                    <button type="submit" class="btn btn-dark w-100">Assinar</button>
-                </div>
-            </form>
-        </div>
-    </section>
+        <!-- Newsletter -->
+        <section id="newsletter" class="py-5 bg-white">
+            <div class="container text-center">
+                <img src="./assets/img/menino123.PNG" width="20%" alt="Desenho de um menino de olhos azuis e camisa com os tons verde, azul e roxo, com desenhos de folhas verdes" class="img-fluid rounded-circle">
+                <h2 class="my-4 fw-bold font-h4 text-center">Assine nossa Newsletter</h2>
+                <p class="">Receba nossas novidades e conteúdos educativos sobre energia sustentável diretamente no seu e-mail!</p>
+                
+                <form action="newsletter" method="post" class="row justify-content-center">
+                    <div class="col-md-6 col-sm-8 mb-3">
+                        <input type="email" name="email" placeholder="Digite seu e-mail" class="form-control" required>
+                    </div>
+                    <div class="col-md-2 col-sm-4">
+                        <button type="submit" class="btn btn-dark w-100">Assinar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
     </main>
 
