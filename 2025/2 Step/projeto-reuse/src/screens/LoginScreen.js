@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
-import CustomButton from '../components/CustomButton';
+import CustomButton from '../components/CustomButton.js';
 
 const LoginScreen = ({ navigation }) => {
   return (
