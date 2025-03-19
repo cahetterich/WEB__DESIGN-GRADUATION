@@ -1,64 +1,104 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import Input from '../components/Input';
-import Button from '../components/Button';
-import SocialLogin from '../components/SocialLogin';
+// import React, { useState } from "react";
+// import { View, Text, TouchableOpacity } from "react-native";
+// import Input from "../components/Input";
+// import Button from "../components/Button";
+// import SocialLogin from "../components/SocialLogin";
+// import GlobalStyles from "../theme/GlobalStyles";
+
+// const LoginScreen = ({ navigation }) => {
+//   const [email, setEmail] = useState("");
+//   const [password, setPassword] = useState("");
+
+//   return (
+//     <View style={GlobalStyles.container}>
+//       <Text style={GlobalStyles.title}>Acesso ao Sistema</Text>
+
+//       <Input placeholder="Email" value={email} onChangeText={setEmail} />
+//       <Input placeholder="Senha" value={password} onChangeText={setPassword} secureTextEntry />
+
+//       <TouchableOpacity onPress={() => navigation.navigate("ForgotPassword")}>
+//         <Text style={GlobalStyles.forgotPassword}>Esqueci minha senha</Text>
+//       </TouchableOpacity>
+
+//       <Button title="Entrar" onPress={() => console.log("Login")} />
+//       <Text style={GlobalStyles.socialText}>Entrar com sua rede social</Text>
+//       <SocialLogin />
+
+//       <TouchableOpacity onPress={() => navigation.navigate("Register")}>
+//         <Text style={GlobalStyles.register}>Cadastre-se</Text>
+//       </TouchableOpacity>
+//     </View>
+//   );
+// };
+
+// export default LoginScreen;
+
+// src/screens/LoginScreen.js
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity, ActivityIndicator } from "react-native";
+import Input from "../components/Input";
+import Button from "../components/Button";
+import SocialLogin from "../components/SocialLogin";
+import GlobalStyles from "../theme/GlobalStyles";
+import useCustomFonts from "../theme/useFonts";
 
 const LoginScreen = ({ navigation }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [form, setForm] = useState({ email: "", password: "" });
+  const [loading, setLoading] = useState(false);
+  const fontsLoaded = useCustomFonts();
+
+  const handleLogin = () => {
+    if (!form.email || !form.password) {
+      alert("Preencha todos os campos!");
+      return;
+    }
+    setLoading(true);
+    setTimeout(() => {
+      console.log("Login realizado");
+      setLoading(false);
+    }, 2000);
+  };
+
+  if (!fontsLoaded) {
+    return (
+      <View style={GlobalStyles.loadingContainer}>
+        <ActivityIndicator size="large" color={GlobalStyles.primaryColor} />
+        <Text style={GlobalStyles.loadingText}>Carregando fontes...</Text>
+      </View>
+    );
+  }
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Acesso ao Sistema</Text>
+    <View style={GlobalStyles.container}>
+      <Text style={GlobalStyles.title}>Acesso ao Sistema</Text>
 
-      <Input placeholder="Email" value={email} onChangeText={setEmail} />
-      <Input placeholder="Senha" value={password} onChangeText={setPassword} secureTextEntry />
+      <Input
+        placeholder="Email"
+        value={form.email}
+        onChangeText={(text) => setForm({ ...form, email: text })}
+      />
+      <Input
+        placeholder="Senha"
+        value={form.password}
+        onChangeText={(text) => setForm({ ...form, password: text })}
+        secureTextEntry
+      />
 
-      <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
-        <Text style={styles.forgotPassword}>Esqueci minha senha</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("ForgotPassword")}>
+        <Text style={GlobalStyles.forgotPassword}>Esqueci minha senha</Text>
       </TouchableOpacity>
 
-      <Button title="Entrar" onPress={() => console.log('Login')} />
-      <Text style={styles.socialText}>Entrar com sua rede social</Text>
+      <Button title={loading ? "Entrando..." : "Entrar"} onPress={handleLogin} disabled={loading} />
+
+      <Text style={GlobalStyles.socialText}>Entrar com sua rede social</Text>
       <SocialLogin />
 
-      <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-        <Text style={styles.register}>Cadastre-se</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("Register")}>
+        <Text style={GlobalStyles.register}>Cadastre-se</Text>
       </TouchableOpacity>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F6F6F6',
-    padding: 20,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
-    color: '#154242',
-  },
-  forgotPassword: {
-    alignSelf: 'flex-end',
-    marginBottom: 20,
-    color: '#154242',
-    textDecorationLine: 'underline',
-  },
-  socialText: {
-    marginVertical: 10,
-    fontSize: 14,
-  },
-  register: {
-    marginTop: 10,
-    color: '#154242',
-    fontWeight: 'bold',
-  },
-});
-
 export default LoginScreen;
+

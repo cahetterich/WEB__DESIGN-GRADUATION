@@ -11,22 +11,38 @@
 // }
 
 
+// import React, { useEffect, useState } from "react";
+// import { View, ActivityIndicator } from "react-native";
+// import { ThemeProvider } from "./theme/ThemeContext";
+// import AppContent from "./AppContent";
+// import { loadFonts } from "./theme/useFonts";
+
+// export default function App() {
+//   const [fontsLoaded, setFontsLoaded] = useState(false);
+
+//   useEffect(() => {
+//     async function loadAssets() {
+//       await loadFonts();
+//       setFontsLoaded(true);
+//     }
+//     loadAssets();
+//   }, []);
+
+//   if (!fontsLoaded) {
+//     return <ActivityIndicator size="large" />;
+//   }
+
+//   return (
+//     <ThemeProvider>
+//       <AppContent />
+//     </ThemeProvider>
+//   );
+// }
+
+// src/App.js
 import React from "react";
-import { View, StyleSheet } from "react-native";
-import { ThemeProvider, useTheme } from "./theme/ThemeContext.js";
-import Navigation from "./navigation/Navigation";
-import Header from "./components/Header";
-
-const AppContent = () => {
-  const { theme } = useTheme();
-
-  return (
-    <View style={[styles.container, { backgroundColor: theme.background }]}>
-      <Header title="ReUse!" />
-      <Navigation />
-    </View>
-  );
-};
+import { ThemeProvider } from "./theme/ThemeContext";
+import AppContent from "./AppContent";
 
 export default function App() {
   return (
@@ -35,10 +51,3 @@ export default function App() {
     </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-

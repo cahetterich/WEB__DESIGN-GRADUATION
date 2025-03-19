@@ -1,30 +1,37 @@
-// src/theme/GlobalStyles.js
+//src/theme/GlobalStyles.js
 import { StyleSheet } from "react-native";
-import { typography } from "./theme";
 
 const GlobalStyles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
-    backgroundColor: "transparent",
-  },
-  text: {
-    fontFamily: typography.text,
-    fontSize: 16,
-    color: "inherit",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
+    backgroundColor: "#F6F6F6",
   },
   title: {
-    fontFamily: typography.title,
     fontSize: 24,
-    fontWeight: "bold",
-    color: "inherit",
+    fontFamily: "Poppins-Regular",
+    color: "#414141",
+    marginBottom: 20,
   },
-  button: {
-    paddingVertical: 12,
-    paddingHorizontal: 20,
-    borderRadius: 8,
-    alignItems: "center",
-    justifyContent: "center",
+  forgotPassword: {
+    fontSize: 14,
+    fontFamily: "Inter-Regular", // Mudamos para Inter
+    color: "#2082DE",
+    marginVertical: 10,
+  },
+  socialText: {
+    fontSize: 16,
+    fontFamily: "Poppins-Regular",
+    color: "#414141",
+    marginTop: 20,
+  },
+  register: {
+    fontSize: 16,
+    fontFamily: "Inter-Regular", // Mudamos para Inter
+    color: "#E23636",
+    marginTop: 10,
   },
 });
 

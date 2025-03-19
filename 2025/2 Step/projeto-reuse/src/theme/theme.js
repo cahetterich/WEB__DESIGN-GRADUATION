@@ -1,34 +1,36 @@
-
+//src/theme/theme.js
 const lightTheme = {
-    background: "#F6F6F6",
-    text: "#414141",
-    primary: "#81AA8B",
-    secondary: "#3D6262",
-    accent: "#C27949",
-    error: "#E23636",
-    warning: "#E2C036",
-    link: "#2082DE",
-    border: "#D1D1D1",
-  };
+  background: "#F6F6F6",
+  text: "#414141",
+  primary: "#81AA8B",
+  secondary: "#3D6262",
+  accent: "#C27949",
+  error: "#E23636",
+  warning: "#E2C036",
+  link: "#2082DE",
+  border: "#D1D1D1",
+};
+
+const darkTheme = {
+  background: "#414141",
+  text: "#F6F6F6",
+  primary: "#81AA8B",
+  secondary: "#3D6262",
+  accent: "#C27949",
+  error: "#E23636",
+  warning: "#E2C036",
+  link: "#2082DE",
+  border: "#D1D1D1",
+};
+
+const typography = {
+  title: "Inter-Regular", // Mudamos para Inter
+  text: "Poppins-Regular",
+};
+
+export { lightTheme, darkTheme, typography };
+
   
-  const darkTheme = {
-    background: "#414141",
-    text: "#F6F6F6",
-    primary: "#81AA8B",
-    secondary: "#3D6262",
-    accent: "#C27949",
-    error: "#E23636",
-    warning: "#E2C036",
-    link: "#2082DE",
-    border: "#D1D1D1",
-  };
-  
-  const typography = {
-    title: "Instrument Sans",
-    text: "Poppins",
-  };
-  
-  export { lightTheme, darkTheme, typography };
   
 
 // const lightTheme = {
