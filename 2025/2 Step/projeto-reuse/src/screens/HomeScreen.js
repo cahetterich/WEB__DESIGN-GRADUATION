@@ -1,138 +1,264 @@
-//src/screens/HomeScreen.js
-import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+// //src/screens/HomeScreen.js
+// import React from 'react';
+// import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+// import { useNavigation } from '@react-navigation/native';
+// // import Header from "../components/Header";
+
+// export default function HomeScreen() {
+//   const navigation = useNavigation();
+
+//   return (
+//     <View style={styles.container}>
+//       {/* Header fixo */}
+//       <View style={styles.header}>
+//         <Text style={styles.headerTitle}>ReUse!</Text>
+//         <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.loginButton}>
+//           <Text style={styles.loginButtonText}>Entrar</Text>
+//         </TouchableOpacity>
+//       </View>
+
+//       {/* Main Content */}
+//       <View style={styles.main}>
+//         <Text style={styles.title}>Bem-vindo ao ReUse!</Text>
+//         <Text style={styles.subtitle}>
+//           Um projeto inovador para reutilização consciente.
+//         </Text>
+        
+//         <TouchableOpacity style={styles.highlightButton} onPress={() => navigation.navigate('Signup')}>
+//           <Text style={styles.highlightButtonText}>Criar Conta</Text>
+//         </TouchableOpacity>
+//       </View>
+
+//       {/* Sections sobre o projeto */}
+//       <View style={styles.section}><Text style={styles.sectionText}>Como funciona o ReUse?</Text></View>
+//       <View style={styles.section}><Text style={styles.sectionText}>Benefícios da reutilização</Text></View>
+//       <View style={styles.section}><Text style={styles.sectionText}>Casos de sucesso</Text></View>
+//       <View style={styles.section}><Text style={styles.sectionText}>Nosso compromisso ambiental</Text></View>
+//       <View style={styles.section}><Text style={styles.sectionText}>Junte-se a nós!</Text></View>
+
+//       {/* Footer */}
+//       <View style={styles.footer}>
+//         <View style={styles.footerLinks}>
+//           <Text style={styles.footerText}>Sobre | Contato | Termos</Text>
+//         </View>
+//         <View style={styles.footerSocials}>
+//           <Text style={styles.footerText}>Redes Sociais</Text>
+//         </View>
+//         <View style={styles.footerSlogan}>
+//           <Text style={styles.footerText}>ReUse! - Transformando o descarte em oportunidade.</Text>
+//         </View>
+//       </View>
+//     </View>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#F6F6F6',
+//     alignItems: 'center',
+//     justifyContent: 'flex-start',
+//     paddingTop: 40,
+//   },
+//   header: {
+//     width: '100%',
+//     flexDirection: 'row',
+//     justifyContent: 'space-between',
+//     alignItems: 'center',
+//     paddingHorizontal: 20,
+//     paddingVertical: 10,
+//     backgroundColor: '#3D6262',
+//     position: 'absolute',
+//     top: 0,
+//   },
+//   headerTitle: {
+//     fontSize: 20,
+//     color: '#FFF',
+//     fontWeight: 'bold',
+//   },
+//   loginButton: {
+//     backgroundColor: '#2082DE',
+//     paddingVertical: 8,
+//     paddingHorizontal: 15,
+//     borderRadius: 5,
+//   },
+//   loginButtonText: {
+//     color: '#FFF',
+//     fontSize: 16,
+//   },
+//   main: {
+//     margin: 80,
+//     alignItems: 'center',
+//     paddingHorizontal: 20,
+//   },
+//   title: {
+//     fontSize: 28,
+//     fontWeight: 'bold',
+//     color: '#3D6262',
+//     marginBottom: 10,
+//     textAlign: 'center',
+//   },
+//   subtitle: {
+//     fontSize: 18,
+//     color: '#414141',
+//     textAlign: 'center',
+//     marginBottom: 20,
+//   },
+//   highlightButton: {
+//     backgroundColor: '#2082DE',
+//     paddingVertical: 14,
+//     paddingHorizontal: 24,
+//     borderRadius: 8,
+//     marginTop: 10,
+//   },
+//   highlightButtonText: {
+//     color: '#FFF',
+//     fontSize: 18,
+//     fontWeight: 'bold',
+//   },
+//   section: {
+//     width: '90%',
+//     padding: 20,
+//     marginVertical: 10,
+//     backgroundColor: '#D1D1D1',
+//     borderRadius: 8,
+//   },
+//   sectionText: {
+//     fontSize: 16,
+//     color: '#414141',
+//   },
+//   footer: {
+//     width: '100%',
+//     backgroundColor: '#3D6262',
+//     paddingVertical: 20,
+//     alignItems: 'center',
+//     marginTop: 20,
+//   },
+//   footerLinks: {
+//     marginBottom: 10,
+//   },
+//   footerSocials: {
+//     marginBottom: 10,
+//   },
+//   footerSlogan: {},
+//   footerText: {
+//     color: '#FFF',
+//     fontSize: 14,
+//     textAlign: 'center',
+//   },
+// });
+
+// //src/screens/HomeScreen.js
+import React from "react";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import Header from "../components/Header";
 
 export default function HomeScreen() {
   const navigation = useNavigation();
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      {/* Header */}
-      <View style={styles.header}>
-        <Text style={styles.headerTitle}>ReUse!</Text>
-        <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Login')}>
-          <Text style={styles.headerButtonText}>Entrar</Text>
+    <View style={styles.container}>
+      <Header />
+
+      <View style={styles.main}>
+        <Text style={styles.title}>Bem-vindo ao ReUse!</Text>
+        <Text style={styles.subtitle}>
+          Um projeto inovador para reutilização consciente.
+        </Text>
+        
+        <TouchableOpacity style={styles.highlightButton} onPress={() => navigation.navigate("Signup")}>
+          <Text style={styles.highlightButtonText}>Criar Conta</Text>
         </TouchableOpacity>
       </View>
 
-      {/* Hero Section */}
-      <View style={styles.hero}>
-        <Text style={styles.heroTitle}>Dê uma nova vida aos objetos!</Text>
-        <Text style={styles.heroSubtitle}>Reutilizar é economizar e ajudar o planeta. Junte-se a nós!</Text>
-        <TouchableOpacity style={styles.ctaButton} onPress={() => navigation.navigate('Signup')}>
-          <Text style={styles.ctaButtonText}>Criar Conta</Text>
-        </TouchableOpacity>
-      </View>
+      <View style={styles.section}><Text style={styles.sectionText}>Como funciona o ReUse?</Text></View>
+      <View style={styles.section}><Text style={styles.sectionText}>Benefícios da reutilização</Text></View>
+      <View style={styles.section}><Text style={styles.sectionText}>Casos de sucesso</Text></View>
+      <View style={styles.section}><Text style={styles.sectionText}>Nosso compromisso ambiental</Text></View>
+      <View style={styles.section}><Text style={styles.sectionText}>Junte-se a nós!</Text></View>
 
-      {/* Informações */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Por que reutilizar?</Text>
-        <Text style={styles.sectionText}>Menos desperdício, mais economia e um planeta mais sustentável.</Text>
-      </View>
-      
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Como funciona?</Text>
-        <Text style={styles.sectionText}>Publique itens, encontre o que precisa e ajude a reduzir o consumo excessivo.</Text>
-      </View>
-
-      {/* Footer */}
       <View style={styles.footer}>
-        <Text style={styles.footerText}>© 2025 ReUse! - Todos os direitos reservados.</Text>
+        <View style={styles.footerLinks}>
+          <Text style={styles.footerText}>Sobre | Contato | Termos</Text>
+        </View>
+        <View style={styles.footerSocials}>
+          <Text style={styles.footerText}>Redes Sociais</Text>
+        </View>
+        <View style={styles.footerSlogan}>
+          <Text style={styles.footerText}>ReUse! - Transformando o descarte em oportunidade.</Text>
+        </View>
       </View>
-    </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
-    backgroundColor: '#F6F6F6',
-    alignItems: 'center',
+    flex: 1,
+    backgroundColor: "#F6F6F6",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    paddingTop: 80, // 🛠️ Ajuste para não sobrepor o Header
+  },
+  main: {
+    width: "90%",
+    alignItems: "center",
     paddingVertical: 20,
   },
-  header: {
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    backgroundColor: '#3D6262',
-  },
-  headerTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#FFF',
-  },
-  headerButton: {
-    backgroundColor: '#2082DE',
-    padding: 8,
-    borderRadius: 5,
-  },
-  headerButtonText: {
-    color: '#FFF',
-    fontSize: 14,
-  },
-  hero: {
-    alignItems: 'center',
-    padding: 20,
-    marginVertical: 20,
-  },
-  heroTitle: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#3D6262',
-    textAlign: 'center',
+  title: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#3D6262",
     marginBottom: 10,
+    textAlign: "center",
   },
-  heroSubtitle: {
-    fontSize: 16,
-    color: '#414141',
-    textAlign: 'center',
+  subtitle: {
+    fontSize: 18,
+    color: "#414141",
+    textAlign: "center",
     marginBottom: 20,
   },
-  ctaButton: {
-    backgroundColor: '#2082DE',
-    paddingVertical: 12,
-    paddingHorizontal: 20,
-    borderRadius: 5,
+  highlightButton: {
+    backgroundColor: "#2082DE",
+    paddingVertical: 14,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    marginTop: 10,
   },
-  ctaButtonText: {
-    color: '#FFF',
-    fontSize: 16,
-    fontWeight: 'bold',
+  highlightButtonText: {
+    color: "#FFF",
+    fontSize: 18,
+    fontWeight: "bold",
   },
   section: {
-    width: '90%',
-    backgroundColor: '#FFF',
-    padding: 15,
-    borderRadius: 10,
-    marginBottom: 20,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
-  },
-  sectionTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#3D6262',
-    marginBottom: 5,
+    width: "90%",
+    padding: 20,
+    marginVertical: 10,
+    backgroundColor: "#D1D1D1",
+    borderRadius: 8,
   },
   sectionText: {
-    fontSize: 14,
-    color: '#414141',
+    fontSize: 16,
+    color: "#414141",
   },
   footer: {
-    width: '100%',
-    paddingVertical: 15,
-    backgroundColor: '#414141',
-    alignItems: 'center',
+    width: "100%",
+    backgroundColor: "#3D6262",
+    paddingVertical: 20,
+    alignItems: "center",
+    marginTop: 20,
   },
+  footerLinks: {
+    marginBottom: 10,
+  },
+  footerSocials: {
+    marginBottom: 10,
+  },
+  footerSlogan: {},
   footerText: {
-    color: '#FFF',
-    fontSize: 12,
+    color: "#FFF",
+    fontSize: 14,
+    textAlign: "center",
   },
 });
