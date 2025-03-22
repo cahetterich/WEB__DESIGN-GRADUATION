@@ -1,17 +1,50 @@
-//src/screens/LoginScreen.js
-import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native";
+import React, { useState, useEffect } from "react";
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, CheckBox } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import Header from "../components/Header";
 
 export default function LoginScreen() {
   const navigation = useNavigation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [rememberPassword, setRememberPassword] = useState(false);
 
-  const handleLogin = () => {
+  useEffect(() => {
+    loadStoredData();
+  }, []);
+
+  const loadStoredData = async () => {
+    try {
+      const storedEmail = await AsyncStorage.getItem("userEmail");
+      const storedPassword = await AsyncStorage.getItem("userPassword");
+      const storedRemember = await AsyncStorage.getItem("rememberPassword");
+      if (storedRemember === "true") {
+        setEmail(storedEmail || "");
+        setPassword(storedPassword || "");
+        setRememberPassword(true);
+      }
+    } catch (error) {
+      console.log("Erro ao carregar dados armazenados", error);
+    }
+  };
+
+  const handleLogin = async () => {
     console.log("Email:", email);
     console.log("Senha:", password);
+    try {
+      if (rememberPassword) {
+        await AsyncStorage.setItem("userEmail", email);
+        await AsyncStorage.setItem("userPassword", password);
+        await AsyncStorage.setItem("rememberPassword", "true");
+      } else {
+        await AsyncStorage.removeItem("userEmail");
+        await AsyncStorage.removeItem("userPassword");
+        await AsyncStorage.setItem("rememberPassword", "false");
+      }
+    } catch (error) {
+      console.log("Erro ao armazenar dados", error);
+    }
   };
 
   return (
@@ -20,31 +53,47 @@ export default function LoginScreen() {
       <View style={styles.formContainer}>
         <Text style={styles.title}>Entrar</Text>
         <Text style={styles.subtitle}>Bem-vindo! Faça login para continuar.</Text>
-        
-        <Text></Text>
-        <TextInput style={styles.input} placeholder="Email" keyboardType="email-address" value={email} onChangeText={setEmail} />
-        
-        <Text></Text>
-        <TextInput style={styles.input} placeholder="Senha" secureTextEntry value={password} onChangeText={setPassword} />
-        
-        <TouchableOpacity>
+
+        <TextInput
+          style={styles.input}
+          placeholder="Email"
+          keyboardType="email-address"
+          value={email}
+          onChangeText={setEmail}
+        />
+
+        <TextInput
+          style={styles.input}
+          placeholder="Senha"
+          secureTextEntry
+          value={password}
+          onChangeText={setPassword}
+        />
+
+        <View style={styles.rememberContainer}>
+          <CheckBox value={rememberPassword} onValueChange={setRememberPassword} />
+          <Text style={styles.rememberText}>Lembrar senha</Text>
+        </View>
+
+
+        <TouchableOpacity onPress={() => navigation.navigate("ForgotPassword")}>
           <Text style={styles.forgotPassword}>Esqueceu a senha?</Text>
         </TouchableOpacity>
-        
+
         <TouchableOpacity style={styles.button} onPress={handleLogin}>
           <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
-        
+
         <Text style={styles.socialLoginText}>Ou entre com sua rede social</Text>
-        
+
         <TouchableOpacity style={styles.socialButton}>
           <Text style={styles.socialButtonText}>Entrar com Facebook</Text>
         </TouchableOpacity>
-        
+
         <TouchableOpacity style={styles.socialButton}>
           <Text style={styles.socialButtonText}>Entrar com Google</Text>
         </TouchableOpacity>
-        
+
         <TouchableOpacity>
           <Text style={styles.signupText}>Ainda não tem uma conta? <Text style={styles.signupLink}>Cadastre-se</Text></Text>
         </TouchableOpacity>
@@ -94,6 +143,16 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     backgroundColor: "#FFF",
   },
+  rememberContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 15,
+  },
+  rememberText: {
+    marginLeft: 8,
+    fontSize: 14,
+    color: "#414141",
+  },
   button: {
     backgroundColor: "#2082DE",
     paddingVertical: 14,
@@ -107,10 +166,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   forgotPassword: {
-    textAlign: "left",
+    textAlign: "center",
     color: "#2082DE",
     fontSize: 14,
-    textAlign: "center",
     marginBottom: 10,
   },
   socialLoginText: {
