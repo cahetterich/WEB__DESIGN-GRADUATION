@@ -95,7 +95,7 @@ export default function LoginScreen() {
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Text style={styles.signupText}>Ainda não tem uma conta? <Text style={styles.signupLink}>Cadastre-se</Text></Text>
+          <Text style={styles.signupText}>Ainda não tem uma conta? <Text style={styles.signupLink} onPress={() => navigation.navigate("Signup")}>Cadastre-se</Text></Text>
         </TouchableOpacity>
       </View>
     </View>
