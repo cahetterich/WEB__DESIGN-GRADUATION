@@ -46,6 +46,7 @@ export default function LoginScreen() {
       console.log("Erro ao armazenar dados", error);
     }
   };
+  
 
   return (
     <View style={styles.container}>
