@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#F6F6F6",
-    paddingTop: StatusBar.currentHeight || 80,
+    paddingTop: StatusBar.currentHeight || 150,
   },
   scrollContainer: {
     alignItems: "center",

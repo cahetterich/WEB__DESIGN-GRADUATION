@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     paddingHorizontal: 20,
-    width: "100%",
-  },
+    width: "100%",   
+  },  
   logo: {
     fontSize: 22,
     fontWeight: "bold",
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
   icon: {
     marginLeft: 15,
   },
-  searchContainer: {
+  searchContainer: {   
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 20,
