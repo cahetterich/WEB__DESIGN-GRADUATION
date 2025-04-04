@@ -10,7 +10,7 @@ export default function Header() {
   const route = useRoute();
 
   const isLoginScreen = route.name === "Login";
-  const isHomeUserScreen = route.name === "HomeUser";
+  const isHomeUserScreen = route.name === "HomeUser" ;
 
   return (
     <SafeAreaView style={styles.container}>

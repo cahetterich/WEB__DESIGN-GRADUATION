@@ -1,9 +1,13 @@
 // src/HomeUser.js
 import React from "react";
 import { View, Text, ScrollView, StyleSheet, TouchableOpacity, StatusBar, Image } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
 import Header from "../components/Header";
 
 export default function HomeUser() {
+  const navigation = useNavigation();
+
   const destaques = [
     { id: 1, nome: "Patins", img: require("../../assets/patins.jpg") },
     { id: 2, nome: "Bicicleta", img: require("../../assets/bike.jpg") },
@@ -21,7 +25,7 @@ export default function HomeUser() {
         {/* Banner */}
         <View style={styles.bannerContainer}>
           <Text style={styles.bannerText}>Encontre novos lares para seus itens</Text>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("AddItem")}>
             <Text style={styles.buttonText}>Vender agora</Text>
           </TouchableOpacity>
           <TouchableOpacity>
@@ -29,6 +33,7 @@ export default function HomeUser() {
           </TouchableOpacity>
         </View>
 
+      
         {/* Categorias */}
         <View style={styles.categoriesContainer}>
           <Text style={styles.sectionTitle}>Categorias</Text>
