@@ -1,3 +1,4 @@
+// src/LoginScreen.js
 import React, { useState, useEffect } from "react";
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, CheckBox } from "react-native";
 import { useNavigation } from "@react-navigation/native";
@@ -109,6 +110,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F6F6F6",
     alignItems: "center",
     justifyContent: "center",
+    paddingTop: 80,
   },
   formContainer: {
     width: "85%",
