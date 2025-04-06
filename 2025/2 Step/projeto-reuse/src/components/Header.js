@@ -10,7 +10,7 @@ export default function Header() {
   const route = useRoute();
 
   const isLoginScreen = route.name === "Login";
-  const isHomeUserScreen = route.name === "HomeUser" ;
+  const isUserLoggedScreen = route.name === "HomeUser" || route.name === "AddItem";
 
   return (
     <SafeAreaView style={styles.container}>
@@ -18,7 +18,7 @@ export default function Header() {
         <Text style={styles.logo}>ReUse!</Text>
 
         {/* Header para LoginScreen e HomeScreen */}
-        {!isHomeUserScreen && (
+        {!isUserLoggedScreen && (
           <TouchableOpacity 
             onPress={() => navigation.navigate(isLoginScreen ? "Home" : "Login")} 
             style={styles.button}
@@ -28,7 +28,7 @@ export default function Header() {
         )}
 
         {/* Header para HomeUser.js com ícones */}
-        {isHomeUserScreen && (
+        {isUserLoggedScreen && (
           <View style={styles.iconsContainer}>
             <Ionicons name="notifications-outline" size={24} color="#F6F6F6" style={styles.icon} />
             <Ionicons name="chatbubble-outline" size={24} color="#F6F6F6" style={styles.icon} />
@@ -39,7 +39,7 @@ export default function Header() {
       </View>
 
       {/* Barra de pesquisa apenas para HomeUser */}
-      {isHomeUserScreen && (
+      {isUserLoggedScreen && (
         <View style={styles.searchContainer}>
           <TextInput
             style={styles.searchInput}
