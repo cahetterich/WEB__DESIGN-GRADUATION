@@ -11,7 +11,7 @@ export default async function ItemsPage() {
 
   return (
     <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-      <h1>Itens cadastrados</h1>
+      <h1>Produtos cadastrados</h1>
       <Link
         href="/items/new"
         style={{
@@ -24,11 +24,11 @@ export default async function ItemsPage() {
           textDecoration: "none",
         }}
       >
-        + Novo Item
+        + Novo Produto
       </Link>
 
       {items.length === 0 ? (
-        <p>Nenhum item encontrado.</p>
+        <p>Nenhum Produto encontrado.</p>
       ) : (
         <ul style={{ listStyle: "none", padding: 0 }}>
           {items.map((item: any) => (

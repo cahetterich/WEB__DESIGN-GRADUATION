@@ -113,6 +113,9 @@
   color: var(--reuse-dark);
 }
 
-.message.error {
+.message {
+  margin-top: 12px;
+  font-size: 0.9rem;
   color: red;
 }
+

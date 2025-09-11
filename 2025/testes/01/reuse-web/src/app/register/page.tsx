@@ -1,3 +1,4 @@
+// src/app/register/page.tsx
 "use client";
 
 import { useState } from "react";
@@ -37,10 +38,8 @@ export default function RegisterPage() {
       if (!res.ok) {
         setMessage(data.error || "Erro ao cadastrar usuário.");
       } else {
-        setMessage("Usuário cadastrado com sucesso! Redirecionando...");
-        setTimeout(() => {
-          router.push("/login");
-        }, 2000); // espera 2 segundos antes de ir para login
+        // ✅ Cadastro bem-sucedido → redireciona direto para o dashboard
+        router.push("/dashboard");
       }
     } catch (error) {
       setMessage("Erro no servidor. Tente novamente mais tarde.");
@@ -131,4 +130,5 @@ export default function RegisterPage() {
     </div>
   );
 }
+
 

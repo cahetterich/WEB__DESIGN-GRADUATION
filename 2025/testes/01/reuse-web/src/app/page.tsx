@@ -21,7 +21,7 @@ export default function Home() {
               Criar conta
             </Link>
             <Link href="/items" className={styles.secondaryBtn}>
-              Explorar Itens
+              Explorar Produtos
             </Link>
           </div>
         </div>

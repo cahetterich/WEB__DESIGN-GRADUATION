@@ -2,19 +2,21 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import styles from "./login.module.css";
 
 export default function LoginPage() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError(null);
     setLoading(true);
-    setMessage(null);
 
     try {
       const res = await fetch("/api/auth/login", {
@@ -26,13 +28,13 @@ export default function LoginPage() {
       const data = await res.json();
 
       if (!res.ok) {
-        setMessage(data.error || "Erro ao realizar login.");
+        setError(data.error || "Erro ao fazer login.");
       } else {
-        setMessage(data.message); // "Login realizado com sucesso!"
-        // Futuro → redirecionar para dashboard
+        // ✅ Login válido → redireciona para dashboard
+        router.push("/dashboard");
       }
-    } catch (error) {
-      setMessage("Erro no servidor. Tente novamente mais tarde.");
+    } catch (err) {
+      setError("Erro de conexão. Tente novamente.");
     } finally {
       setLoading(false);
     }
@@ -54,11 +56,9 @@ export default function LoginPage() {
               id="email"
               type="email"
               placeholder="seuemail@exemplo.com"
-              aria-label="E-mail"
-              autoComplete="email"
-              required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
 
@@ -69,22 +69,20 @@ export default function LoginPage() {
               id="password"
               type="password"
               placeholder="Digite sua senha"
-              aria-label="Senha"
-              autoComplete="current-password"
-              required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
+
+          {/* Erro */}
+          {error && <p className={styles.error}>{error}</p>}
 
           {/* Botão */}
           <button type="submit" className={styles.primaryBtn} disabled={loading}>
             {loading ? "Entrando..." : "Entrar"}
           </button>
         </form>
-
-        {/* Mensagem de feedback */}
-        {message && <p className={styles.message}>{message}</p>}
 
         <p className={styles.registerText}>
           Ainda não tem conta?{" "}
@@ -96,3 +94,4 @@ export default function LoginPage() {
     </div>
   );
 }
+

@@ -89,6 +89,9 @@
 }
 
 /* Mensagens de erro em vermelho */
-.message:has(+ .error) {
+.error {
   color: red;
+  font-size: 0.9rem;
+  margin-top: -8px;
+  margin-bottom: 8px;
 }

@@ -21,8 +21,8 @@ export default function Navbar() {
         <Link href="/users" style={{ color: "white" }}>
           Usuários
         </Link>
-        <Link href="/items" style={{ color: "white" }}>
-          Itens
+        <Link href="/produtos" style={{ color: "white" }}>
+          Produtos
         </Link>
         <Link href="/login" style={{ color: "white" }}>
           Login
