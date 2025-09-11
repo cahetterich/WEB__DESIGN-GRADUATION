@@ -1,95 +1,59 @@
+// src/app/page.tsx
 import Image from "next/image";
+import { FaRecycle, FaPeopleArrows, FaExchangeAlt } from "react-icons/fa";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <main className={styles.container}>
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <div className={styles.heroText}>
+          <h1>ReUse! – repensar, reaproveitar, reconectar</h1>
+          <p>
+            Uma plataforma para conectar pessoas que desejam doar, trocar ou
+            vender objetos pessoais. <br />
+            Menos desperdício, mais comunidade.
+          </p>
+          <div className={styles.actions}>
+            <Link href="/register" className={styles.primaryBtn}>
+              Criar conta
+            </Link>
+            <Link href="/items" className={styles.secondaryBtn}>
+              Explorar Itens
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className={styles.heroImage}>
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/hero.png"
+            alt="Ilustração ReUse"
+            width={1024} // mantém proporção
+            height={671}
+            priority
           />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </section>
+
+      {/* Cards Section */}
+     <section className={styles.cardsSection}>
+  <div className={styles.card}>
+    <FaRecycle size={32} color="#5F9070" />
+    <h3>Reduza o Desperdício</h3>
+    <p>Doe itens que você não usa mais e ajude outras pessoas.</p>
+  </div>
+  <div className={styles.card}>
+    <FaExchangeAlt size={32} color="#5F9070" />
+    <h3>Troque Objetos</h3>
+    <p>Encontre alguém que precise do que você tem e troque por algo útil.</p>
+  </div>
+  <div className={styles.card}>
+    <FaPeopleArrows size={32} color="#5F9070" />
+    <h3>Conecte Pessoas</h3>
+    <p>Faça parte de uma comunidade que acredita em sustentabilidade.</p>
+  </div>
+</section>
+    </main>
   );
 }
