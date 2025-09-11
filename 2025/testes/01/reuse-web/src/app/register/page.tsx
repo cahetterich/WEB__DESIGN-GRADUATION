@@ -1,56 +1,134 @@
-// src/app/register/page.tsx
 "use client";
+
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import styles from "./register.module.css";
 
 export default function RegisterPage() {
-  const [form, setForm] = useState({ name: "", email: "", password: "" });
-  const [message, setMessage] = useState("");
+  const router = useRouter();
 
-  async function handleSubmit(e: React.FormEvent) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [message, setMessage] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setMessage("Carregando...");
+    setMessage(null);
 
-    const res = await fetch("/api/auth/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
+    if (password !== confirmPassword) {
+      setMessage("As senhas não conferem.");
+      return;
+    }
 
-    const data = await res.json();
-    setMessage(data.message || data.error);
-  }
+    setLoading(true);
+    try {
+      const res = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setMessage(data.error || "Erro ao cadastrar usuário.");
+      } else {
+        setMessage("Usuário cadastrado com sucesso! Redirecionando...");
+        setTimeout(() => {
+          router.push("/login");
+        }, 2000); // espera 2 segundos antes de ir para login
+      }
+    } catch (error) {
+      setMessage("Erro no servidor. Tente novamente mais tarde.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <div style={{ maxWidth: 400, margin: "2rem auto", fontFamily: "sans-serif" }}>
-      <h1>Cadastro</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Nome"
-          value={form.name}
-          onChange={(e) => setForm({ ...form, name: e.target.value })}
-          required
-          style={{ display: "block", marginBottom: "10px", width: "100%", padding: "8px" }}
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          value={form.email}
-          onChange={(e) => setForm({ ...form, email: e.target.value })}
-          required
-          style={{ display: "block", marginBottom: "10px", width: "100%", padding: "8px" }}
-        />
-        <input
-          type="password"
-          placeholder="Senha"
-          value={form.password}
-          onChange={(e) => setForm({ ...form, password: e.target.value })}
-          required
-          style={{ display: "block", marginBottom: "10px", width: "100%", padding: "8px" }}
-        />
-        <button type="submit" style={{ padding: "10px", width: "100%" }}>Cadastrar</button>
-      </form>
-      <p>{message}</p>
+    <div className={styles.container}>
+      <div className={styles.card}>
+        <h1 className={styles.title}>Criar Conta</h1>
+        <p className={styles.subtitle}>
+          Junte-se à comunidade ReUse! e faça parte da mudança.
+        </p>
+
+        <form className={styles.form} onSubmit={handleSubmit}>
+          {/* Nome */}
+          <div className={styles.inputGroup}>
+            <label htmlFor="name">Nome completo</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Digite seu nome"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+
+          {/* Email */}
+          <div className={styles.inputGroup}>
+            <label htmlFor="email">E-mail</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="seuemail@exemplo.com"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+
+          {/* Senha */}
+          <div className={styles.inputGroup}>
+            <label htmlFor="password">Senha</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Digite sua senha"
+              required
+              minLength={6}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+
+          {/* Confirmar Senha */}
+          <div className={styles.inputGroup}>
+            <label htmlFor="confirm-password">Confirmar senha</label>
+            <input
+              id="confirm-password"
+              type="password"
+              placeholder="Repita sua senha"
+              required
+              minLength={6}
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </div>
+
+          {/* Botão */}
+          <button type="submit" className={styles.primaryBtn} disabled={loading}>
+            {loading ? "Cadastrando..." : "Criar conta"}
+          </button>
+        </form>
+
+        {/* Feedback */}
+        {message && <p className={styles.message}>{message}</p>}
+
+        <p className={styles.loginText}>
+          Já tem conta?{" "}
+          <Link href="/login" className={styles.link}>
+            Entrar
+          </Link>
+        </p>
+      </div>
     </div>
   );
 }
+

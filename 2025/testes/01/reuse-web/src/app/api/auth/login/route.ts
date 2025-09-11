@@ -10,25 +10,40 @@ export async function POST(req: Request) {
     const { email, password } = await req.json();
 
     if (!email || !password) {
-      return NextResponse.json({ error: "Preencha todos os campos." }, { status: 400 });
+      return NextResponse.json(
+        { error: "Preencha todos os campos." },
+        { status: 400 }
+      );
     }
 
+    // Verifica se e-mail existe
     const user = await prisma.user.findUnique({ where: { email } });
     if (!user) {
-      return NextResponse.json({ error: "Usuário não encontrado." }, { status: 401 });
+      return NextResponse.json(
+        { error: "E-mail não cadastrado." },
+        { status: 400 }
+      );
     }
 
+    // Verifica senha
     const passwordMatch = await bcrypt.compare(password, user.password);
     if (!passwordMatch) {
-      return NextResponse.json({ error: "Senha incorreta." }, { status: 401 });
+      return NextResponse.json(
+        { error: "Senha incorreta." },
+        { status: 400 }
+      );
     }
 
-    // Por enquanto, só retorna mensagem (futuramente JWT/session)
+    // Login OK
     return NextResponse.json({
       message: "Login realizado com sucesso!",
-      user: { id: user.id, name: user.name, email: user.email }
+      user: { id: user.id, name: user.name, email: user.email },
     });
   } catch (error) {
-    return NextResponse.json({ error: "Erro no servidor." }, { status: 500 });
+    console.error(error);
+    return NextResponse.json(
+      { error: "Erro no servidor." },
+      { status: 500 }
+    );
   }
 }
