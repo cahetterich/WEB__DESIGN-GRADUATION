@@ -1,7 +1,7 @@
-/* dashboard.module.css */
+/* src/app/dashboard.module.css */
 
 .container {
-  display: flex;
+  margin-top: 40px;
   min-height: 100vh;
   background: var(--reuse-light);
   color: var(--reuse-text);
@@ -40,10 +40,18 @@
   opacity: 0.8;
 }
 
+.dashboardWrapper {
+  display: flex;
+  background: var(--reuse-light);
+  color: var(--reuse-text);
+  min-height: 100vh;
+}
+
 /* Área principal */
 .main {
   flex: 1;
   padding: 32px;
+  margin-left: 220px; /* deixa espaço para sidebar fixa */
 }
 
 .header {
@@ -137,7 +145,8 @@
     gap: 12px;
   }
 
-  .main {
+.main {
+    margin-left: 0;
     padding: 16px;
   }
 }

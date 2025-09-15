@@ -17,12 +17,9 @@ export default function Navbar() {
       <Link href="/" style={{ color: "white", fontWeight: "bold", fontSize: "18px" }}>
         ReUse!
       </Link>
-      <div style={{ display: "flex", gap: "16px" }}>
-        <Link href="/users" style={{ color: "white" }}>
-          Usuários
-        </Link>
-        <Link href="/produtos" style={{ color: "white" }}>
-          Produtos
+      <div style={{ display: "flex", gap: "16px" }}>        
+        <Link href="/itens" style={{ color: "white" }}>
+          Itens
         </Link>
         <Link href="/login" style={{ color: "white" }}>
           Login
