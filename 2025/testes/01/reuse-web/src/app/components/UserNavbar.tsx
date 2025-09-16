@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation"; // ⬅️ novo import
+import { useRouter } from "next/navigation"; // 
 import Link from "next/link";
 import {
   FaChartPie,
@@ -19,10 +19,10 @@ import styles from "./userNavbar.module.css";
 
 export default function UserNavbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter(); // ⬅️ inicializa o hook
+  const router = useRouter(); // o hook
 
   const handleLogout = () => {
-    // no futuro aqui podemos limpar sessão/token
+    // no futuro podemos limpar sessão/token
     console.log("Usuário deslogado!");
     router.push("/"); // redireciona para a Home
   };
@@ -47,7 +47,7 @@ export default function UserNavbar() {
             <Link href="/dashboard" className={styles.navLink}>
               <FaChartPie size={18} /> Visão Geral
             </Link>
-            <Link href="/items" className={styles.navLink}>
+            <Link href="/items/my" className={styles.navLink}>
               <FaBox size={18} /> Meus Itens
             </Link>
             <Link href="/busca" className={styles.navLink}>
