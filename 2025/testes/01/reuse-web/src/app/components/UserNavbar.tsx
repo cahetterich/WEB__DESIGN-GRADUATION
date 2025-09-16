@@ -9,6 +9,7 @@ import {
   FaBox,
   FaUser,
   FaCog,
+  FaSearch,
   FaBell,
   FaEnvelope,
   FaBars,
@@ -48,6 +49,9 @@ export default function UserNavbar() {
             </Link>
             <Link href="/items" className={styles.navLink}>
               <FaBox size={18} /> Meus Itens
+            </Link>
+            <Link href="/busca" className={styles.navLink}>
+              <FaSearch size={18} /> Buscar Itens
             </Link>
             <Link href="/alerts" className={styles.navLink}>
               <FaBell size={18} /> Alertas

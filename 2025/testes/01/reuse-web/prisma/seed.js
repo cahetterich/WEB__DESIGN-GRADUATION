@@ -1,55 +1,3 @@
-// prisma/seed.ts
-// import { PrismaClient } from "@prisma/client";
-// import bcrypt from "bcrypt";
-
-// const prisma = new PrismaClient();
-
-// async function main() {
-//   // Limpar dados antigos
-//   await prisma.item.deleteMany();
-//   await prisma.user.deleteMany();
-
-//   // Criar usuários de teste
-//   const passwordHash = await bcrypt.hash("123456", 10);
-
-//   const users = await prisma.user.createMany({
-//     data: [
-//       {
-//         name: "João Silva",
-//         email: "joao@reuse.com",
-//         password: passwordHash,
-//       },
-//       {
-//         name: "Maria Lima",
-//         email: "maria@reuse.com",
-//         password: passwordHash,
-//       },
-//       {
-//         name: "Carla Dev",
-//         email: "carla@reuse.com",
-//         password: passwordHash,
-//       },
-//       {
-//         name: "Diego",
-//         email: "diego@reuse.com",
-//         password: passwordHash,
-//       },
-//     ],
-//   });
-
-//   console.log(`✔ Usuários criados: ${users.count}`);
-// }
-
-// main()
-//   .then(async () => {
-//     await prisma.$disconnect();
-//   })
-//   .catch(async (e) => {
-//     console.error(e);
-//     await prisma.$disconnect();
-//     process.exit(1);
-//   });
-
 // prisma/seed.js
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcrypt";
@@ -57,18 +5,85 @@ import bcrypt from "bcrypt";
 const prisma = new PrismaClient();
 
 async function main() {
-  const password1 = await bcrypt.hash("123456", 10);
-  const password2 = await bcrypt.hash("123456", 10);
+  // Senha padrão para todos os usuários
+  const password = await bcrypt.hash("123456", 10);
 
-  await prisma.user.createMany({
+  // Criando usuários (upsert evita duplicados)
+  const joao = await prisma.user.upsert({
+    where: { email: "joao@reuse.com" },
+    update: {},
+    create: {
+      name: "João Silva",
+      email: "joao@reuse.com",
+      password,
+    },
+  });
+
+  const maria = await prisma.user.upsert({
+    where: { email: "maria@reuse.com" },
+    update: {},
+    create: {
+      name: "Maria Lima",
+      email: "maria@reuse.com",
+      password,
+    },
+  });
+
+  // Itens do João
+  await prisma.item.createMany({
     data: [
-      { name: "João Silva", email: "joao@reuse.com", password: password1 },
-      { name: "Maria Lima", email: "maria@reuse.com", password: password2 },
+      {
+        title: "Celular usado",
+        description: "Smartphone em bom estado, apenas com alguns riscos.",
+        category: "Eletrônicos",
+        price: 450.0,
+        imageUrl: "https://via.placeholder.com/300x200?text=Celular",
+        status: "disponível",
+        isActive: true,
+        userId: joao.id,
+      },
+      {
+        title: "Camiseta esportiva",
+        description: "Camiseta tamanho M, quase nova.",
+        category: "Roupas",
+        price: 30.0,
+        imageUrl: "https://via.placeholder.com/300x200?text=Camiseta",
+        status: "trocado",
+        isActive: false,
+        userId: joao.id,
+      },
     ],
     skipDuplicates: true,
   });
 
-  console.log("✅ Usuários criados com sucesso!");
+  // Itens da Maria
+  await prisma.item.createMany({
+    data: [
+      {
+        title: "Livros de programação",
+        description: "Coleção de livros sobre JavaScript e Node.js.",
+        category: "Livros",
+        price: 120.0,
+        imageUrl: "https://via.placeholder.com/300x200?text=Livros",
+        status: "disponível",
+        isActive: true,
+        userId: maria.id,
+      },
+      {
+        title: "Mesa de escritório",
+        description: "Mesa compacta de madeira, ideal para home office.",
+        category: "Móveis",
+        price: 250.0,
+        imageUrl: "https://via.placeholder.com/300x200?text=Mesa",
+        status: "disponível",
+        isActive: true,
+        userId: maria.id,
+      },
+    ],
+    skipDuplicates: true,
+  });
+
+  console.log("✅ Usuários e itens criados com sucesso!");
 }
 
 main()

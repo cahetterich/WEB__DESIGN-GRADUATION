@@ -40,8 +40,24 @@ Arquivos relevantes
 - Migrations: `01/reuse-web/prisma/migrations/`
 - API Cadastro: `01/reuse-web/src/app/api/auth/register/route.ts`
 - API Login: `01/reuse-web/src/app/api/auth/login/route.ts`
+ 
+Itens (CRUD via API)
+
+- Listar/criar itens — `GET` e `POST` em `/api/items`
+  - Arquivo: `01/reuse-web/src/app/api/items/route.ts`
+  - `GET`: retorna itens (filtra por `userId` via query, se informado).
+  - `POST`: cria item com campos: `title`, `description`, `category`, `price?`, `imageUrl?`, `userId`.
+
+- Ler/atualizar/excluir item — `GET`, `PUT`, `DELETE` em `/api/items/[id]`
+  - Arquivo: `01/reuse-web/src/app/api/items/[id]/route.ts`
+  - `GET`: retorna um item pelo `id`.
+  - `PUT`: atualiza campos do item (`title`, `description`, `category`, `price?`, `imageUrl?`, `status?`).
+  - `DELETE`: remove o item.
+
+- Alternar disponibilidade — `PUT` em `/api/items/[id]/toggle`
+  - Arquivo: `01/reuse-web/src/app/api/items/[id]/toggle/route.ts`
+  - Objetivo: inverte o campo booleano `isActive` do item (ativo/inativo).
 
 Links
 
 - Código integrado (Next.js + Prisma): INSERIR_LINK_GITHUB_PRISMA
-

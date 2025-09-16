@@ -30,7 +30,10 @@ export default function LoginPage() {
       if (!res.ok) {
         setError(data.error || "Erro ao fazer login.");
       } else {
-        // ✅ Login válido → redireciona para dashboard
+        //Salva usuário no localStorage
+        localStorage.setItem("user", JSON.stringify(data.user));
+
+        //Redireciona para dashboard
         router.push("/dashboard");
       }
     } catch (err) {

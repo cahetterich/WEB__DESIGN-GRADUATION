@@ -1,28 +1,52 @@
 // src/app/api/items/route.ts
-import { PrismaClient } from '@prisma/client';
+
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-// GET → listar todos os itens
-export async function GET() {
+// GET 
+export async function GET(req: Request) {
+  const { searchParams } = new URL(req.url);
+  const userId = searchParams.get("userId");
+
   const items = await prisma.item.findMany({
-    include: { user: { select: { name: true } } }, // mostra só o nome do dono
+    where: userId ? { userId: Number(userId) } : {},
+    include: { user: { select: { name: true } } },
+    orderBy: { createdAt: "desc" },
   });
+
   return Response.json(items);
 }
 
-// POST → criar novo item
+// POST 
 export async function POST(req: Request) {
-  const data = await req.json();
-  const { title, description, userId } = data;
+  try {
+    const data = await req.json();
+    const { title, description, category, price, imageUrl, userId } = data;
 
-  if (!title || !description || !userId) {
-    return Response.json({ error: "Campos obrigatórios faltando" }, { status: 400 });
+    if (!title || !description || !category || !userId) {
+      return Response.json(
+        { error: "Campos obrigatórios faltando." },
+        { status: 400 }
+      );
+    }
+
+    const newItem = await prisma.item.create({
+      data: {
+        title,
+        description,
+        category,
+        price: price ? Number(price) : null,
+        imageUrl: imageUrl || null,
+        userId: Number(userId),
+        // status e isActive já possuem default
+      },
+    });
+
+    return Response.json(newItem);
+  } catch (error) {
+    console.error("Erro ao criar item:", error);
+    return Response.json({ error: "Erro no servidor" }, { status: 500 });
   }
-
-  const newItem = await prisma.item.create({
-    data: { title, description, userId },
-  });
-
-  return Response.json(newItem);
 }
+

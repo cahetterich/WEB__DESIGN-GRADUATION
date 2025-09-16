@@ -4,9 +4,14 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 // GET → buscar item por id
-export async function GET(_: Request, { params }: { params: { id: string } }) {
+export async function GET(
+  _: Request,
+  context: { params: Promise<{ id: string }> }
+) {
+  const { id } = await context.params; // ✅ agora com await
+
   const item = await prisma.item.findUnique({
-    where: { id: Number(params.id) },
+    where: { id: Number(id) },
   });
 
   if (!item) {
@@ -22,13 +27,20 @@ export async function PUT(
   context: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = await context.params; // 👈 agora com await
+    const { id } = await context.params; // ✅ await aqui também
     const body = await req.json();
-    const { title, description } = body;
+    const { title, description, category, price, imageUrl, status } = body;
 
     const updatedItem = await prisma.item.update({
       where: { id: Number(id) },
-      data: { title, description },
+      data: {
+        title,
+        description,
+        category,
+        price: price ? Number(price) : null,
+        imageUrl: imageUrl || null,
+        status: status || "disponível",
+      },
     });
 
     return Response.json(updatedItem);
@@ -40,11 +52,11 @@ export async function PUT(
 
 // DELETE → remover item
 export async function DELETE(
-  req: Request,
+  _: Request,
   context: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = await context.params; // 👈 precisa do await
+    const { id } = await context.params; // ✅ await também
     await prisma.item.delete({
       where: { id: Number(id) },
     });
@@ -54,4 +66,5 @@ export async function DELETE(
     return Response.json({ error: "Erro ao deletar item" }, { status: 500 });
   }
 }
+
 

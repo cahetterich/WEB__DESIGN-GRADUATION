@@ -46,3 +46,33 @@ Notas técnicas (simples)
 - Os botões e links usam `next/link` para navegar entre páginas sem recarregar o site.
 - Os estilos das páginas de Login e Cadastro usam CSS Modules (`.module.css`) para manter estilos isolados.
 
+Novas telas/rotas
+
+Dashboard (`/dashboard`)
+
+- O que é: área interna para o usuário acompanhar seus itens e atalhos (em construção).
+- Objetivo: resumir itens cadastrados e permitir ações rápidas (ativar/desativar, editar, excluir) quando implementadas.
+- Arquivo: `01/reuse-web/src/app/dashboard/page.tsx`
+- Print sugerido: `docs/prints/dashboard.png`
+
+Items — listagem (`/items`)
+
+- O que é: lista de itens disponíveis na plataforma.
+- Objetivo: apresentar itens com título, descrição e outras informações.
+- Arquivo: `01/reuse-web/src/app/items/page.tsx`
+- Print sugerido: `docs/prints/items-list.png`
+
+Items — novo (`/items/new`)
+
+- O que é: formulário para cadastrar um novo item.
+- Objetivo: permitir que o usuário crie um item informando título, descrição, categoria, preço (opcional) e imagem (opcional).
+- Arquivo: `01/reuse-web/src/app/items/new/page.tsx`
+- Observação técnica: página interativa (usa formulário e chamadas à API).
+- Print sugerido: `docs/prints/items-new.png`
+
+Items — editar (`/items/[id]/edit`)
+
+- O que é: formulário para editar um item existente.
+- Objetivo: atualizar dados do item (título, descrição, categoria, preço, imagem e status).
+- Arquivo: `01/reuse-web/src/app/items/[id]/edit/page.tsx`
+- Print sugerido: `docs/prints/items-edit.png`

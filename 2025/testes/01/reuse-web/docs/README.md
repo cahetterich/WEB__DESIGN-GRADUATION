@@ -31,7 +31,13 @@ Locais relevantes no código
 - Login: `01/reuse-web/src/app/login/page.tsx`
 - Cadastro: `01/reuse-web/src/app/register/page.tsx`
 - Navbar: `01/reuse-web/src/app/components/Navbar.tsx`
+- Dashboard: `01/reuse-web/src/app/dashboard/page.tsx`
+- Itens (lista): `01/reuse-web/src/app/items/page.tsx`
+- Itens (novo): `01/reuse-web/src/app/items/new/page.tsx`
+- Itens (editar): `01/reuse-web/src/app/items/[id]/edit/page.tsx`
 - API Login: `01/reuse-web/src/app/api/auth/login/route.ts`
 - API Cadastro: `01/reuse-web/src/app/api/auth/register/route.ts`
+- API Itens (lista/criação): `01/reuse-web/src/app/api/items/route.ts`
+- API Item (detalhe/edição/exclusão): `01/reuse-web/src/app/api/items/[id]/route.ts`
+- API Alternar item (ativo/inativo): `01/reuse-web/src/app/api/items/[id]/toggle/route.ts`
 - Schema Prisma: `01/reuse-web/prisma/schema.prisma`
-

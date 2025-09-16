@@ -25,6 +25,12 @@ Item (objeto)
   - `id` (número, auto‑incremento): identificador único do item.
   - `title` (texto): título do item.
   - `description` (texto): descrição do item.
+  - `category` (texto): categoria do item (ex.: Eletrônicos, Roupas).
+  - `imageUrl` (texto, opcional): link para imagem ilustrativa.
+  - `price` (número, opcional): preço sugerido para venda (pode ser nulo para doação/troca).
+  - `status` (texto, default "disponível"): estado do item (ex.: disponível, reservado, trocado/vendido).
+  - `trade` (booleano, default `false`): indica se o item está marcado para troca.
+  - `isActive` (booleano, default `true`): controla se o item aparece nas listagens.
   - `createdAt` (data/hora): quando o item foi criado (preenchido automaticamente).
   - `userId` (número): referência ao dono do item.
   - Relações: pertence a um `User` (`user`).
@@ -39,4 +45,3 @@ Como isso é usado nas telas
 - Cadastro: cria um registro em `User` com nome, e‑mail e senha (hash).
 - Login: valida `User` existente pelo e‑mail e confere a senha (hash).
 - Futuro (itens): listagem e criação de `Item` ligados ao usuário logado.
-
